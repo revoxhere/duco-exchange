@@ -2,6 +2,6 @@ title: DUCO exchange
 description: Exchange Duino-Coins (DUCO) to Coin Magi (XMG)
 show_downloads: false
 google_analytics:
-theme: jekyll-theme-minimal
+theme: jekyll-theme-leap-day
 github:
   is_project_page: false
