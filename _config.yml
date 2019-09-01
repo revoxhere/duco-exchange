@@ -5,3 +5,5 @@ google_analytics:
 #theme: jekyll-theme-midnight
 github:
   is_project_page: false
+
+theme: jekyll-theme-minimal
