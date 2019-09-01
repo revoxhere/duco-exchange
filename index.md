@@ -9,7 +9,7 @@
 # Exchange
 
 #### On this site you can exchange Duino-Coins (DUCO) to Coin Magi (XMG). <br>
-##### Send an e-mail to [this address](mailto:robik123.345@gmail.com) by providing this filled form: <br>
+#### Send an e-mail to [this address](mailto:robik123.345@gmail.com) and provide this filled form: <br>
 ```
 Duino-Coin wallet username: (provide your wallet username here) e.g. revox
 DUCO amount to exchange: (how many duino-coins you want to exchange) e.g. 10
@@ -19,6 +19,7 @@ Coin Magi wallet address: (your coin magi wallet address)
 Your exchange request may take up to 5 days. <br>
 
 If your request will be accepted, you will receive and email with proposed amount of Magi Coins you will receive. <br>
+You can negotiate how many Magi Coins you'd like to receive. <br>
 If you'll accept exchange at proposed price, you will receive desired XMG to your wallet address. <br>
 Of course, predetermined quantity of DUCO will be then taken off of your Duino-Coin wallet. <br>
 
