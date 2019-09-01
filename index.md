@@ -26,7 +26,7 @@ Of course, predetermined quantity of DUCO will be then taken off of your Duino-C
 
 You can then e-mail us back and review this exchange (transaction speed, clarity etc.)
 
-## buy Duino-Coins
+## Buy Duino-Coins
 #### You can also exchange Coin Magi (XMG) to Duino-Coin (DUCO). <br>
 #### Send an e-mail to [this address](mailto:robik123.345@gmail.com) and provide this filled form: <br>
 ```
