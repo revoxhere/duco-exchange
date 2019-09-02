@@ -1,4 +1,6 @@
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<head>
+<link rel="icon" href="/Bez nazwy.ico" type="image/x-icon" />
+</head>
 # Exchange Duino-Coins to Coin Magi
 
 ## Statistics
