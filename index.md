@@ -1,12 +1,9 @@
 # Exchange Duino-Coins to Coin Magi
 
-## Graphs
+## Statistics
 
-<p align="center">
-  <b>Duino-Coin (DUCO) price chart</b> <br>
-  <img src="https://i.imgur.com/hJ6fTy2.png"> <br>
-  Current estimated price for 1 DUCO: 0.1 XMG <br>
-</p>
+Current estimated price for 1 DUCO: 0.1 XMG
+Current estimated price for 1 XMG: 10 DUCO
 
 ## Exchange
 
