@@ -1,3 +1,5 @@
+# Exchange Duino-Coins to Coin Magi
+
 ## Graphs
 
 <p align="center">
