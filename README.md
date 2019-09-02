@@ -1,1 +1,1 @@
-# [https://revoxhere.github.io/duco-exchange/](https://revoxhere.github.io/duco-exchange/)
+# [Exchange Duino Coin (DUCO) to Coin Magi (XMG)](https://revoxhere.github.io/duco-exchange/)
