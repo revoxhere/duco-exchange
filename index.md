@@ -6,8 +6,8 @@
 
 ## Statistics
 
-Current estimated price for 1 DUCO: 0.1 XMG
-Current estimated price for 1 XMG: 10 DUCO
+Current estimated price for 1 DUCO: 0.1 XMG <br>
+Current estimated price for 1 XMG: 10 DUCO <br>
 
 ## Exchange
 
