@@ -1,9 +1,8 @@
-# [Explore Duino Coin](https://github.com/revoxhere/duino-coin) <br>
-## [Exchange Duino Coin (DUCO) to Coin Magi (XMG)](https://revoxhere.github.io/duco-exchange/) <br> [Exchange Coin Magi (XMG) to Duino Coin (DUCO)](https://revoxhere.github.io/duco-exchange/) <br>
-All information you need to know is available on site listed above.
-<br>
-<br>
-<br>
+<p align="center">
+  <b><a href="https://github.com/revoxhere/duino-coin">Explore Duino Coin (if you haven't already)<b></a><br><br>
+  <b><a href="https://revoxhere.github.io/duco-exchange/">Exchange Duino Coin (DUCO) other cryptocurrency (buy)<b></a></h1><br>
+  <b><a href="https://revoxhere.github.io/duco-exchange/">Exchange other cryptocurrency to Duino Coin (DUCO) (sell)<b></a></h1><br>
+  <b><br>All information you need to know is available on site listed above.</b> <br>
 <br>
 <br>
 <sub> <sup> Tags (ignore): Duino Coin Coin Magi XMG DUCO Cryptocurrency Exchange Website Stocks Bitcoin Ethereum Litecoin Arduino AVR Rate Digital Cryptocoins 
