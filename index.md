@@ -2,10 +2,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/revoxhere/duco-exchange/master/favicon.ico">
  </head>
   
-# Exchange Duino-Coins to Coin Magi
+# Exchange Duino-Coins to other cryptocurrencies
 
 ## Statistics
 
+Currently available cryptocurrencies for exchange: XMG <=> DUCO <br>
 Current estimated price for 1 DUCO: 0.1 XMG <br>
 Current estimated price for 1 XMG: 10 DUCO <br>
 
@@ -52,3 +53,5 @@ If you need some help, clarification or need more information, just contact some
 * **Lead Duino-Coin developer:** [Robert "revox" Piotrowski](https://github.com/revoxhere/) - [YouTube](https://youtube.com/c/reVox96) - [e-mail](mailto:robik123.345@gmail.com)
 * **Duino-Coin developer:** [MrKris7100](https://github.com/MrKris7100) - [YouTube](https://www.youtube.com/user/MrKris7100) 
 * **Duino-Coin social manager:** [Jan "Furim" Malewski](https://github.com/Furim) - [YouTube](https://www.youtube.com/channel/UCKxFuOCalYxlQoS7R6zilRQ)
+
+<sup><sub>Tags (ignore): Duino Coin Coin Magi XMG DUCO Cryptocurrency Exchange Website Stocks Bitcoin Ethereum Litecoin Arduino AVR Rate Digital Cryptocoins
