@@ -7,8 +7,8 @@
 ## Statistics
 
 Currently available cryptocurrencies for exchange: XMG <=> DUCO <br>
-Current estimated price for 1 DUCO: 0.14 XMG <br>
-Current estimated price for 1 XMG: 15 DUCO <br>
+Current estimated price for 1 DUCO: 0.1 XMG <br>
+Current estimated price for 1 XMG: 10 DUCO <br>
 
 ## Exchange
 
