@@ -1,5 +1,5 @@
  <head>
-    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/revoxhere/duco-exchange/master/favicon.ico">
+    <link rel='icon' href='https://revoxhere.github.io/duino-coin/favicon.ico' type='image/x-icon'/ >
  </head>
   
 # Exchange Duino-Coins to other cryptocurrencies
