@@ -1,4 +1,29 @@
- html *
-{
-   font-family: Arial !important;
+body {
+	background-color: #f2fff5;
+}
+
+html {
+	font-family: Raleway !important;
+	padding-left: 30px;
+	color: #2c3e50;
+}
+
+marquee {
+	font-size: 130%;
+	color: #27ae60;
+}
+
+hr {
+	border-top: 1px solid #ecf0f1;
+}
+
+code {
+	font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: #27ae60;
 }
