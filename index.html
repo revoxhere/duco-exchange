@@ -1,100 +1,267 @@
+
 <!DOCTYPE html>
-<html>
+    <head>
+        <meta charset="utf-8" />
+        <html lang="en">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Duino-Coin | Exchange</title>
+        <link rel="icon" href="https://i.imgur.com/X07ke21.png" type="image/png"/>
+        <link rel="shortcut icon" href="https://i.imgur.com/X07ke21.png" type="image/png"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/assets/js/app.4aa08d6dcc3080b4c008.js"></script>
+        <style>
+            html {
+                scroll-behavior: smooth !important;
+            }
+            .btn-success {
+                background-color: #f39c12;
+                border-color: #f39c12;
+            }
+            .btn-success:hover, .btn-success:focus, .btc-success:active, .btc-success:visited {
+                background-color: #f1c40f;
+                border-color: #f1c40f;
+            }
+            .btn-btc, .btn-btc:hover, .btn-btc:active, .btn-btc:visited {
+                background-color: #f7931a !important;
+                color:#ffffff;
+            }
+            .btn-bch, .btn-bch:hover, .btn-bch:active, .btn-bch:visited {
+                background-color: #4cca47 !important;
+                color:#ffffff;
+            }
+            .btn-ltc, .btn-ltc:hover, .btn-ltc:active, .btn-ltc:visited {
+                background-color: #4d4d4d !important;
+                color:#ffffff;
+            }
+            .btn-xmr, .btn-xmr:hover, .btn-xmr:active, .btn-xmr:visited {
+                background-color: #ff6600 !important;
+                color:#ffffff;
+            }
+            .btn-xmg, .btn-xmg:hover, .btn-xmg:active, .btn-xmg:visited {
+                background-color: #1d62f0 !important;
+                color:#ffffff;
+            }
+            .btn-duco, .btn-duco:hover, .btn-duco:active, .btn-duco:visited {
+                background-color: #f39c12 !important;
+                color:#ffffff;
+            }
+            ::-webkit-scrollbar
+            {
+              width: 8px;  /* for vertical scrollbars */
+              height: 8px; /* for horizontal scrollbars */
+            }
 
-<head>
-    <title>Duino-Coin Exchange</title>
-    <link rel="icon" href="https://i.imgur.com/X07ke21.png">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
-<br>
+            ::-webkit-scrollbar-track
+            {
+              background: rgba(0, 0, 0, 0.1);
+            }
 
-<p align="center">
-	<a href="https://revoxhere.github.io/duco-exchange/">
-		<img src="https://i.imgur.com/BeIFS5a.png" height="auto"" width="30%">
-	</a>
-</p>
+            ::-webkit-scrollbar-thumb
+            {
+              background: #343a40;
+            }
+            .modal-body {
+              word-wrap: break-word;
+            }
+            .navbar-nav.navbar-center {
+              position: absolute;
+                left: 50%;
+                transform: translatex(-50%);
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand mr-0 mr-md-2" href="index"><img src="https://i.imgur.com/X07ke21.png" width="30" height="30" alt="Duino-Coin" title="Duino-Coin" class="d-inline-block align-top" /></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse navbar-center" id="navbarSupportedContent">
+            <ul class="nav navbar-nav navbar-center">
+                <li class="nav-item"><a class="nav-link" href="#exchange">Exchange</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+           </ul>
+                <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                <li class="nav-item"><a class="nav-link p-2" href="https://github.com/revoxhere/duino-coin" target="_blank" title="Twitter"><i class="fab fa-lg fa-github"></i></a></li>
+            </ul>
+        </nav>
+        
+        <main class="jumbotron" id="exchange" style="background-color:#FAFAFA">
+            <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-4 mx-auto col-md-3 order-md-2 text-right"><svg class="bi bi-gem" width="100%" height="100%" viewBox="0 0 16 16" fill="#9966CC" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.1.7a.5.5 0 01.4-.2h9a.5.5 0 01.4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 01-.8 0L.1 5.3a.5.5 0 010-.6l3-4zm11.386 3.785l-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004l.961-2.989H4.186l.963 2.995 5.704-.006zM5.47 5.495l5.062-.005L8 13.366 5.47 5.495zm-1.371-.999l-.78-2.422-1.818 2.425 2.598-.003zM1.499 5.5l2.92-.003 2.193 6.82L1.5 5.5zm7.889 6.817l2.194-6.828 2.929-.003-5.123 6.831z" clip-rule="evenodd"/></svg></div>
+                  <div class="col-md-8 order-md-1 text-center text-md-left pr-md-5">
+    		          <h1 align="center">Official Duino-Coin Exchange</h1>
+                  <p>Here you can exchange cryptocurrencies to Duino-Coins <strong>(buy)</strong> and Duino-Coins to other cryptocurrencies <strong>(sell)</strong>.<br>Select what you want to exchange and fill in the form.<br>After filling the form, you will receive an e-mail in <strong>24 hours</strong> confirming the transaction.</p>
 
-<br>
+                    <!-- Button trigger modal -->
+                    <button style="width:14em" type="button" class="btn btn-xmg m-1" data-toggle="modal" data-target="#xmgModal">Duino-Coin ⇄ Coin Magi
+                    </button><br>
 
-<marquee direction="left" scrollamount="10" behavior="scroll">
-	<span>Exchange rates as of <script>document.write(new Date().toLocaleDateString());</script>: &nbsp &nbsp  &nbsp &nbsp </span>
-	<span> <b>10 DUCO</b> (Duino-Coin) = <b>1 XMG</b> (Coin Magi) &nbsp &nbsp  &nbsp &nbsp </span>
-	<span> <b>1 XMG</b> (Coin Magi) = <b>10 DUCO</b> (Duino-Coin)</span>
-</marquee>
+                    <button style="width:14em" type="button" class="btn btn-ltc m-1" data-toggle="modal" data-target="#ltcModal">Duino-Coin ⇄ Litecoin
+                    </button><br>
 
-<hr>
+                    <button style="width:14em" type="button" class="btn btn-bch m-1" data-toggle="modal" data-target="#bchModal">Duino-Coin ⇄ Bitcoin Cash
+                    </button><br>
 
-<h2>
-	<img src="https://blog.wwolf.us/wp-content/uploads/2019/09/Magilogo.png" height="18px">
-	Buy Duino-Coin
-</h2>
+                    <button style="width:14em" type="button" class="btn btn-btc m-1 disabled" data-toggle="modal" data-target="#btcModal">Duino-Coin ⇄ Bitcoin
+                    </button><br>
 
-<p>
-	Send an e-mail to&nbsp;<span style="color: #27ae60">
-	<a style="color: #27ae60" href="mailto:robik123.345@gmail.com">this e-mail address</a>
-	</span> with the form below filled according to your request:
-</p>
+                    <button style="width:14em" type="button" class="btn btn-xmr m-1 disabled" data-toggle="modal" data-target="#xmrModal">Duino-Coin ⇄ Monero
+                    </button><br>
 
-<pre>
-	<code>
-		Duino-Coin wallet username: (provide your wallet username here - e.g. Ducoman)
-		Coin Magi wallet address: (your coin magi wallet address - e.g. 93qJ8j93ibCye7pTWKTu88pr6a8xy7EUqC)
-		How many XMG you'd like to send OR How many DUCO you'd like to receive: (e.g. 1 XMG for 10 DUCO)
-	</code>
-</pre>
+                    <br>
 
-<h4>Transaction process</h4>
-<p>We will professionally and privately process your request. Your transaction should be finished within 12 hours. In rare cases, it may take up to 3 days.</p>
-<p>You will receive an email with the proposed amount of Duino-Coins you will receive.<br>If you'll accept exchange at the proposed price, after sending the prediscussed amount of Coin Magi to address you'll receive, desired Duino-Coins will be added to your Duino-Coin wallet address.</p>
-<p>You can then e-mail us back and review this exchange (transaction speed, clarity, etc.)</p>
+                    <h3>Estimated exchange rates</h3>
+                    <ul align="left">
+                      <li>1 DUCO ≈ 0.1 XMG</li>
+                      <li>1 DUCO ≈ 0.000038 LTC</li>
+                      <li>1 DUCO ≈ 0.0000068 BCH</li>
+                    </ul>
 
-<br>
+                    <br>
 
-<h2>
-	<img src="https://raw.githubusercontent.com/revoxhere/duino-coin/master/Resources/duco.png" height="18px">
-	Sell Duino-Coin
-</h2>
+                    <p>Prices are mainly backed up by conversion rates, altcoins price, demand and supply.</p>
+                   
+                    <!-- Modals -->
+                    <div class="modal fade" id="xmgModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Duino-Coin ⇄ Coin Magi Exchange</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <iframe width="100%" height="776" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="https://www.emailmeform.com/builder/embed/EcyYn69P8cul36"><a href="https://www.emailmeform.com/builder/embed/EcyYn69P8cul36">Fill out form.</a></iframe>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-<p>
-	Send an e-mail to&nbsp;<span style="color: #27ae60">
-	<a style="color: #27ae60" href="mailto:robik123.345@gmail.com">this e-mail address</a>
-	</span> with the form below filled according to your request:
-</p>
+                    <div class="modal fade" id="ltcModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Duino-Coin ⇄ Litecoin Exchange</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <iframe width="100%" height="776" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="https://www.emailmeform.com/builder/embed/tU6nk0pD0YFOr1dmQvf95u"><a href="https://www.emailmeform.com/builder/embed/tU6nk0pD0YFOr1dmQvf95u">Fill out form.</a></iframe>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-<pre>
-	<code>
-		Duino-Coin wallet username: (provide your wallet username here - e.g. Ducoman)
-		Coin Magi wallet address: (your coin magi wallet address - e.g. 93qJ8j93ibCye7pTWKTu88pr6a8xy7EUqC)
-		DUCO amount to exchange: (how many Duino-Coins you want to exchange - e.g. 45 (to receive 4.5 XMG))
-	</code>
-</pre>
+                    <div class="modal fade" id="bchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Duino-Coin ⇄ Bitcoin Cash Exchange</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <iframe width="100%" height="775" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="https://www.emailmeform.com/builder/embed/t8cMfpA654v4UoFN"><a href="https://www.emailmeform.com/builder/embed/t8cMfpA654v4UoFN">Fill out form.</a></iframe>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-<h4>Transaction process</h4>
-<p>We will professionally and privately process your request. Your transaction should be finished within 12 hours. In rare cases, it may take up to 3 days.</p>
-<p>You will receive an email with the proposed amount of Coin Magi you will receive.<br>If you'll accept exchange at the proposed price, exchanged Duino-Coins will be taken-off from your wallet and a prediscussed amount of Coin Magi will be sent to your address.</p>
-<p>You can then e-mail us back and review this exchange (transaction speed, clarity, etc.)</p>
+                    <div class="modal fade" id="btcModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Duino-Coin ⇄ Bitcoin Exchange</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Coming soon</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-<br>
+                    <div class="modal fade" id="xmrModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Duino-Coin ⇄ Monero Exchange</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Coming soon</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-<hr>
+        <main class="jumbotron" id="reviews" style="background-color:#FAFAFA">
+            <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-4 mx-auto col-md-3 order-md-2 text-right"><svg class="bi bi-card-text" width="100%" height="100%" viewBox="0 0 16 16" fill="#27ae60" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 00-.5.5v9a.5.5 0 00.5.5h13a.5.5 0 00.5-.5v-9a.5.5 0 00-.5-.5zm-13-1A1.5 1.5 0 000 3.5v9A1.5 1.5 0 001.5 14h13a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0014.5 2h-13z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M3 5.5a.5.5 0 01.5-.5h9a.5.5 0 010 1h-9a.5.5 0 01-.5-.5zM3 8a.5.5 0 01.5-.5h9a.5.5 0 010 1h-9A.5.5 0 013 8zm0 2.5a.5.5 0 01.5-.5h6a.5.5 0 010 1h-6a.5.5 0 01-.5-.5z" clip-rule="evenodd"/></svg></div>
+                  <div class="col-md-8 order-md-1 text-center text-md-left pr-md-5">
+                  <h1 align="center">User Reviews</h1>
 
-<p align="center">
-	<a href="https://github.com/revoxhere/duco-exchange/">
-	<img src="https://revoxhere.github.io/duino-coin/github.png" alt="" width="30" height="30"></a>
-</p>
+                  <h5><svg class="bi bi-person" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 00.014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 00.022.004zm9.974.056v-.002.002zM8 7a2 2 0 100-4 2 2 0 000 4zm3-2a3 3 0 11-6 0 3 3 0 016 0z" clip-rule="evenodd"/></svg> AlexSama S</h3>
+                  <p>Very fast transaction, and all confirmed. Thanks u and for the whole project.</p>
+                  <h5><svg class="bi bi-person" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 00.014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 00.022.004zm9.974.056v-.002.002zM8 7a2 2 0 100-4 2 2 0 000 4zm3-2a3 3 0 11-6 0 3 3 0 016 0z" clip-rule="evenodd"/></svg> lorenzo giacomelli</h3>
+                  <p>I’ve received my funds  in minutes, it was my first transaction and i’m so satisfied with your service.</p>
+                  <h5><svg class="bi bi-person" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 00.014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 00.022.004zm9.974.056v-.002.002zM8 7a2 2 0 100-4 2 2 0 000 4zm3-2a3 3 0 11-6 0 3 3 0 016 0z" clip-rule="evenodd"/></svg> Rogerina</h3>
+                  <p>Fast exchange in only ~24h, I'm keen on seeing exchanges to more cryptos.</p>
+                </div>
+              </div>
+            </div>
+        </main>
 
-<p align="center">
-	&trade; 2020 Duino-Coin project<br>
-	This service runs on donations. If you'd like to help visit
-	<span style="color: #27ae60">
-	<a style="color: #27ae60" href="https://revoxhere.github.io/duino-coin/donate">Donate</a>
-	</span> page.
-	<br><span style="color: #808080;">
-	website made by revox, hosted using GitHub Pages
-</span>
-</p>
+        <main class="jumbotron" id="contact" style="background-color:#FAFAFA">
+            <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-4 mx-auto col-md-3 order-md-2 text-right"><svg class="bi bi-chat-dots-fill" width="100%" height="100%" viewBox="0 0 16 16" fill="#e67e22" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 01-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 11-2 0 1 1 0 012 0zm4 0a1 1 0 11-2 0 1 1 0 012 0zm3 1a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg></div>
+                  <div class="col-md-8 order-md-1 text-center text-md-left pr-md-5">
+                  <h1 align="center">Contact</h1>
+                  <p>If you need help or generally want to get in touch, please visit <a href="https://revoxhere.github.io/duino-coin/contact">Duino-Coin Contact Us</a> page.</p>
+                </div>
+              </div>
+            </div>
+        </main>
 
-</body>
+        <br><hr><br>
+
+        <p style="color: #777777" align="center" class="mb">
+          Website made by revox <br> 2019-2020 Duino-Coin community</p>
+    </body>
 </html>
