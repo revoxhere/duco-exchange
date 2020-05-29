@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8" />
@@ -33,8 +32,16 @@
                 background-color: #4cca47 !important;
                 color:#ffffff;
             }
+            .btn-trbo, .btn-trbo:hover, .btn-trbo:active, .btn-trbo:visited {
+                background-color: #e74c3c !important;
+                color:#ffffff;
+            }
+            .btn-ctsc, .btn-ctsc:hover, .btn-ctsc:active, .btn-ctsc:visited {
+                background-color: #3498db !important;
+                color:#ffffff;
+            }
             .btn-ltc, .btn-ltc:hover, .btn-ltc:active, .btn-ltc:visited {
-                background-color: #4d4d4d !important;
+                background-color: #777777 !important;
                 color:#ffffff;
             }
             .btn-xmr, .btn-xmr:hover, .btn-xmr:active, .btn-xmr:visited {
@@ -89,7 +96,7 @@
           </div>
            </ul>
                 <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-                <li class="nav-item"><a class="nav-link p-2" href="https://github.com/revoxhere/duino-coin" target="_blank" title="Twitter"><i class="fab fa-lg fa-github"></i></a></li>
+                <li class="nav-item"><a class="nav-link p-2" href="https://github.com/revoxhere/duino-coin" target="_blank" title="GitHub"><i class="fab fa-lg fa-github"></i></a></li>
             </ul>
         </nav>
         
@@ -99,19 +106,25 @@
                   <div class="col-4 mx-auto col-md-3 order-md-2 text-right"><svg class="bi bi-gem" width="100%" height="100%" viewBox="0 0 16 16" fill="#9966CC" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.1.7a.5.5 0 01.4-.2h9a.5.5 0 01.4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 01-.8 0L.1 5.3a.5.5 0 010-.6l3-4zm11.386 3.785l-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004l.961-2.989H4.186l.963 2.995 5.704-.006zM5.47 5.495l5.062-.005L8 13.366 5.47 5.495zm-1.371-.999l-.78-2.422-1.818 2.425 2.598-.003zM1.499 5.5l2.92-.003 2.193 6.82L1.5 5.5zm7.889 6.817l2.194-6.828 2.929-.003-5.123 6.831z" clip-rule="evenodd"/></svg></div>
                   <div class="col-md-8 order-md-1 text-center text-md-left pr-md-5">
     		          <h1 align="center">Official Duino-Coin Exchange</h1>
-                  <p>Here you can exchange cryptocurrencies to Duino-Coins <strong>(buy)</strong> and Duino-Coins to other cryptocurrencies <strong>(sell)</strong>.<br>Select what you want to exchange and fill in the form.<br>After filling the form, you will receive an e-mail in <strong>24 hours</strong> confirming the transaction.<br>Minimum exchange is 10 DUCO.</p>
+                  <p>Here you can exchange cryptocurrencies to Duino-Coins <strong>(buy)</strong> and Duino-Coins to other cryptocurrencies <strong>(sell)</strong>.<br>Select what you want to exchange and fill in the form.<br>After filling the form, you will receive an e-mail in <strong>48 hours</strong> confirming the transaction.<br><br>Minimum exchange amount is 75 DUCO when selling. No minimum amount when buying.</p>
 
                     <!-- Button trigger modal -->
                     <button style="width:14em" type="button" class="btn btn-xmg m-1" data-toggle="modal" data-target="#xmgModal">Duino-Coin ⇄ Coin Magi
                     </button><br>
 
-                    <button style="width:14em" type="button" class="btn btn-ltc m-1" data-toggle="modal" data-target="#ltcModal">Duino-Coin ⇄ Litecoin
+                    <button style="width:14em" type="button" class="btn btn-trbo m-1" data-toggle="modal" data-target="#trboModal">Duino-Coin ⇄ TRBO
+                    </button><br>
+
+                    <button style="width:14em" type="button" class="btn btn-ctsc m-1" data-toggle="modal" data-target="#ctscModal">Duino-Coin ⇄ CTSC
                     </button><br>
 
                     <button style="width:14em" type="button" class="btn btn-bch m-1" data-toggle="modal" data-target="#bchModal">Duino-Coin ⇄ Bitcoin Cash
                     </button><br>
 
                     <button style="width:14em" type="button" class="btn btn-btc m-1 disabled" data-toggle="modal" data-target="#btcModal">Duino-Coin ⇄ Bitcoin
+                    </button><br>
+
+                    <button style="width:14em" type="button" class="btn btn-ltc m-1 disabled" data-toggle="modal" data-target="#ltcModal">Duino-Coin ⇄ Litecoin
                     </button><br>
 
                     <button style="width:14em" type="button" class="btn btn-xmr m-1 disabled" data-toggle="modal" data-target="#xmrModal">Duino-Coin ⇄ Monero
@@ -122,13 +135,14 @@
                     <h3>Estimated exchange rates</h3>
                     <ul align="left">
                       <li>1 DUCO ≈ 0.1 XMG</li>
-                      <li>1 DUCO ≈ 0.000038 LTC</li>
-                      <li>1 DUCO ≈ 0.0000068 BCH</li>
+                      <li>1 DUCO ≈ 0.5 TRBO</li>
+                      <li>1 DUCO ≈ 0.00003 CTSC</li>
+                      <li>1 DUCO ≈ 0.00000068 BCH</li>
                     </ul>
 
                     <br>
 
-                    <p>Prices are mainly backed up by conversion rates, altcoins price, demand and supply.</p>
+                    <p><sup>Prices are mainly backed up by conversion rates, altcoins price, demand and supply.</sup></p>
                    
                     <!-- Modals -->
                     <div class="modal fade" id="xmgModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -150,17 +164,36 @@
                       </div>
                     </div>
 
-                    <div class="modal fade" id="ltcModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="trboModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Duino-Coin ⇄ Litecoin Exchange</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Duino-Coin ⇄ TRBO Exchange</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
                           <div class="modal-body">
                             <iframe width="100%" height="776" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="https://www.emailmeform.com/builder/embed/tU6nk0pD0YFOr1dmQvf95u"><a href="https://www.emailmeform.com/builder/embed/tU6nk0pD0YFOr1dmQvf95u">Fill out form.</a></iframe>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="modal fade" id="ctscModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Duino-Coin ⇄ CTSC Exchange</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <iframe width="100%" height="693" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="https://www.emailmeform.com/builder/embed/B45k2V1chuXotUR2Y1"><a href="https://www.emailmeform.com/builder/embed/B45k2V1chuXotUR2Y1">Fill out form.</a></iframe>
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -193,6 +226,25 @@
                         <div class="modal-content">
                           <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Duino-Coin ⇄ Bitcoin Exchange</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Coming soon</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="modal fade" id="ltcModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Duino-Coin ⇄ Litecoin Exchange</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
