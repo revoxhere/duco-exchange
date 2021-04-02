@@ -1,13 +1,12 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" type="image/png"/>
-    <link rel="shortcut icon" href="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" type="image/png"/>
+    <title>DUCO Exchange | BCH - DUCO</title>
+    <link rel="icon" href="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" type="image/png" />
+    <link rel="shortcut icon" href="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" type="image/png" />
     <!-- SEO Stuff -->
     <meta name="description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin and Bitcoin Cash in a few clicks!">
     <meta name="keywords" content="exchange, altcoin, beyondcoin, xmg, magi, bynd, bch, bitcoincash, likecoin, lke, duco, duino, duinocoin, arduino, crypto, mining, blockchain, cryptocurrency, bitcoin">
@@ -17,110 +16,341 @@
     <!-- Open Graph Metadata -->
     <meta property="og:site_name" content="DUCO Exchange - Intuitive altcoin exchange service" />
     <meta property="og:site" content="https://revoxhere.github.io/duco-exchange/" />
-    <meta property="og:title" content="DUCO Exchange - Intuitive altcoin exchange service"/>
-    <meta property="og:description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin and Bitcoin Cash in a few clicks!" /> 
+    <meta property="og:title" content="DUCO Exchange - Intuitive altcoin exchange service" />
+    <meta property="og:description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin and Bitcoin Cash in a few clicks!" />
     <meta property="og:image" content="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" />
     <meta property="og:url" content="https://revoxhere.github.io/duco-exchange/" />
-    <meta property="og:type" content="website" />   
+    <meta property="og:type" content="website" />
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="DUCO Exchange - Intuitive altcoin exchange service">
     <meta name="twitter:description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin and Bitcoin Cash in a few clicks!">
     <meta name="twitter:image" content="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true">
     <meta name="twitter:site" content="@CoinDuino">
     <meta name="twitter:creator" content="@CoinDuino">
-    <script>
-    var speed = "fast";
-    $("html, body").hide();
-    $(document).ready(function() {
-        $("html, body").fadeIn(speed, function() {
-            $("a[href], button[href]").click(function(event) {
-                var url = $(this).attr("href");
-                if (url.indexOf("#") == 0 || url.indexOf("javascript:") == 0) return;
-                event.preventDefault();
-                $("html, body").fadeOut(speed, function() {
-                    window.location = url;});});});});
-    </script>
-    <title>DUCO Exchange | DUCO - LKE Exchange</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css">
     <style>
-      .textlogo {
-        font-family: "Archivo Black", sans-serif;
-        background-image: linear-gradient(45deg, #d90088, #ff7d00);
-        background-repeat: repeat;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; 
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
-      }
-      body {
-        background-color: #121212;
-      }
-      h1 {
-        color: #fafafa;
-      }
-      p, ul, ol {
-        font-size: 1.3em;
-        color: #ecf0f1;
-      }
-      a {
-        color: #bdc3c7;
-      }
+        .is-primary { 
+            /* Override Bulmas primary color to DUCO Exchange colored gradient*/
+            background: linear-gradient(160deg, #EA2027, #B53471) !important;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand ms-5" href="index.html"><img width="75em" src="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3.png?raw=true"></a>
-        <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="exchange.html">Exchange</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="listing.html">Listing form</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link me-5" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="row mx-auto">
-      <div class="col col-md-auto" style="background-color:#1e272e;">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link ms-5" aria-current="page" href="magi.html"><img height="16em" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true"> DUCO ⇌ XMG <img height="16em" src="https://cdn.discordapp.com/emojis/728704765378428938.png?v=1"></a>
-          </li>
-          <li class="nav-item ms-5">
-            <a class="nav-link" aria-current="page" href="bynd.html"><img height="16em" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true"> DUCO ⇌ BYND <img height="16em" src="https://beyondcoin.io/images/beyondcoin-logo.png"></a>
-          </li>
-          <li class="nav-item ms-5">
-            <a class="nav-link" aria-current="page" href="lke.html"><img height="16em" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true"> DUCO ⇌ LKE <img height="16em" src="https://likecoin.pro/img/logo.svg"></a>
-          </li>
-          <li class="nav-item ms-5">
-            <a class="nav-link" aria-current="page" href="bch.html"><img height="16em" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true"> DUCO ⇌ BCHN <img height="16em" src="https://assets.coingecko.com/coins/images/780/large/bitcoin-cash-circle.png?1594689492"></a>
-          </li>
-          <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
-        </ul>
-      </div>
-      <div class="col me-5">
-        <br>
-        <iframe width="100%" height="819" allowTransparency="true" frameborder="0" scrolling="no" style="border:none" src="https://www.emailmeform.com/builder/embed/KbSV4A8j8bbk"><a href="https://www.emailmeform.com/builder/embed/KbSV4A8j8bbk">Fill out form.</a></iframe>
-     </div>
+<body>
+    <div id="pageloader" class="pageloader is-active is-primary is-bottom-to-top">
+        <span class="title">DUCO Exchange</span>
     </div>
+    <nav class="navbar mt-1 mx-5" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item ml-5 mt-2" href="https://revoxhere.github.io/duco-exchange/">
+                <img src="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3.png?raw=true">
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="https://revoxhere.github.io/duco-exchange/exchange.html" class="navbar-item">
+                    <span class="subtitle is-size-5">
+                        Exchange pairs
+                    </span>
+                </a>
+                <a href="https://revoxhere.github.io/duco-exchange/listing.html" class="navbar-item">
+                    <span class="subtitle is-size-5">
+                        Listing form
+                    </span>
+                </a>
+            </div>
+            <div class="navbar-end mr-5">
+                <a href="https://revoxhere.github.io/duco-exchange/contact.html" class="navbar-item">
+                    <span class="subtitle is-size-5">
+                        Contact
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="title">
+                        <span class="icon">
+                            <img src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true">
+                        </span>
+                        Duino-Coin
+                        <i class="fa fa-exchange-alt"></i>
+                        <span class="icon">
+                            <img src="https://assets.coingecko.com/coins/images/780/large/bitcoin-cash-circle.png?1594689492">
+                        </span>
+                        Bitcoin Cash exchange form
+                    </h1>
+                </div>
+            </div>
+            <form id="emf-form" target="_self" enctype="multipart/form-data" method="post" action="https://www.emailmeform.com/builder/form/KbSV4A8j8bbk">
+                <span>
+                    <label>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="box notification is-info is-light">
+                                    <p class="title is-size-5">
+                                        Fill out this form to start the exchange process.
+                                    </p>
+                                    <p class="subtitle is-size-5">
+                                        After sending the exchange request you should receive an e-mail informing about the state of the transaction within the next 72 hours.<br>
+                                        <span class="subtitle is-size-6">Exchange request may be rejected if it's against <a href="https://revoxhere.github.io/duco-exchange/index.html#TOS">DUCO Exchange ToS</a> or <a href="https://github.com/revoxhere/duino-coin#terms-of-service">Duino-Coin ToS</a>.</span>
+                                    </p>
+                                    <p class="title mt-5 is-size-6">
+                                        Current exchange rates
+                                    </p>
+                                    <p class="subtitle is-size-6">
+                                        When selling: 1 DUCO ≈ 0.00000025 BCH<br>
+                                        When buying: 1 DUCO ≈ 0.0000005 BCH<br>
+                                        Transaction fee: 0.00001 BCH
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                    <br />
+                </span>
+                <div class="columns">
+                    <div class="column">
+                        <div class="box notification is-warning">
+                            <button class="delete"></button>
+                            <i class="fa fa-exclamation-triangle"></i>
+                            <strong>This exchange pair has poor liquidity.</strong> Consider selecting another exchange pair.<br>
+                            There is not enough BCH in our stock to achieve higher exchange rates for better prices.<br>
+                            If you want to change that, buy some DUCO.
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="box">
+                            <tr>
+                                <td id="td_element_label_0">
+                                    <p class="title is-size-5 mb-2">
+                                        <i class="fa fa-fw fa-user" style="color:#B53471"></i>
+                                        Your Duino-Coin username
+                                        <small style="color:#ff6b6b">*</small>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="td_element_field_0">
+                                    <input class="input mb-4" placeholder="username" id="element_0" name="element_0" value="" class="validate[required]" type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="td_element_label_1">
+                                    <p class="title is-size-5">
+                                        <i class="fa fa-fw fa-at" style="color:#1289A7"></i>
+                                        Your e-mail address
+                                        <small style="color:#ff6b6b">*</small>
+                                    </p>
+                                    <p class="subtitle is-size-5 mb-2">
+                                        associated with your Duino-Coin account
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="td_element_field_1">
+                                    <input class="input mb-4" placeholder="email" id="element_1" name="element_1" class="validate[required,custom[email]]" value="" type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="td_element_label_2">
+                                    <p class="title is-size-5 mb-2">
+                                        <i class="fa fa-fw fa-balance-scale" style="color:#009432"></i>
+                                        Are you selling or buying?
+                                        <small style="color:#ff6b6b">*</small>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="td_element_field_2">
+                                    <div>
+                                        <label class="radio mb-2">
+                                            <input type="radio" id="element_2_0" name="element_2" value="I'm selling DUCO for Bitcoin Cash" class="validate[required]" type="radio" />
+                                            <span class="subtitle">
+                                                &nbsp;I'm selling Duino-Coins for Bitcoin Cash
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="radio mb-4">
+                                            <input type="radio" id="element_2_1" name="element_2" value="I'm buying DUCO for Bitcoin Cash" class="validate[required]" type="radio" />
+                                            <span class="subtitle">
+                                                &nbsp;I'm buying Duino-Coins for Bitcoin Cash
+                                            </span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="td_element_label_3">
+                                    <p class="title is-size-5 mb-2">
+                                        <i class="fa fa-fw fa-coins" style="color:#EE5A24"></i>
+                                        How much DUCO are you selling/buying?
+                                        <small style="color:#ff6b6b">*</small>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="td_element_field_3">
+                                    <div class="columns">
+                                        <div class="column">
+                                            <input class="input mt-1" type="number" id="element_3" name="element_3" class="validate[required,lengthValue[200,3000],custom[onlyNumber]]" value="200" min="200" max="5000" />
+                                        </div>
+                                        <div class="column">
+                                            <p class="has-text-left">
+                                                <span class="subtitle is-size-6">
+                                                    If you're selling, you will receive
+                                                    <strong>
+                                                        <span style="color:#1289A7" id="exchangedValueLabel">
+                                                            ≈0.0004 BCH (≈$0.03)
+                                                        </span>
+                                                    </strong>
+                                                </span><br>
+                                                <span class="subtitle is-size-6 mb-4">
+                                                    If you're buying, you will pay
+                                                    <strong>
+                                                        <span style="color:#1289A7" id="soldValueLabel">
+                                                            ≈0.0011 BCH (≈$0.06)
+                                                        </span>
+                                                    </strong>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="td_element_label_4">
+                                    <p class="title is-size-5 mb-2">
+                                        <i class="fa fa-fw fa-address-card" style="color:#A3CB38"></i>
+                                        Your Bitcoin Cash wallet address
+                                        <small style="color:#ff6b6b">*</small>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="td_element_field_4">
+                                    <input class="input mb-3" id="element_4" placeholder="bch address" name="element_4" value="" class="validate[required]" type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="element_counts" value="5" type="hidden" />
+                                    <input name="embed" value="forms" type="hidden" />
+                                    <button class="button is-success is-fullwidth" type="submit">
+                                        <i class="fa fa-fw fa-check"></i>
+                                        &nbsp;Submit exchange request
+                                    </button>
+                                    <div class="buttons mt-5">
+                                        <a href="https://www.emailmeform.com" class="button is-secondary">
+                                            <span>Powered by</span>&nbsp;&nbsp;
+                                            <img class="image" width="16em" src="https://d2lp05f39ek59n.cloudfront.net/uploads/EmailMeForm_product_img_616243211_emailmeform.png">
+                                            <span><b>&nbsp;EMF</b></span>
+                                        </a>
+                                        <a href="https://bulma.io" class="button is-secondary">
+                                            <span>Made with</span>&nbsp;&nbsp;
+                                            <img class="image" width="16em" src="https://seeklogo.com/images/B/bulma-logo-45B5145BF4-seeklogo.com.png" alt="Bulma">&nbsp;
+                                            <span><b>BULMA</b></span>
+                                        </a>
+                                        <a href="https://duinocoin.com" class="button is-secondar">
+                                            <img class="image" width="16em" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true" alt="Bulma">&nbsp;
+                                            <span>Duino-Coin</span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
     <hr>
-    <footer>
-      <p align="center" style="color:#777777">This page is open source. You can improve it on <a href="https://github.com/revoxhere/duco-exchange">DUCO Exchange GitHub repository</a>.<br>
-      Duino-Coin, Coin Magi, Beyondcoin, Likecoin and Bitcoin Cash logos are a property of their respective owners.<br>
-      Created by Duino-Coin Community, 2019-2021<br>
-      Hosted using GitHub Pages</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>DUCO Exchange</strong> (v4) by <a href="https://github.com/revoxhere">Robert "revox" Piotrowski </a>2019-2021
+                <br>Hosted with the help of <a href="https://pages.github.com">GitHub Pages</a>
+                <br>Duino-Coin, Coin Magi, Beyondcoin, Likecoin and Bitcoin Cash logos are a property of their respective owners.
+                <br>This page is open-source. You can improve it <a href="https://github.com/revoxhere/duco-exchange">here</a><br>
+            </p>
+        </div>
     </footer>
-  </body>
+</body>
+<script>
+let bchPrice = 500;
+let buyValue = 0.0000005;
+let sellValue = 0.00000025;
+let transactionFee = 0.00001;
+document.addEventListener('DOMContentLoaded', () => {
+    $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash&vs_currencies=usd', function(data) {
+        bchPrice = data["bitcoin-cash"]["usd"]
+    });
+
+    setInterval(function() {
+        exchangedValue = document.getElementById("element_3").value;
+        exchangedValueBCH = exchangedValue * sellValue;
+        exchangedValueUSD = exchangedValueBCH * bchPrice;
+        // Selling
+        document.getElementById("exchangedValueLabel").innerHTML = "≈" + (exchangedValueBCH - transactionFee).toFixed(7) + " BCH (≈$" + exchangedValueUSD.toFixed(3) + ")";
+
+        // Buying
+        exchangedValue2 = exchangedValue * buyValue;
+        exchangedValueUSD2 = exchangedValue2 * bchPrice;
+        document.getElementById("soldValueLabel").innerHTML = "≈" + (exchangedValue2 + transactionFee).toFixed(7) + " BCH (≈$" + exchangedValueUSD2.toFixed(3) + ")";
+    }, 300);
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+        const $notification = $delete.parentNode;
+
+        $delete.addEventListener('click', () => {
+            $notification.parentNode.removeChild($notification);
+        });
+    });
+});
+</script>
+<script>
+let pageloader = document.getElementById("pageloader"); // PAGE LOAGER
+pageloader.setAttribute('class', "pageloader is-active is-primary is-bottom-to-top"); // Before page is loaded
+window.addEventListener('load', function() {
+    pageloader.setAttribute('class', "pageloader is-primary is-bottom-to-top"); // After page is loaded
+});
+
+document.addEventListener('DOMContentLoaded', () => { // HAMBURGER MENU
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => { // Add a click event on each of burger menus
+            el.addEventListener('click', () => {
+                const target = el.dataset.target; // Get the target from the "data-target" attribute
+                const $target = document.getElementById(target);
+                el.classList.toggle('is-active'); // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $target.classList.toggle('is-active');
+            });
+        });
+    }
+});
+</script>
+</body>
+
 </html>
