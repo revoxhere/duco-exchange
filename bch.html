@@ -114,7 +114,7 @@
                                         Current exchange rates
                                     </p>
                                     <p class="subtitle is-size-6">
-                                        When selling: 1 DUCO ≈ 0.00000075 BCH<br>
+                                        When selling: 1 DUCO ≈ 0.00000065 BCH<br>
                                         When buying: 1 DUCO ≈ 0.00000095 BCH<br>
                                         Transaction fee: 0.00001 BCH
                                     </p>
@@ -298,7 +298,7 @@
 <script>
 let bchPrice = 500;
 let buyValue = 0.00000095;
-let sellValue = 0.00000075;
+let sellValue = 0.00000065;
 let transactionFee = 0.00001;
 document.addEventListener('DOMContentLoaded', () => {
     $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash&vs_currencies=usd', function(data) {
