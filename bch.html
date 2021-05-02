@@ -126,12 +126,11 @@
                 </span>
                 <div class="columns">
                     <div class="column">
-                        <div class="box notification is-warning">
+                        <div class="box notification is-warning is-light">
                             <button class="delete"></button>
                             <i class="fa fa-exclamation-triangle"></i>
-                            <strong>This exchange pair has poor liquidity.</strong> Consider selecting another exchange pair.<br>
-                            There is not enough BCH in our stock to achieve higher exchange rates for better prices.<br>
-                            If you want to change that, buy some DUCO.
+                            <strong>This exchange pair has medium liquidity.</strong> Consider selecting another exchange pair.<br>
+                            Exchange rate on this pair isn't bad but could be better - if you want to change that - buy some DUCO.
                         </div>
                     </div>
                 </div>
@@ -166,7 +165,7 @@
                             </tr>
                             <tr>
                                 <td id="td_element_field_1">
-                                    <input class="input mb-4" placeholder="email" id="element_1" name="element_1" class="validate[required,custom[email]]" value="" type="text" />
+                                    <input class="input mb-4" placeholder="email@domain.com" id="element_1" name="element_1" class="validate[required,custom[email]]" value="" type="email" />
                                 </td>
                             </tr>
                             <tr>
@@ -204,6 +203,10 @@
                                         <i class="fa fa-fw fa-coins" style="color:#EE5A24"></i>
                                         How much DUCO are you selling/buying?
                                         <small style="color:#ff6b6b">*</small>
+                                        <p class="has-text-info mb-3">
+                                            <i class="fa fa-fw fa-info-circle"></i>
+                                            Minimum exchangeable amount is 200 DUCO
+                                        </p>
                                     </p>
                                 </td>
                             </tr>
@@ -223,7 +226,7 @@
                                                         </span>
                                                     </strong>
                                                 </span><br>
-                                                <span class="subtitle is-size-6 mb-4">
+                                                <span class="subtitle is-size-6">
                                                     If you're buying, you will pay
                                                     <strong>
                                                         <span style="color:#1289A7" id="soldValueLabel">
@@ -238,16 +241,24 @@
                             </tr>
                             <tr>
                                 <td id="td_element_label_4">
-                                    <p class="title is-size-5 mb-2">
+                                    <p class="title is-size-5 mb-1">
                                         <i class="fa fa-fw fa-address-card" style="color:#A3CB38"></i>
                                         Your Bitcoin Cash wallet address
                                         <small style="color:#ff6b6b">*</small>
+                                        <p id="invalid_address" class="has-text-danger" style="display:none">
+                                            <i class="fa fa-fw fa-exclamation-triangle"></i>
+                                            Provide a valid wallet address!
+                                        </p>
+                                        <p id="valid_address" class="has-text-success" style="display:none">
+                                            <i class="fa fa-fw fa-check"></i>
+                                            Valid wallet address provided!
+                                        </p>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
                                 <td id="td_element_field_4">
-                                    <input class="input mb-3" id="element_4" placeholder="bch address" name="element_4" value="" class="validate[required]" type="text" />
+                                    <input class="input mt-3 mb-3" id="element_4" placeholder="bitcoincash:..." name="element_4" value="" class="validate[required]" type="text" />
                                 </td>
                             </tr>
                             <tr>
@@ -295,12 +306,33 @@
         </div>
     </footer>
 </body>
+<script src="wallet-address-validator.min.js"></script>
 <script>
 let bchPrice = 500;
-let buyValue = 0.00000095;
-let sellValue = 0.00000065;
-let transactionFee = 0.00001;
+const buyValue = 0.00000095;
+const sellValue = 0.00000065;
+const transactionFee = 0.00001;
 document.addEventListener('DOMContentLoaded', () => {
+
+    const input = document.getElementById('element_4');
+    const valid_address = document.getElementById("valid_address");
+    const invalid_address = document.getElementById("invalid_address");
+
+    input.addEventListener('input', updateValue);
+
+    function updateValue(e) {
+        console.log(e.target.value);
+        var valid = WAValidator.validate(e.target.value, 'BCH');
+        if (valid) {
+            valid_address.style.display = "block";
+            invalid_address.style.display = "none";
+        } else {
+            valid_address.style.display = "none";
+            invalid_address.style.display = "block";
+        }
+    }
+
+
     $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash&vs_currencies=usd', function(data) {
         bchPrice = data["bitcoin-cash"]["usd"]
     });
