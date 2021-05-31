@@ -265,7 +265,7 @@
                                 <td>
                                     <input name="element_counts" value="5" type="hidden" />
                                     <input name="embed" value="forms" type="hidden" />
-                                    <button class="button is-success is-fullwidth" type="submit">
+                                    <button class="button is-success is-fullwidth" id="submit_form" type="submit">
                                         <i class="fa fa-fw fa-check"></i>
                                         &nbsp;Submit exchange request
                                     </button>
@@ -308,11 +308,38 @@
 </body>
 <script src="wallet-address-validator.min.js"></script>
 <script>
+let correct_balance = false;
 let bchPrice = 500;
 const buyValue = 0.00000095;
 const sellValue = 0.00000065;
 const transactionFee = 0.00001;
 document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("submit_form").disabled = true;
+
+    const radios = document.querySelectorAll('input[type=radio]');
+
+    $('input[type=radio]').click(function() {
+        if (this.value == "I'm selling DUCO for Bitcoin Cash") {
+
+            var username = document.getElementById('element_0').value;
+
+            try {
+                $.getJSON('https://server.duinocoin.com/balances/' + username, function(data) {
+                    if (data.result.balance >= 200) {
+                        correct_balance = true;
+                    } else {
+                        correct_balance = false;
+                        document.getElementById("submit_form").disabled = false;
+                    }
+                });
+            } catch (e) {
+                correct_balance = false;
+                document.getElementById("submit_form").disabled = false;
+            }
+        } else {
+            correct_balance = true;
+        }
+    });
 
     const input = document.getElementById('element_4');
     const valid_address = document.getElementById("valid_address");
@@ -326,9 +353,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (valid) {
             valid_address.style.display = "block";
             invalid_address.style.display = "none";
+
+            if (valid && correct_balance) {
+                document.getElementById("submit_form").disabled = false;
+            } else {
+                document.getElementById("submit_form").disabled = true;
+            }
+
         } else {
             valid_address.style.display = "none";
             invalid_address.style.display = "block";
+            document.getElementById("submit_form").disabled = true;
         }
     }
 
