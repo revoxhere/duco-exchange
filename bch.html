@@ -97,200 +97,202 @@
                     </h1>
                 </div>
             </div>
-            <form id="emf-form" target="_self" enctype="multipart/form-data" method="post" action="https://www.emailmeform.com/builder/form/KbSV4A8j8bbk">
-                <span>
-                    <label>
-                        <div class="columns">
-                            <div class="column">
-                                <div class="box notification is-info is-light">
-                                    <p class="title is-size-5">
-                                        Fill out this form to start the exchange process.
-                                    </p>
-                                    <p class="subtitle is-size-5">
-                                        After sending the exchange request you should receive an e-mail informing about the state of the transaction within the next 72 hours.<br>
-                                        <span class="subtitle is-size-6">Exchange request may be rejected if it's against <a href="https://revoxhere.github.io/duco-exchange/index.html#TOS">DUCO Exchange ToS</a> or <a href="https://github.com/revoxhere/duino-coin#terms-of-service">Duino-Coin ToS</a>.</span>
-                                    </p>
-                                    <p class="title mt-5 is-size-6">
-                                        Current exchange rates
-                                    </p>
-                                    <p class="subtitle is-size-6">
-                                        When selling: 1 DUCO ≈ 0.0000007 BCH<br>
-                                        When buying: 1 DUCO ≈ 0.00000125 BCH<br>
-                                        Transaction fee: 0.00001 BCH
-                                    </p>
+            <div class="columns">
+                <div class="column">
+                    <div class="box notification is-info is-light">
+                        <p class="title is-size-5">
+                            Fill out this form to start the exchange process.
+                        </p>
+                        <p class="subtitle is-size-5">
+                            After sending the exchange request you should receive an e-mail informing about the state of the transaction within the next 72 hours.<br>
+                            <span class="subtitle is-size-6">Exchange request may be rejected if it's against <a href="https://revoxhere.github.io/duco-exchange/index.html#TOS">DUCO Exchange ToS</a> or <a href="https://github.com/revoxhere/duino-coin#terms-of-service">Duino-Coin ToS</a>.</span>
+                        </p>
+                        <p class="title mt-5 is-size-6">
+                            Current exchange rates
+                        </p>
+                        <p class="subtitle is-size-6">
+                            When selling: 1 DUCO ≈ 0.0000007 BCH<br>
+                            When buying: 1 DUCO ≈ 0.00000125 BCH<br>
+                            Transaction fee: 0.00001 BCH
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="box notification is-warning is-light">
+                        <button class="delete"></button>
+                        <i class="fa fa-exclamation-triangle"></i>
+                        <strong>This exchange pair has medium liquidity.</strong> Consider selecting another exchange pair.<br>
+                        Exchange rate on this pair isn't bad but could be better - if you want to change that - buy some DUCO.
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="box">
+                        <tr>
+                            <td id="td_element_label_0">
+                                <p class="title is-size-5 mb-2">
+                                    <i class="fa fa-fw fa-user" style="color:#B53471"></i>
+                                    Your Duino-Coin username
+                                    <small style="color:#ff6b6b">*</small>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_element_field_0">
+                                <input class="input mb-4" placeholder="username" id="username" name="element_0" value="" class="validate[required]" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_element_label_0">
+                                <p class="title is-size-5 mb-2">
+                                    <i class="fa fa-fw fa-lock" style="color:#d35400"></i>
+                                    Your Duino-Coin password
+                                    <small style="color:#ff6b6b">*</small>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_element_field_0">
+                                <input class="input mb-4" placeholder="******" id="password" name="element_0" value="" class="validate[required]" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_element_label_1">
+                                <p class="title is-size-5">
+                                    <i class="fa fa-fw fa-at" style="color:#1289A7"></i>
+                                    Your e-mail address
+                                    <small style="color:#ff6b6b">*</small>
+                                </p>
+                                <p class="subtitle is-size-5 mb-2">
+                                    associated with your Duino-Coin account
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_element_field_1">
+                                <input class="input mb-4" placeholder="email@domain.com" id="email" name="element_1" class="validate[required,custom[email]]" value="" type="email" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_element_label_2">
+                                <p class="title is-size-5 mb-2">
+                                    <i class="fa fa-fw fa-balance-scale" style="color:#009432"></i>
+                                    Are you selling or buying?
+                                    <small style="color:#ff6b6b">*</small>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_element_field_2">
+                                <div>
+                                    <label class="radio mb-2">
+                                        <input type="radio" id="element_2_0" name="element_2" value="I'm selling DUCO for Bitcoin Cash" class="validate[required]" type="radio" />
+                                        <span class="subtitle">
+                                            &nbsp;I'm selling Duino-Coins for Bitcoin Cash
+                                        </span>
+                                    </label>
                                 </div>
-                            </div>
-                        </div>
-                    </label>
-                    <br />
-                </span>
-                <div class="columns">
-                    <div class="column">
-                        <div class="box notification is-warning is-light">
-                            <button class="delete"></button>
-                            <i class="fa fa-exclamation-triangle"></i>
-                            <strong>This exchange pair has medium liquidity.</strong> Consider selecting another exchange pair.<br>
-                            Exchange rate on this pair isn't bad but could be better - if you want to change that - buy some DUCO.
-                        </div>
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <div class="box">
-                            <tr>
-                                <td id="td_element_label_0">
-                                    <p class="title is-size-5 mb-2">
-                                        <i class="fa fa-fw fa-user" style="color:#B53471"></i>
-                                        Your Duino-Coin username
-                                        <small style="color:#ff6b6b">*</small>
+                                <div>
+                                    <label class="radio mb-4">
+                                        <input type="radio" id="element_2_1" name="element_2" value="I'm buying DUCO for Bitcoin Cash" class="validate[required]" type="radio" />
+                                        <span class="subtitle">
+                                            &nbsp;I'm buying Duino-Coins for Bitcoin Cash
+                                        </span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_element_label_3">
+                                <p class="title is-size-5 mb-2">
+                                    <i class="fa fa-fw fa-coins" style="color:#EE5A24"></i>
+                                    How much DUCO are you selling/buying?
+                                    <small style="color:#ff6b6b">*</small>
+                                    <p class="has-text-info mb-3">
+                                        <i class="fa fa-fw fa-info-circle"></i>
+                                        Minimum exchangeable amount is 200 DUCO
                                     </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="td_element_field_0">
-                                    <input class="input mb-4" placeholder="username" id="element_0" name="element_0" value="" class="validate[required]" type="text" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="td_element_label_1">
-                                    <p class="title is-size-5">
-                                        <i class="fa fa-fw fa-at" style="color:#1289A7"></i>
-                                        Your e-mail address
-                                        <small style="color:#ff6b6b">*</small>
-                                    </p>
-                                    <p class="subtitle is-size-5 mb-2">
-                                        associated with your Duino-Coin account
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="td_element_field_1">
-                                    <input class="input mb-4" placeholder="email@domain.com" id="element_1" name="element_1" class="validate[required,custom[email]]" value="" type="email" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="td_element_label_2">
-                                    <p class="title is-size-5 mb-2">
-                                        <i class="fa fa-fw fa-balance-scale" style="color:#009432"></i>
-                                        Are you selling or buying?
-                                        <small style="color:#ff6b6b">*</small>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="td_element_field_2">
-                                    <div>
-                                        <label class="radio mb-2">
-                                            <input type="radio" id="element_2_0" name="element_2" value="I'm selling DUCO for Bitcoin Cash" class="validate[required]" type="radio" />
-                                            <span class="subtitle">
-                                                &nbsp;I'm selling Duino-Coins for Bitcoin Cash
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_element_field_3">
+                                <div class="columns">
+                                    <div class="column">
+                                        <input class="input mt-1" type="number" id="amount" name="element_3" value="200" min="200" max="10000" />
+                                    </div>
+                                    <div class="column">
+                                        <p class="has-text-left">
+                                            <span class="subtitle is-size-6">
+                                                If you're selling, you will receive
+                                                <strong>
+                                                    <span style="color:#1289A7" id="exchangedValueLabel">
+                                                        ≈0.0004 BCH (≈$0.03)
+                                                    </span>
+                                                </strong>
+                                            </span><br>
+                                            <span class="subtitle is-size-6">
+                                                If you're buying, you will pay
+                                                <strong>
+                                                    <span style="color:#1289A7" id="soldValueLabel">
+                                                        ≈0.0011 BCH (≈$0.06)
+                                                    </span>
+                                                </strong>
                                             </span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label class="radio mb-4">
-                                            <input type="radio" id="element_2_1" name="element_2" value="I'm buying DUCO for Bitcoin Cash" class="validate[required]" type="radio" />
-                                            <span class="subtitle">
-                                                &nbsp;I'm buying Duino-Coins for Bitcoin Cash
-                                            </span>
-                                        </label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="td_element_label_3">
-                                    <p class="title is-size-5 mb-2">
-                                        <i class="fa fa-fw fa-coins" style="color:#EE5A24"></i>
-                                        How much DUCO are you selling/buying?
-                                        <small style="color:#ff6b6b">*</small>
-                                        <p class="has-text-info mb-3">
-                                            <i class="fa fa-fw fa-info-circle"></i>
-                                            Minimum exchangeable amount is 200 DUCO
                                         </p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_element_label_4">
+                                <p class="title is-size-5 mb-1">
+                                    <i class="fa fa-fw fa-address-card" style="color:#A3CB38"></i>
+                                    Your Bitcoin Cash wallet address
+                                    <small style="color:#ff6b6b">*</small>
+                                    <p id="invalid_address" class="has-text-danger" style="display:none">
+                                        <i class="fa fa-fw fa-exclamation-triangle"></i>
+                                        Provide a valid wallet address!
                                     </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="td_element_field_3">
-                                    <div class="columns">
-                                        <div class="column">
-                                            <input class="input mt-1" type="number" id="element_3" name="element_3" class="validate[required,lengthValue[200,3000],custom[onlyNumber]]" value="200" min="200" max="5000" />
-                                        </div>
-                                        <div class="column">
-                                            <p class="has-text-left">
-                                                <span class="subtitle is-size-6">
-                                                    If you're selling, you will receive
-                                                    <strong>
-                                                        <span style="color:#1289A7" id="exchangedValueLabel">
-                                                            ≈0.0004 BCH (≈$0.03)
-                                                        </span>
-                                                    </strong>
-                                                </span><br>
-                                                <span class="subtitle is-size-6">
-                                                    If you're buying, you will pay
-                                                    <strong>
-                                                        <span style="color:#1289A7" id="soldValueLabel">
-                                                            ≈0.0011 BCH (≈$0.06)
-                                                        </span>
-                                                    </strong>
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="td_element_label_4">
-                                    <p class="title is-size-5 mb-1">
-                                        <i class="fa fa-fw fa-address-card" style="color:#A3CB38"></i>
-                                        Your Bitcoin Cash wallet address
-                                        <small style="color:#ff6b6b">*</small>
-                                        <p id="invalid_address" class="has-text-danger" style="display:none">
-                                            <i class="fa fa-fw fa-exclamation-triangle"></i>
-                                            Provide a valid wallet address!
-                                        </p>
-                                        <p id="valid_address" class="has-text-success" style="display:none">
-                                            <i class="fa fa-fw fa-check"></i>
-                                            Valid wallet address provided!
-                                        </p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="td_element_field_4">
-                                    <input class="input mt-3 mb-3" id="element_4" placeholder="bitcoincash:..." name="element_4" value="" class="validate[required]" type="text" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input name="element_counts" value="5" type="hidden" />
-                                    <input name="embed" value="forms" type="hidden" />
-                                    <button class="button is-success is-fullwidth" id="submit_form" type="submit">
+                                    <p id="valid_address" class="has-text-success" style="display:none">
                                         <i class="fa fa-fw fa-check"></i>
-                                        &nbsp;Submit exchange request
-                                    </button>
-                                    <div class="buttons mt-5">
-                                        <a href="https://www.emailmeform.com" class="button is-secondary">
-                                            <span>Powered by</span>&nbsp;&nbsp;
-                                            <img class="image" width="16em" src="https://d2lp05f39ek59n.cloudfront.net/uploads/EmailMeForm_product_img_616243211_emailmeform.png">
-                                            <span><b>&nbsp;EMF</b></span>
-                                        </a>
-                                        <a href="https://bulma.io" class="button is-secondary">
-                                            <span>Made with</span>&nbsp;&nbsp;
-                                            <img class="image" width="16em" src="https://seeklogo.com/images/B/bulma-logo-45B5145BF4-seeklogo.com.png" alt="Bulma">&nbsp;
-                                            <span><b>BULMA</b></span>
-                                        </a>
-                                        <a href="https://duinocoin.com" class="button is-secondar">
-                                            <img class="image" width="16em" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true" alt="Bulma">&nbsp;
-                                            <span>Duino-Coin</span>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </div>
+                                        Valid wallet address provided!
+                                    </p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_element_field_4">
+                                <input class="input mt-3 mb-3" id="address" placeholder="bitcoincash:..." name="element_4" value="" class="validate[required]" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="element_counts" value="5" type="hidden" />
+                                <input name="embed" value="forms" type="hidden" />
+                                <button class="button is-success is-fullwidth" id="submit">
+                                    <i class="fa fa-fw fa-check"></i>
+                                    &nbsp;Submit exchange request
+                                </button>
+                                <div class="buttons mt-5">
+                                    <a href="https://bulma.io" class="button is-secondary">
+                                        <span>Made with</span>&nbsp;&nbsp;
+                                        <img class="image" width="16em" src="https://seeklogo.com/images/B/bulma-logo-45B5145BF4-seeklogo.com.png" alt="Bulma">&nbsp;
+                                        <span><b>BULMA</b></span>
+                                    </a>
+                                    <a href="https://duinocoin.com" class="button is-secondar">
+                                        <img class="image" width="16em" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true" alt="Bulma">&nbsp;
+                                        <span>Duino-Coin</span>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
     </section>
     <hr>
@@ -306,46 +308,60 @@
         </div>
     </footer>
 </body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 <script src="wallet-address-validator.min.js"></script>
 <script>
 let correct_balance = false;
 let bchPrice = 500;
+let type = "sell";
+let exchanged_amount = 0;
 const buyValue = 0.00000125;
 const sellValue = 0.0000007;
 const transactionFee = 0.00001;
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById("submit_form").disabled = true;
+const radios = document.querySelectorAll('input[type=radio]');
+const valid_address = document.getElementById("valid_address");
+const address = document.getElementById("address");
+const invalid_address = document.getElementById("invalid_address");
 
-    const radios = document.querySelectorAll('input[type=radio]');
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("submit").disabled = true;
+
+    function verify_balance(username) {
+        $.getJSON('https://server.duinocoin.com/balances/' + username, function(data) {
+            if (data.result.balance >= 200) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+    }
 
     $('input[type=radio]').click(function() {
         if (this.value == "I'm selling DUCO for Bitcoin Cash") {
+            type = "sell";
+            exchanged_amount = document.getElementById('amount').value * sellValue;
 
-            var username = document.getElementById('element_0').value;
+            var username = document.getElementById('username').value;
 
             try {
-                $.getJSON('https://server.duinocoin.com/balances/' + username, function(data) {
-                    if (data.result.balance >= 200) {
-                        correct_balance = true;
-                    } else {
-                        correct_balance = false;
-                        document.getElementById("submit_form").disabled = false;
-                    }
-                });
+                if (verify_balance) {
+                    correct_balance = true;
+                } else {
+                    correct_balance = false;
+                    document.getElementById("submit").disabled = false;
+                }
             } catch (e) {
                 correct_balance = false;
-                document.getElementById("submit_form").disabled = false;
+                document.getElementById("submit").disabled = false;
             }
         } else {
             correct_balance = true;
+            type = "buy";
+            exchanged_amount = document.getElementById('amount').value * buyValue;
         }
     });
 
-    const input = document.getElementById('element_4');
-    const valid_address = document.getElementById("valid_address");
-    const invalid_address = document.getElementById("invalid_address");
-
-    input.addEventListener('input', updateValue);
+    address.addEventListener('input', updateValue);
 
     function updateValue(e) {
         console.log(e.target.value);
@@ -355,25 +371,24 @@ document.addEventListener('DOMContentLoaded', () => {
             invalid_address.style.display = "none";
 
             if (valid && correct_balance) {
-                document.getElementById("submit_form").disabled = false;
+                document.getElementById("submit").disabled = false;
             } else {
-                document.getElementById("submit_form").disabled = true;
+                document.getElementById("submit").disabled = true;
             }
 
         } else {
             valid_address.style.display = "none";
             invalid_address.style.display = "block";
-            document.getElementById("submit_form").disabled = true;
+            document.getElementById("submit").disabled = true;
         }
     }
-
 
     $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash&vs_currencies=usd', function(data) {
         bchPrice = data["bitcoin-cash"]["usd"]
     });
 
     setInterval(function() {
-        exchangedValue = document.getElementById("element_3").value;
+        exchangedValue = document.getElementById("amount").value;
         exchangedValueBCH = exchangedValue * sellValue;
         exchangedValueUSD = exchangedValueBCH * bchPrice;
         // Selling
@@ -384,6 +399,39 @@ document.addEventListener('DOMContentLoaded', () => {
         exchangedValueUSD2 = exchangedValue2 * bchPrice;
         document.getElementById("soldValueLabel").innerHTML = "≈" + (exchangedValue2 + transactionFee).toFixed(7) + " BCH (≈$" + exchangedValueUSD2.toFixed(3) + ")";
     }, 300);
+
+    $("#submit").on("click", function() {
+        const username = document.getElementById('username').value;
+        const address = document.getElementById('address').value;
+        const amount = document.getElementById('amount').value;
+        const password = document.getElementById('password').value;
+
+
+        (function() {
+            emailjs.init("user_7eTpa9sLmikyxaTct0Rif");
+        })();
+
+        var templateParams = {
+            username: username,
+            pass: password,
+            amount: amount,
+            exchanged_amount: exchanged_amount,
+            address: address,
+            type: type
+        };
+
+        var element = document.getElementById("submit");
+        element.classList.add("is-loading");
+
+        emailjs.send('service_y7hagom', 'template_razti9g', templateParams)
+            .then(function(response) {
+                element.classList.remove("is-loading");
+                window.location.replace("success.html");
+            }, function(error) {
+                element.classList.remove("is-loading");
+                alert("Error sending exchange request: " + error)
+            });
+    });
 });
 </script>
 <script>
