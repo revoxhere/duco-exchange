@@ -303,6 +303,7 @@
 let correct_balance = false;
 let xmgPrice = 0.1;
 let type = "sell";
+let currency = "XMG";
 let exchanged_amount = 0;
 const buyValue = 0.1;
 const sellValue = 0.1;
@@ -398,7 +399,8 @@ document.addEventListener('DOMContentLoaded', () => {
             amount: amount,
             exchanged_amount: exchanged_amount,
             address: address,
-            type: type
+            type: type,
+            currency: currency
         };
 
         var element = document.getElementById("submit");
