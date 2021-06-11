@@ -156,7 +156,7 @@
                         </tr>
                         <tr>
                             <td id="td_element_field_0">
-                                <input class="input mb-4" placeholder="******" id="password" show="*" name="element_0" value="" class="validate[required]" type="password" />
+                                <input class="input mb-4" placeholder="******" id="password" name="element_0" value="" class="validate[required]" type="password" />
                             </td>
                         </tr>
                         <tr>
@@ -314,6 +314,7 @@
 let correct_balance = false;
 let bchPrice = 500;
 let type = "sell";
+let currency = "BCH";
 let exchanged_amount = 0;
 const buyValue = 0.00000125;
 const sellValue = 0.0000007;
@@ -417,7 +418,8 @@ document.addEventListener('DOMContentLoaded', () => {
             amount: amount,
             exchanged_amount: exchanged_amount,
             address: address,
-            type: type
+            type: type,
+            currency: currency
         };
 
         var element = document.getElementById("submit");
