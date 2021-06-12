@@ -1,0 +1,21 @@
+{
+	"result": {
+		"bch": {
+			"sell": 0.0000007,
+			"buy": 0.00000125
+		},
+		"xmg": {
+			"sell": 0.1,
+			"buy": 0.1
+		},
+		"lke": {
+			"sell": 0.75,
+			"buy": 0.75
+		},
+		"bynd": {
+			"sell": 0,
+			"buy": 0.1
+		}
+	},
+	"success": true
+}
