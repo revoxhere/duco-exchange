@@ -340,10 +340,8 @@ document.addEventListener('DOMContentLoaded', () => {
     $('input[type=radio]').click(function() {
         if (this.value == "I'm selling DUCO for Bitcoin Cash") {
             type = "sell";
-            exchanged_amount = document.getElementById('amount').value * sellValue;
 
-            var username = document.getElementById('username').value;
-
+            let username = document.getElementById('username').value;
             try {
                 if (verify_balance) {
                     correct_balance = true;
@@ -358,7 +356,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             correct_balance = true;
             type = "buy";
-            exchanged_amount = document.getElementById('amount').value * buyValue;
         }
     });
 
@@ -407,6 +404,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const amount = document.getElementById('amount').value;
         const password = document.getElementById('password').value;
         const email = document.getElementById('email').value;
+
+        if (type == "sell") {
+            exchanged_amount = document.getElementById('amount').value * sellValue;
+        }
+        else {
+            exchanged_amount = document.getElementById('amount').value * buyValue;
+        }
 
         (function() {
             emailjs.init("user_7eTpa9sLmikyxaTct0Rif");
