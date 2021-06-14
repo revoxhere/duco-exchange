@@ -25,8 +25,8 @@
     <meta name="twitter:title" content="DUCO Exchange - Intuitive altcoin exchange service">
     <meta name="twitter:description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin and Bitcoin Cash in a few clicks!">
     <meta name="twitter:image" content="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true">
-    <meta name="twitter:site" content="@CoinDuino">
-    <meta name="twitter:creator" content="@CoinDuino">
+    <meta name="twitter:site" content="@DuinoCoin">
+    <meta name="twitter:creator" content="@DuinoCoin">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
@@ -220,7 +220,7 @@
                                                 If you're selling, you will receive
                                                 <strong>
                                                     <span style="color:#1289A7" id="exchangedValueLabel">
-                                                        ≈0.1 XMG (≈$0.1)
+                                                        ≈19.9500000 XMG (≈$0.484)
                                                     </span>
                                                 </strong>
                                             </span><br>
@@ -228,7 +228,7 @@
                                                 If you're buying, you will pay
                                                 <strong>
                                                     <span style="color:#1289A7" id="soldValueLabel">
-                                                        ≈0.1 XMG (≈$0.1)
+                                                        ≈20.0500000 XMG (≈$0.484)
                                                     </span>
                                                 </strong>
                                             </span>
@@ -311,6 +311,7 @@ const transactionFee = 0.05;
 const radios = document.querySelectorAll('input[type=radio]');
 const valid_address = document.getElementById("valid_address");
 const address = document.getElementById("address");
+const amount_input = document.getElementById("amount");
 const invalid_address = document.getElementById("invalid_address");
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -369,7 +370,9 @@ document.addEventListener('DOMContentLoaded', () => {
         xmgPrice = data["magi"]["usd"]
     });
 
-    setInterval(function() {
+    amount_input.addEventListener('input', updateRate);
+
+    function updateRate(e) {
         exchangedValue = document.getElementById("amount").value;
         exchangedValueXMG = exchangedValue * sellValue;
         exchangedValueUSD = exchangedValueXMG * xmgPrice;
@@ -380,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
         exchangedValue2 = exchangedValue * buyValue;
         exchangedValueUSD2 = exchangedValue2 * xmgPrice;
         document.getElementById("soldValueLabel").innerHTML = "≈" + (exchangedValue2 + transactionFee).toFixed(7) + " XMG (≈$" + exchangedValueUSD2.toFixed(3) + ")";
-    }, 300);
+    }
 
     $("#submit").on("click", function() {
         const username = document.getElementById('username').value;
