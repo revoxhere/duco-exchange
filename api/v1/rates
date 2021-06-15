@@ -1,20 +1,20 @@
 {
 	"result": {
 		"bch": {
-			"sell": 0.0000007,
-			"buy": 0.00000125
+			"sell": 0.000001,
+			"buy": 0.00000175
 		},
 		"xmg": {
-			"sell": 0.1,
-			"buy": 0.1
+			"sell": 0.5,
+			"buy": 0.5
 		},
 		"lke": {
-			"sell": 0.75,
-			"buy": 0.75
+			"sell": 1,
+			"buy": 1
 		},
 		"bynd": {
 			"sell": 0,
-			"buy": 0.1
+			"buy": 0.5
 		}
 	},
 	"success": true
