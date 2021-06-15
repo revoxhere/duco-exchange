@@ -111,8 +111,8 @@
                             Current exchange rates
                         </p>
                         <p class="subtitle is-size-6">
-                            When selling: 1 DUCO ≈ 0.75 LKE<br>
-                            When buying: 1 DUCO ≈ 0.75 LKE<br>
+                            When selling: 1 DUCO ≈ <span id="lkes"></span> LKE<br>
+                            When buying: 1 DUCO ≈ <span id="lkeb"></span> LKE<br>
                             Transaction fee: none
                         </p>
                     </div>
@@ -285,13 +285,24 @@ let lkePrice = 0.1;
 let type = "sell";
 let currency = "LKE";
 let exchanged_amount = 0;
-const buyValue = 0.75;
-const sellValue = 0.75;
+let buyValue;
+let sellValue;
 const transactionFee = 0;
 const radios = document.querySelectorAll('input[type=radio]');
 const valid_address = document.getElementById("valid_address");
 const address = document.getElementById("address");
 const invalid_address = document.getElementById("invalid_address");
+
+document.addEventListener('DOMContentLoaded', () => {
+    $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
+        data = data.result;
+
+        $("#lkes").html(data.lke.sell);
+        $("#lkeb").html(data.lke.buy);
+        buyValue = data.lke.buy;
+        sellValue = data.lke.sell;
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("submit").disabled = true;
