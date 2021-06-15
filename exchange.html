@@ -107,8 +107,8 @@
                                 XMG
                             </span><br>
                             <span class="subtitle is-size-7">
-                                Sell: 1 DUCO ≈ 0.1 XMG<br>
-                                Buy: 1 DUCO ≈ 0.1 XMG<br>
+                                Sell: 1 DUCO ≈ <span id="xmgs"></span> XMG<br>
+                                Buy: 1 DUCO ≈ <span id="xmgb"></span> XMG<br>
                                 Transaction fee: 0.05 XMG<br>
                                 Liquidity:
                                 <span class="has-text-success-dark">
@@ -132,7 +132,7 @@
                                 BYND
                             </span><br>
                             <span class="subtitle is-size-7">
-                                Buy: 1 DUCO ≈ 0.1 BYND<br>
+                                Buy: 1 DUCO ≈ <span id="byndb"></span> BYND<br>
                                 Transaction fee: none<br>
                                 Liquidity:
                                 <span class="has-text-danger-dark">
@@ -160,8 +160,8 @@
                                 LKE
                             </span><br>
                             <span class="subtitle is-size-7">
-                                Sell: 1 DUCO ≈ 0.75 LKE<br>
-                                Buy: 1 DUCO ≈ 0.75 LKE<br>
+                                Sell: 1 DUCO ≈ <span id="lkes"></span> LKE<br>
+                                Buy: 1 DUCO ≈ <span id="lkeb"></span> LKE<br>
                                 Transaction fee: none<br>
                                 Liquidity:
                                 <span class="has-text-success-dark">
@@ -185,8 +185,8 @@
                                 BCH
                             </span><br>
                             <span class="subtitle is-size-7">
-                                Sell: 1 DUCO ≈ 0.0000007 BCH<br>
-                                Buy: 1 DUCO ≈ 0.00000125 BCH<br>
+                                Sell: 1 DUCO ≈ <span id="bchs"></span> BCH<br>
+                                Buy: 1 DUCO ≈ <span id="bchb"></span> BCH<br>
                                 Transaction fee: 0.00001 BCH<br>
                                 Liquidity:
                                 <span class="has-text-warning-dark">
@@ -266,6 +266,25 @@
         </div>
     </footer>
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
+        data = data.result;
+
+        $("#bchs").html(data.bch.sell)
+        $("#bchb").html(data.bch.buy)
+
+        $("#xmgs").html(data.xmg.sell)
+        $("#xmgb").html(data.xmg.buy)
+
+        $("#lkes").html(data.lke.sell)
+        $("#lkeb").html(data.lke.buy)
+
+        $("#bynds").html(data.bynd.sell)
+        $("#byndb").html(data.bynd.buy)
+    });
+});
+</script>
 <script>
 let pageloader = document.getElementById("pageloader"); // PAGE LOAGER
 pageloader.setAttribute('class', "pageloader is-active is-primary is-bottom-to-top"); // Before page is loaded
