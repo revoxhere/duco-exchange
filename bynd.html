@@ -111,7 +111,7 @@
                             Current exchange rates
                         </p>
                         <p class="subtitle is-size-6">
-                            When buying: 1 DUCO ≈ 0.1 BYND<br>
+                            When buying: 1 DUCO ≈ <span id="byndb"></span> BYND<br>
                         </p>
                     </div>
                 </div>
@@ -303,13 +303,24 @@ let byndPrice = 0.1;
 let type = "sell";
 let currency = "BYND";
 let exchanged_amount = 0;
-const buyValue = 0.1;
-const sellValue = 0.1;
+let buyValue;
+let sellValue;
 const transactionFee = 0;
 const radios = document.querySelectorAll('input[type=radio]');
 const valid_address = document.getElementById("valid_address");
 const address = document.getElementById("address");
 const invalid_address = document.getElementById("invalid_address");
+
+document.addEventListener('DOMContentLoaded', () => {
+    $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
+        data = data.result;
+
+        $("#bynds").html(data.bynd.sell);
+        $("#byndb").html(data.bynd.buy);
+        buyValue = data.bynd.buy;
+        sellValue = data.bynd.sell;
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("submit").disabled = true;
