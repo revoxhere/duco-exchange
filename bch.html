@@ -111,8 +111,8 @@
                             Current exchange rates
                         </p>
                         <p class="subtitle is-size-6">
-                            When selling: 1 DUCO ≈ 0.0000007 BCH<br>
-                            When buying: 1 DUCO ≈ 0.00000125 BCH<br>
+                            When selling: 1 DUCO ≈ <span id="bchs"></span> BCH<br>
+                            When buying: 1 DUCO ≈ <span id="bchb"></span> BCH<br>
                             Transaction fee: 0.00001 BCH
                         </p>
                     </div>
@@ -316,13 +316,24 @@ let bchPrice = 500;
 let type = "sell";
 let currency = "BCH";
 let exchanged_amount = 0;
-const buyValue = 0.00000125;
-const sellValue = 0.0000007;
+let buyValue;
+let sellValue;
 const transactionFee = 0.00001;
 const radios = document.querySelectorAll('input[type=radio]');
 const valid_address = document.getElementById("valid_address");
 const address = document.getElementById("address");
 const invalid_address = document.getElementById("invalid_address");
+
+document.addEventListener('DOMContentLoaded', () => {
+    $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
+        data = data.result;
+
+        $("#bchs").html(data.bch.sell);
+        $("#bchb").html(data.bch.buy);
+        buyValue = data.bch.buy;
+        sellValue = data.bch.sell;
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("submit").disabled = true;
