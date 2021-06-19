@@ -15,6 +15,10 @@
 		"bynd": {
 			"sell": 0,
 			"buy": 0.5
+		},
+		"trx": {
+			"sell": 0.01
+			"buy": 0.025
 		}
 	},
 	"success": true
