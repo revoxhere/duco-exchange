@@ -93,8 +93,8 @@
            Sorry for inconvenience.
         </p>-->
         <br>
-        <div class="columns">
-            <div class="column">
+        <div class="columns is-multiline">
+            <div class="column is-one-third">
                 <a href="magi.html">
                     <div class="box">
                         <p align="center">
@@ -119,12 +119,12 @@
                     </div>
                 </a>
             </div>
-            <div class="column">
+            <div class="column is-one-third">
                 <a href="bynd.html">
                     <div class="box">
                         <p align="center">
                             <img class="icon is-large" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true">
-                            <img class="icon is-large" src="https://en.bitcoinwiki.org/upload/en/images/thumb/5/51/Beyondcoin-Logo.png/250px-Beyondcoin-Logo.png">
+                            <img class="icon is-large" src="http://en.bitcoinwiki.org/upload/en/images/thumb/5/51/Beyondcoin-Logo.png/250px-Beyondcoin-Logo.png">
                             <br>
                             <span class="title is-size-4">
                                 DUCO
@@ -147,7 +147,7 @@
                     </div>
                 </a>
             </div>
-            <div class="column">
+            <div class="column is-one-third">
                 <a href="lke.html">
                     <div class="box">
                         <p align="center">
@@ -172,7 +172,7 @@
                     </div>
                 </a>
             </div>
-            <div class="column">
+            <div class="column is-one-fourth">
                 <a href="bch.html">
                     <div class="box">
                         <p align="center">
@@ -197,14 +197,37 @@
                     </div>
                 </a>
             </div>
-        </div>
-        <div class="columns">
-            <div class="column">
-                <a href="#!">
+            <div class="column is-one-fourth">
+                <a href="trx.html">
                     <div class="box">
                         <p align="center">
                             <img class="icon is-large" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true">
                             <img class="icon is-large" src="https://iconape.com/wp-content/files/ku/110933/svg/tron.svg">
+                            <br>exc
+                            <span class="title is-size-4">
+                                DUCO
+                                <i class="fa fa-exchange-alt"></i>
+                                TRX
+                            </span><br>
+                            <span class="subtitle is-size-7">
+                                Sell: 1 DUCO ≈ <span id="trxs"></span> TRX<br>
+                                Buy: 1 DUCO ≈ <span id="trxb"></span> TRX<br>
+                                Transaction fee: 1 TRX<br>
+                                Liquidity:
+                                <span class="has-text-warning-dark">
+                                    LOW
+                                </span>
+                            </span><br>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="column is-one-fourth">
+                <a href="#!">
+                    <div class="box">
+                        <p align="center">
+                            <img class="icon is-large" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true">
+                            <img class="icon is-large" src="https://assets.website-files.com/5c269a684fdbba1386c0d796/5daa540e0d705b20297dd194_xrp-social-media-profile%201.svg">
                             <br>
                             <span class="subtitle is-size-4">
                                 Coming soon<br>
@@ -212,12 +235,12 @@
                             <span class="title is-size-4">
                                 DUCO
                                 <i class="fa fa-exchange-alt"></i>
-                                TRX
+                                XRP
                             </span><br>
                             <span class="subtitle is-size-7">
-                                Sell: 1 DUCO ≈ ? TRX<br>
-                                Buy: 1 DUCO ≈ ? TRX<br>
-                                Transaction fee: ? TRX<br>
+                                Sell: 1 DUCO ≈ ? XRP<br>
+                                Buy: 1 DUCO ≈ ? XRP<br>
+                                Transaction fee: ? XRP<br>
                                 Liquidity:
                                 <span class="has-text-warning-dark">
                                     ?
@@ -227,7 +250,7 @@
                     </div>
                 </a>
             </div>
-            <div class="column">
+            <div class="column is-one-fourth">
                 <a href="#!">
                     <div class="box">
                         <p align="center">
@@ -282,6 +305,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         $("#bynds").html(data.bynd.sell)
         $("#byndb").html(data.bynd.buy)
+
+        $("#trxs").html(data.trx.sell)
+        $("#trxb").html(data.trx.buy)
     });
 });
 </script>
