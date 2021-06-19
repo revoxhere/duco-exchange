@@ -330,6 +330,7 @@ let transactionFee = 0.00001;
 let tos_checked = false;
 let correct_balance = false;
 let correct_address = false;
+let correct_amount = false;
 
 const amount_input = document.getElementById("amount");
 const radios = document.querySelectorAll('input[type=radio]');
@@ -414,11 +415,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Display notifications when amount is incorrect
         if (exchanged_amount < 200) {
             amount_notify.innerHTML = "Minimum exchangeable amount is 200 DUCO";
-            amount_input.value = 200;
+            correct_amount = false;
         } else if (exchanged_amount > 10000) {
             amount_notify.innerHTML = "Maximum exchangeable amount is 10000 DUCO";
-            amount_input.value = 10000;
+            correct_amount = false;
         } else {
+            correct_amount = true;
             amount_notify.innerHTML = "";
 
             // Selling
@@ -441,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function check_inputs(){
         if (tos_checked) {
-            if (correct_balance) {
+            if (correct_balance && correct_amount) {
                 if (correct_address) {
                     submit_button.disabled = false;
                 } else {
