@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DUCO Exchange | BCH - DUCO</title>
+    <title>DUCO Exchange | Exchange form</title>
     <link rel="icon" href="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" type="image/png" />
     <link rel="shortcut icon" href="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" type="image/png" />
     <!-- SEO Stuff -->
-    <meta name="description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin and Bitcoin Cash in a few clicks!">
-    <meta name="keywords" content="exchange, altcoin, beyondcoin, xmg, magi, bynd, bch, bitcoincash, likecoin, lke, duco, duino, duinocoin, arduino, crypto, mining, blockchain, cryptocurrency, bitcoin">
+    <meta name="description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin, Bitcoin Cash and Tron in a few clicks!">
+    <meta name="keywords" content="exchange, altcoin, beyondcoin, xmg, magi, bynd, bch, bitcoincash, likecoin, trx, tron, lke, duco, duino, duinocoin, arduino, crypto, mining, blockchain, cryptocurrency, bitcoin">
     <link rel="canonical" href="https://revoxhere.github.io/duco-exchange/" />
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#D90088">
@@ -17,13 +17,13 @@
     <meta property="og:site_name" content="DUCO Exchange - Intuitive altcoin exchange service" />
     <meta property="og:site" content="https://revoxhere.github.io/duco-exchange/" />
     <meta property="og:title" content="DUCO Exchange - Intuitive altcoin exchange service" />
-    <meta property="og:description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin and Bitcoin Cash in a few clicks!" />
+    <meta property="og:description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin, Bitcoin Cash and Tron in a few clicks!" />
     <meta property="og:image" content="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" />
     <meta property="og:url" content="https://revoxhere.github.io/duco-exchange/" />
     <meta property="og:type" content="website" />
     <!-- Twitter Metadata -->
     <meta name="twitter:title" content="DUCO Exchange - Intuitive altcoin exchange service">
-    <meta name="twitter:description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin and Bitcoin Cash in a few clicks!">
+    <meta name="twitter:description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin, Bitcoin Cash and Tron in a few clicks!">
     <meta name="twitter:image" content="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true">
     <meta name="twitter:site" content="@CoinDuino">
     <meta name="twitter:creator" content="@CoinDuino">
@@ -135,7 +135,7 @@
                             <td id="td_element_label_0">
                                 <p class="title is-size-5 mb-2">
                                     <i class="fa fa-fw fa-user" style="color:#B53471"></i>
-                                    Your Duino-Coin username
+                                    Duino-Coin username
                                     <small style="color:#ff6b6b">*</small>
                                 </p>
                             </td>
@@ -149,7 +149,7 @@
                             <td id="td_element_label_0">
                                 <p class="title is-size-5 mb-2">
                                     <i class="fa fa-fw fa-lock" style="color:#d35400"></i>
-                                    Your Duino-Coin password
+                                    Duino-Coin password
                                     <small style="color:#ff6b6b">*</small>
                                 </p>
                             </td>
@@ -163,7 +163,7 @@
                             <td id="td_element_label_1">
                                 <p class="title is-size-5">
                                     <i class="fa fa-fw fa-at" style="color:#1289A7"></i>
-                                    Your e-mail address
+                                    E-mail address
                                     <small style="color:#ff6b6b">*</small>
                                 </p>
                                 <p class="subtitle is-size-5 mb-2">
@@ -211,9 +211,7 @@
                                     <i class="fa fa-fw fa-coins" style="color:#EE5A24"></i>
                                     How much DUCO are you selling/buying?
                                     <small style="color:#ff6b6b">*</small>
-                                    <p class="has-text-info mb-3">
-                                        <i class="fa fa-fw fa-info-circle"></i>
-                                        Minimum exchangeable amount is 200 DUCO
+                                    <p class="has-text-info mb-3" id="amount_notify">
                                     </p>
                                 </p>
                             </td>
@@ -222,23 +220,23 @@
                             <td id="td_element_field_3">
                                 <div class="columns">
                                     <div class="column">
-                                        <input class="input mt-1" type="number" id="amount" name="element_3" value="200" min="200" max="10000" />
+                                        <input class="input mt-1" type="number" id="amount" name="element_3" value="200" />
                                     </div>
                                     <div class="column">
                                         <p class="has-text-left">
                                             <span class="subtitle is-size-6">
                                                 If you're selling, you will receive
                                                 <strong>
-                                                    <span style="color:#1289A7" id="exchangedValueLabel">
-                                                        ≈0.0004 BCH (≈$0.03)
+                                                    <span style="color:#6ab04c" id="exchanged_amountLabel">
+                                                        0.000190 BCH (≈$0.115)
                                                     </span>
                                                 </strong>
                                             </span><br>
                                             <span class="subtitle is-size-6">
                                                 If you're buying, you will pay
                                                 <strong>
-                                                    <span style="color:#1289A7" id="soldValueLabel">
-                                                        ≈0.0011 BCH (≈$0.06)
+                                                    <span style="color:#6ab04c" id="soldValueLabel">
+                                                        0.000360 BCH (≈$0.201)
                                                     </span>
                                                 </strong>
                                             </span>
@@ -251,7 +249,7 @@
                             <td id="td_element_label_4">
                                 <p class="title is-size-5 mb-1">
                                     <i class="fa fa-fw fa-address-card" style="color:#A3CB38"></i>
-                                    Your Bitcoin Cash wallet address
+                                    Bitcoin Cash wallet address
                                     <small style="color:#ff6b6b">*</small>
                                     <p id="invalid_address" class="has-text-danger" style="display:none">
                                         <i class="fa fa-fw fa-exclamation-triangle"></i>
@@ -270,10 +268,21 @@
                             </td>
                         </tr>
                         <tr>
+                            <label class="subtitle checkbox mb-3">
+                                <input type="checkbox" id="tos">
+                                I agree to the
+                                <a href="https://exchange.duinocoin.com/index.html#TOS">DUCO Exchange</a>
+                                and
+                                <a href="https://github.com/revoxhere/duino-coin#terms-of-service">Duino-Coin</a>
+                                terms of service
+                                <small style="color:#ff6b6b">*</small>
+                            </label>
+                        </tr>
+                        <tr>
                             <td>
                                 <input name="element_counts" value="5" type="hidden" />
                                 <input name="embed" value="forms" type="hidden" />
-                                <button class="button is-success is-fullwidth" id="submit">
+                                <button class="button is-success is-fullwidth" disabled="true" id="submit">
                                     <i class="fa fa-fw fa-check"></i>
                                     &nbsp;Submit exchange request
                                 </button>
@@ -311,59 +320,65 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 <script src="wallet-address-validator.min.js"></script>
 <script>
-let correct_balance = false;
-let bchPrice = 500;
 let type = "sell";
 let currency = "BCH";
 let exchanged_amount = 0;
-let buyValue;
-let sellValue;
-const transactionFee = 0.00001;
+let buy_value, sell_value;
+let coin_price = 500;
+let transactionFee = 0.00001;
+
+let tos_checked = false;
+let correct_balance = false;
+let correct_address = false;
+
+const amount_input = document.getElementById("amount");
 const radios = document.querySelectorAll('input[type=radio]');
+
+const amount_notify = document.getElementById("amount_notify");
+const sell_label = document.getElementById("exchanged_amountLabel");
+const buy_label = document.getElementById("soldValueLabel");
+
 const valid_address = document.getElementById("valid_address");
-const address = document.getElementById("address");
 const invalid_address = document.getElementById("invalid_address");
+const address = document.getElementById("address");
 
-document.addEventListener('DOMContentLoaded', () => {
-    $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
-        data = data.result;
+const tos = document.getElementById("tos");
+const submit_button = document.getElementById("submit")
 
-        $("#bchs").html(data.bch.sell);
-        $("#bchb").html(data.bch.buy);
-        buyValue = data.bch.buy;
-        sellValue = data.bch.sell;
-    });
+$.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash&vs_currencies=usd', function(data) {
+    coin_price = data["bitcoin-cash"]["usd"]
+});
+
+$.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
+    data = data.result;
+    $("#bchs").html(data.bch.sell);
+    $("#bchb").html(data.bch.buy);
+    buy_value = data.bch.buy;
+    sell_value = data.bch.sell;
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById("submit").disabled = true;
-
-    function verify_balance(username) {
-        $.getJSON('https://server.duinocoin.com/balances/' + username, function(data) {
-            if (data.result.balance >= 200) {
-                return true;
-            } else {
-                return false;
-            }
-        });
-    }
 
     $('input[type=radio]').click(function() {
+        console.log(this.value);
         if (this.value == "I'm selling DUCO for Bitcoin Cash") {
             type = "sell";
+            username = document.getElementById('username').value;
 
-            let username = document.getElementById('username').value;
-            try {
-                if (verify_balance) {
+            amount_notify.innerHTML = "Checking your balance...";
+            $.getJSON('https://server.duinocoin.com/balances/' + username, function(data) {
+                if (data.result.balance >= 200) {
+                    amount_notify.innerHTML = "You have enough DUCO in your account";
                     correct_balance = true;
                 } else {
+                    amount_notify.innerHTML = "You don't have enough DUCO in your account";
                     correct_balance = false;
-                    document.getElementById("submit").disabled = false;
                 }
-            } catch (e) {
+            }).fail(function() { 
+                amount_notify.innerHTML = "Error checking your balance";
                 correct_balance = false;
-                document.getElementById("submit").disabled = false;
-            }
+            });
+
         } else {
             correct_balance = true;
             type = "buy";
@@ -373,61 +388,97 @@ document.addEventListener('DOMContentLoaded', () => {
     address.addEventListener('input', updateValue);
 
     function updateValue(e) {
-        console.log(e.target.value);
-        var valid = WAValidator.validate(e.target.value, 'BCH');
-        if (valid) {
+        // Coin wallet address validation
+        correct_address = WAValidator.validate(e.target.value, 'BCH');
+
+        if (correct_address) {
             valid_address.style.display = "block";
             invalid_address.style.display = "none";
-
-            if (valid && correct_balance) {
-                document.getElementById("submit").disabled = false;
-            } else {
-                document.getElementById("submit").disabled = true;
-            }
-
         } else {
             valid_address.style.display = "none";
             invalid_address.style.display = "block";
-            document.getElementById("submit").disabled = true;
         }
     }
 
-    $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash&vs_currencies=usd', function(data) {
-        bchPrice = data["bitcoin-cash"]["usd"]
+    amount_input.addEventListener('input', updateRate);
+
+    function updateRate(e) {
+        // Show exchanged amount
+        exchanged_amount = amount_input.value;
+        exchanged_coin_value = exchanged_amount * sell_value;
+        exchanged_coin_value_usd = exchanged_coin_value * coin_price;
+
+        exchanged_amount_buy = exchanged_amount * buy_value;
+        exchanged_coin_value_usd_buy = exchanged_amount_buy * coin_price;
+
+        // Display notifications when amount is incorrect
+        if (exchanged_amount < 200) {
+            amount_notify.innerHTML = "Minimum exchangeable amount is 200 DUCO";
+            amount_input.value = 200;
+        } else if (exchanged_amount > 10000) {
+            amount_notify.innerHTML = "Maximum exchangeable amount is 10000 DUCO";
+            amount_input.value = 10000;
+        } else {
+            amount_notify.innerHTML = "";
+
+            // Selling
+            sell_label.innerHTML = (exchanged_coin_value - transactionFee).toFixed(6) +
+                " " + currency + " (≈$" + exchanged_coin_value_usd.toFixed(3) + ")";
+
+            // Buying
+            buy_label.innerHTML = (exchanged_amount_buy + transactionFee).toFixed(6) +
+                " " + currency + " (≈$" + exchanged_coin_value_usd_buy.toFixed(3) + ")";
+        }
+    }
+
+    tos.addEventListener("change", function() {
+        if (this.checked) {
+            tos_checked = true;
+        } else {
+            tos_checked = false;
+        }
     });
 
-    setInterval(function() {
-        exchangedValue = document.getElementById("amount").value;
-        exchangedValueBCH = exchangedValue * sellValue;
-        exchangedValueUSD = exchangedValueBCH * bchPrice;
-        // Selling
-        document.getElementById("exchangedValueLabel").innerHTML = "≈" + (exchangedValueBCH - transactionFee).toFixed(7) + " BCH (≈$" + exchangedValueUSD.toFixed(3) + ")";
+    function check_inputs(){
+        if (tos_checked) {
+            if (correct_balance) {
+                if (correct_address) {
+                    submit_button.disabled = false;
+                } else {
+                    submit_button.disabled = true;
+                }
+            } else {
+                submit_button.disabled = true;
+                amount_notify.innerHTML = "You don't have enough DUCO in your account";
+            }
+        } else {
+            submit_button.disabled = true;
+        }
+        
+        setTimeout(check_inputs, 100);
+    }
+    check_inputs();
 
-        // Buying
-        exchangedValue2 = exchangedValue * buyValue;
-        exchangedValueUSD2 = exchangedValue2 * bchPrice;
-        document.getElementById("soldValueLabel").innerHTML = "≈" + (exchangedValue2 + transactionFee).toFixed(7) + " BCH (≈$" + exchangedValueUSD2.toFixed(3) + ")";
-    }, 300);
+    submit_button.addEventListener("click", function() {
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        let email = document.getElementById('email').value;
+        let amount = document.getElementById('amount').value;
+        let address = document.getElementById('address').value;
 
-    $("#submit").on("click", function() {
-        const username = document.getElementById('username').value;
-        const address = document.getElementById('address').value;
-        const amount = document.getElementById('amount').value;
-        const password = document.getElementById('password').value;
-        const email = document.getElementById('email').value;
+        submit_button.classList.add("is-loading");
 
         if (type == "sell") {
-            exchanged_amount = document.getElementById('amount').value * sellValue;
-        }
-        else {
-            exchanged_amount = document.getElementById('amount').value * buyValue;
+            exchanged_amount = amount.value * sell_value;
+        } else {
+            exchanged_amount = amount.value * buy_value;
         }
 
         (function() {
             emailjs.init("user_7eTpa9sLmikyxaTct0Rif");
         })();
 
-        var templateParams = {
+        let params = {
             username: username,
             pass: password,
             amount: amount,
@@ -438,15 +489,12 @@ document.addEventListener('DOMContentLoaded', () => {
             mail: email
         };
 
-        var element = document.getElementById("submit");
-        element.classList.add("is-loading");
-
-        emailjs.send('service_y7hagom', 'template_razti9g', templateParams)
+        emailjs.send('service_y7hagom', 'template_razti9g', params)
             .then(function(response) {
-                element.classList.remove("is-loading");
+                submit_button.classList.remove("is-loading");
                 window.location.replace("success.html");
             }, function(error) {
-                element.classList.remove("is-loading");
+                submit_button.classList.remove("is-loading");
                 alert("Error sending exchange request: " + error)
             });
     });
