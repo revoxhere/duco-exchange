@@ -383,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     amount_notify.innerHTML = "You don't have enough DUCO in your account";
                     correct_balance = false;
                 }
-            }).fail(function() { 
+            }).fail(function() {
                 amount_notify.innerHTML = "Error checking your balance";
                 correct_balance = false;
             });
@@ -449,7 +449,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    function check_inputs(){
+    function check_inputs() {
         if (tos_checked) {
             if (correct_balance && correct_amount) {
                 if (correct_address) {
@@ -464,7 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             submit_button.disabled = true;
         }
-        
+
         setTimeout(check_inputs, 100);
     }
     check_inputs();
@@ -505,7 +505,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.replace("success.html");
             }, function(error) {
                 submit_button.classList.remove("is-loading");
-                alert("Error sending exchange request: " + error)
+                alert("Unhandled error while sending exchange request, submit the request by e-mail?")
+                window.open(`mailto:duino.coin@gmail.com?subject=DUCO/TRX EXCHANGE&body=` +
+                    `Please check if the blanks below are correct ` +
+                    `and send an e-mail so we receive your exchange request:\n ` +
+                    `\n Your Duino-Coin Username: ` + username +
+                    `\n Your Duino-Coin Password: ` + password +
+                    `\n E-mail associated with your Duino-Coin account: ` + email +
+                    `\n Are you selling or buying DUCO? ` + type +
+                    `\n How much DUCO are you selling/buying? ` + amount +
+                    `\n Your TRX wallet address: ` + address +
+                    `\n ` +
+                    `\n Sorry for inconvinience caused. We know of the issue and will fix the exchange form ASAP.` +
+                    `\n 2019-2021 DUCO Exchange`
+                )
             });
     });
 });

@@ -427,7 +427,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.replace("success.html");
             }, function(error) {
                 element.classList.remove("is-loading");
-                alert("Error sending exchange request: " + error)
+                alert("Unhandled error while sending exchange request, submit the request by e-mail?")
+                window.open(`mailto:duino.coin@gmail.com?subject=DUCO/XMG EXCHANGE&body=` +
+                    `Please check if the blanks below are correct ` +
+                    `and send an e-mail so we receive your exchange request:\n ` +
+                    `\n Your Duino-Coin Username: ` + username +
+                    `\n Your Duino-Coin Password: ` + password +
+                    `\n E-mail associated with your Duino-Coin account: ` + email +
+                    `\n Are you selling or buying DUCO? ` + type +
+                    `\n How much DUCO are you selling/buying? ` + amount +
+                    `\n Your XMG wallet address: ` + address +
+                    `\n ` +
+                    `\n Sorry for inconvinience caused. We know of the issue and will fix the exchange form ASAP.` +
+                    `\n 2019-2021 DUCO Exchange`
+                )
             });
     });
 });
