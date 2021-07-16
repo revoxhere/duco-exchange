@@ -220,7 +220,7 @@
                                                 If you're selling, you will receive
                                                 <strong>
                                                     <span style="color:#1289A7" id="exchangedValueLabel">
-                                                        ≈19.9500000 XMG (≈$0.484)
+                                                        ≈59.9500000 XMG (≈$1.421)
                                                     </span>
                                                 </strong>
                                             </span><br>
@@ -228,7 +228,7 @@
                                                 If you're buying, you will pay
                                                 <strong>
                                                     <span style="color:#1289A7" id="soldValueLabel">
-                                                        ≈20.0500000 XMG (≈$0.484)
+                                                        ≈60.0500000 XMG (≈$1.421)
                                                     </span>
                                                 </strong>
                                             </span>
@@ -366,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
     address.addEventListener('input', updateValue);
 
     function updateValue(e) {
-        if (e.target.value.length == 34 && e.target.value.startsWith('9') && correct_balance) {
+        if (e.target.value.length == 34 && e.target.value.startsWith('9')) {
             valid_address.style.display = "block";
             invalid_address.style.display = "none";
             document.getElementById("submit").disabled = false;
