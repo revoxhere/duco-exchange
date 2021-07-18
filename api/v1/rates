@@ -17,8 +17,8 @@
 			"buy": 0.5
 		},
 		"trx": {
-			"sell": 0.0105,
-			"buy": 0.0215
+			"sell": 0.075,
+			"buy": 0.1
 		}
 	},
 	"success": true
