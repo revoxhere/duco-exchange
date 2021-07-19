@@ -9,7 +9,7 @@
 			"buy": 0.3
 		},
 		"lke": {
-			"sell": 2,
+			"sell": 1.25,
 			"buy": 1.5
 		},
 		"bynd": {
@@ -17,8 +17,8 @@
 			"buy": 0.5
 		},
 		"trx": {
-			"sell": 0.03,
-			"buy": 0.075
+			"sell": 0.015,
+			"buy": 0.03
 		}
 	},
 	"success": true
