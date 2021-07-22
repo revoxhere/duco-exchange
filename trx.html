@@ -365,23 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(this.value);
         if (this.value == "I'm selling DUCO for Tron") {
             type = "sell";
-            correct_balance = false;
-            username = document.getElementById('username').value;
-
-            amount_notify.innerHTML = "Checking your balance...";
-            $.getJSON('https://server.duinocoin.com/balances/' + username, function(data) {
-                if (data.result.balance >= 200) {
-                    amount_notify.innerHTML = "You have enough DUCO in your account";
-                    correct_balance = true;
-                } else {
-                    amount_notify.innerHTML = "You don't have enough DUCO in your account";
-                    correct_balance = false;
-                }
-            }).fail(function() {
-                amount_notify.innerHTML = "Error checking your balance";
-                correct_balance = false;
-            });
-
+            correct_balance = true;
         } else {
             correct_balance = true;
             type = "buy";
@@ -471,6 +455,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let address = document.getElementById('address').value;
         let exchangedamount = 0;
         submit_button.classList.add("is-loading");
+        
+        function round_to(precision, value) {
+            power_of_ten = 10 ** precision;
+            return Math.round(value * power_of_ten) / power_of_ten;
+        }
 
         if (type == "sell") {
             exchangedamount = amount * sell_value;
