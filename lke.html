@@ -362,6 +362,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const amount = document.getElementById('amount').value;
         const password = document.getElementById('password').value;
         const email = document.getElementById('email').value;
+        
+        if (type == "sell") {
+            exchangedamount = amount * sell_value;
+        } else {
+            exchangedamount = amount * buy_value;
+        }
 
         (function() {
             emailjs.init("user_7eTpa9sLmikyxaTct0Rif");
