@@ -407,6 +407,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const amount = document.getElementById('amount').value;
         const password = document.getElementById('password').value;
         const email = document.getElementById('email').value;
+        
+        function round_to(precision, value) {
+            power_of_ten = 10 ** precision;
+            return Math.round(value * power_of_ten) / power_of_ten;
+        }
 
         (function() {
             emailjs.init("user_7eTpa9sLmikyxaTct0Rif");
