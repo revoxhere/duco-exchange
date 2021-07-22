@@ -364,9 +364,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('email').value;
         
         if (type == "sell") {
-            exchangedamount = amount * sell_value;
+            exchangedamount = amount * sellValue;
         } else {
-            exchangedamount = amount * buy_value;
+            exchangedamount = amount * buyValue;
+        }
+        
+        function round_to(precision, value) {
+            power_of_ten = 10 ** precision;
+            return Math.round(value * power_of_ten) / power_of_ten;
         }
 
         (function() {
