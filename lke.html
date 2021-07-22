@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
     address.addEventListener('input', updateValue);
 
     function updateValue(e) {
-        if (e.target.value.length == 43 && e.target.value.startsWith('Like') && correct_balance) {
+        if (e.target.value.length == 43 && e.target.value.startsWith('Like')) {
             valid_address.style.display = "block";
             invalid_address.style.display = "none";
             document.getElementById("submit").disabled = false;
