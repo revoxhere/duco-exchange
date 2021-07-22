@@ -499,7 +499,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.replace("success.html");
             }, function(error) {
                 submit_button.classList.remove("is-loading");
-                alert("An error occured while submitting the request, do you want to submit the request automatically by e-mail?")
+                alert("EJS is currently unavailable but the exchange request can be sent by e-mail, do you want to submit the request by emailing us?")
                 window.open(`mailto:duino.coin@gmail.com?subject=DUCO/TRX EXCHANGE&body=` +
                     `Please check if the blanks below are correct ` +
                     `and send an e-mail so we receive your exchange request:%0D%0A ` +
