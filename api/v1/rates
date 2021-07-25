@@ -2,19 +2,23 @@
 	"result": {
 		"bch": {
 			"sell": 0.0000019,
-			"buy": 0.00000275
+			"buy": 0.00000275,
+			"liquidity": "MEDIUM"
 		},
 		"xmg": {
 			"sell": 0.3,
-			"buy": 0.3
+			"buy": 0.3,
+			"liquidity": "GOOD"
 		},
 		"lke": {
 			"sell": 1,
-			"buy": 1.1
+			"buy": 1.1,
+			"liquidity": "GOOD"
 		},
 		"trx": {
 			"sell": 0.015,
-			"buy": 0.035
+			"buy": 0.035,
+			"liquidity": "LOW"
 		}
 	},
 	"success": true
