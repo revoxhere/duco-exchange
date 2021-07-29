@@ -1,0 +1,116 @@
+.is-primary {
+    background: linear-gradient(90deg, #FF57B9, #f76b1c) !important;
+    background-blend-mode: darken;
+}
+
+.shadow {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background: linear-gradient(90deg, #f02fc2, #A704FD);
+    background-size: 777% 777%;
+    -webkit-animation: colorfulbackground 1.5s ease infinite;
+    -moz-animation: colorfulbackground 1.5s ease infinite;
+    animation: colorfulbackground 1.5s ease infinite;
+    font-size: 24px !important;
+    border: 0;
+    outline: 0;
+    color: white;
+}
+
+.btn:hover {
+    background: linear-gradient(120deg, #f02fc2, #A704FD);
+    background-size: 777% 777%;
+    color: white;
+    text-decoration: underline;
+    -webkit-animation: colorfulbackground 0.7s ease infinite;
+    -moz-animation: colorfulbackground 0.7s ease infinite;
+    animation: colorfulbackground 0.7s ease infinite;
+}
+
+@-webkit-keyframes colorfulbackground {
+    0% {
+        background-position: 0% 20%
+    }
+
+    50% {
+        background-position: 100% 81%
+    }
+
+    100% {
+        background-position: 0% 20%
+    }
+}
+
+@-moz-keyframes colorfulbackground {
+    0% {
+        background-position: 0% 20%
+    }
+
+    50% {
+        background-position: 100% 81%
+    }
+
+    100% {
+        background-position: 0% 20%
+    }
+}
+
+@keyframes colorfulbackground {
+    0% {
+        background-position: 0% 20%
+    }
+
+    50% {
+        background-position: 100% 81%
+    }
+
+    100% {
+        background-position: 0% 20%
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #636e72;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #2d3436;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}

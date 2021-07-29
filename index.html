@@ -4,306 +4,325 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DUCO Exchange | Intuitive altcoin exchange service</title>
-    <link rel="icon" href="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" type="image/png" />
-    <link rel="shortcut icon" href="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" type="image/png" />
+    <title>DUCO Exchange | Easy to use coin exchange service</title>
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/png" />
     <!-- SEO Stuff -->
-    <meta name="description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin and Bitcoin Cash in a few clicks!">
+    <meta name="description" content="Exchange Duino-Coin between Coin Magi, Likecoin, Bitcoin Cash, Ripple, Tron or Digibyte in a few clicks">
     <meta name="keywords" content="exchange, altcoin, beyondcoin, xmg, magi, bynd, bch, bitcoincash, likecoin, lke, duco, duino, duinocoin, arduino, crypto, mining, blockchain, cryptocurrency, bitcoin">
-    <link rel="canonical" href="https://revoxhere.github.io/duco-exchange/" />
+    <link rel="canonical" href="https://exchange.duinocoin.com/" />
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#D90088">
     <!-- Open Graph Metadata -->
-    <meta property="og:site_name" content="DUCO Exchange - Intuitive altcoin exchange service" />
-    <meta property="og:site" content="https://revoxhere.github.io/duco-exchange/" />
-    <meta property="og:title" content="DUCO Exchange - Intuitive altcoin exchange service" />
-    <meta property="og:description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin and Bitcoin Cash in a few clicks!" />
-    <meta property="og:image" content="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" />
-    <meta property="og:url" content="https://revoxhere.github.io/duco-exchange/" />
+    <meta property="og:site_name" content="DUCO Exchange - Easy to use coin exchange service" />
+    <meta property="og:site" content="https://exchange.duinocoin.com/" />
+    <meta property="og:title" content="DUCO Exchange - Easy to use coin exchange service" />
+    <meta property="og:description" content="Exchange Duino-Coin between Coin Magi, Likecoin, Bitcoin Cash, Ripple, Tron or Digibyte in a few clicks" />
+    <meta property="og:image" content="images/logo.png" />
+    <meta property="og:url" content="https://exchange.duinocoin.com/" />
     <meta property="og:type" content="website" />
     <!-- Twitter Metadata -->
-    <meta name="twitter:title" content="DUCO Exchange - Intuitive altcoin exchange service">
-    <meta name="twitter:description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin and Bitcoin Cash in a few clicks!">
-    <meta name="twitter:image" content="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true">
-    <meta name="twitter:site" content="@CoinDuino">
-    <meta name="twitter:creator" content="@CoinDuino">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+    <meta name="twitter:title" content="DUCO Exchange - Easy to use coin exchange service">
+    <meta name="twitter:description" content="Exchange Duino-Coin between Coin Magi, Likecoin, Bitcoin Cash, Ripple, Tron or Digibyte in a few clicks">
+    <meta name="twitter:image" content="images/logo.png">
+    <meta name="twitter:site" content="@DuinoCoin">
+    <meta name="twitter:creator" content="@DuinoCoin">
+    <!-- Imports -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma-prefers-dark" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css">
-    <style>
-    .is-primary {
-        /* Override Bulmas primary color to DUCO Exchange colored gradient*/
-        background: linear-gradient(160deg, #EA2027, #B53471) !important;
-    }
-    </style>
-    <style>
-    .btn {
-        background: linear-gradient(90deg, #d90088, #ff7d00);
-        background-size: 400% 400%;
-        -webkit-animation: colorfulbackground 1.5s ease infinite;
-        -moz-animation: colorfulbackground 1.5s ease infinite;
-        animation: colorfulbackground 1.5s ease infinite;
-        transiutio
-
-        font-size: 24px !important;
-        border: 0;
-        outline: 0;
-        text-transform: uppercase;
-    }
-
-    .btn:hover {
-        background: linear-gradient(45deg, #d90088, #ff7d0f, #B53471);
-        background-size: 400% 400%;
-        color: #fafafa;
-        -webkit-animation: colorfulbackground 0.7s ease infinite;
-        -moz-animation: colorfulbackground 0.7s ease infinite;
-        animation: colorfulbackground 0.7s ease infinite;
-    }
-
-    @-webkit-keyframes colorfulbackground {
-        0% {
-            background-position: 0% 20%
-        }
-
-        50% {
-            background-position: 100% 81%
-        }
-
-        100% {
-            background-position: 0% 20%
-        }
-    }
-
-    @-moz-keyframes colorfulbackground {
-        0% {
-            background-position: 0% 20%
-        }
-
-        50% {
-            background-position: 100% 81%
-        }
-
-        100% {
-            background-position: 0% 20%
-        }
-    }
-
-    @keyframes colorfulbackground {
-        0% {
-            background-position: 0% 20%
-        }
-
-        50% {
-            background-position: 100% 81%
-        }
-
-        100% {
-            background-position: 0% 20%
-        }
-    }
-    @media (prefers-color-scheme: light) {
-        ::-webkit-scrollbar {
-            width: 5px;
-            height: 5px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-    }
-
-    @media (prefers-color-scheme: dark) {
-        ::-webkit-scrollbar {
-            width: 5px;
-            height: 5px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #636e72;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #2d3436;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-    }
-    </style>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
 </head>
 
 <body>
     <div id="pageloader" class="pageloader is-active is-primary is-bottom-to-top">
         <span class="title">DUCO Exchange</span>
     </div>
-    <nav class="navbar mt-1 mx-5" role="navigation" aria-label="main navigation">
+    <nav class="container navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item ml-5 mt-2" href="https://revoxhere.github.io/duco-exchange/">
-                <img src="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3.png?raw=true">
+            <a class="navbar-item" href="index.html">
+                <img src="images/logo.png">
             </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar_mobile">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div id="navbar_mobile" class="navbar-menu">
             <div class="navbar-start">
-                <a href="https://revoxhere.github.io/duco-exchange/exchange.html" class="navbar-item">
-                    <span class="subtitle is-size-5">
+                <a href="exchange.html" class="navbar-item">
+                    <span class="subtitle">
                         Exchange pairs
                     </span>
                 </a>
-                <a href="https://revoxhere.github.io/duco-exchange/listing.html" class="navbar-item">
-                    <span class="subtitle is-size-5">
+                <a href="listing.html" class="navbar-item">
+                    <span class="subtitle">
                         Listing form
                     </span>
                 </a>
             </div>
             <div class="navbar-end mr-5">
-                <a href="https://revoxhere.github.io/duco-exchange/contact.html" class="navbar-item">
-                    <span class="subtitle is-size-5">
+                <a href="contact.html" class="navbar-item">
+                    <span class="subtitle">
                         Contact
                     </span>
                 </a>
             </div>
         </div>
     </nav>
-    <br>
-    <main class="hero is-primary" id="content">
-        <div class="container">
-            <div class="hero-body">
-                <div class="columns">
-                    <div class="column is-two-thirds">
-                        <h1 align="center" class="title">DUCO Exchange</h1>
-                        <p class="subtitle">
-                            <br>Currently we support the following coins:
-                        </p>
-                        <ul class="subtitle">
-                            <li>
-                                <img width="16em" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true"><b> Duino-Coin</b> (DUCO) - <a href="https://duinocoin.com">duinocoin.com</a>
-                            </li>
-                            <li>
-                                <img width="16em" src="https://cdn.discordapp.com/emojis/728704765378428938.png?v=1"><b> Coin Magi</b> (XMG) - <a href="https://xmg.network">xmg.network</a> / <a href="https://m-core.org">m-core.org</a>
-                            </li>
-                            <li>
-                                <img width="16em" src="https://likecoin.pro/img/logo.svg"><b> Likecoin</b> (LKE) - <a href="https://likecoin.pro">likecoin.pro</a>
-                            </li>
-                            <li>
-                                <img width="16em" src="https://assets.coingecko.com/coins/images/780/large/bitcoin-cash-circle.png?1594689492"><b> Bitcoin Cash</b> (BCH) - <a href="https://bitcoincash.org">bitcoincash.org</a>
-                            </li>
-                            <li>
-                                <img width="16em" src="https://iconape.com/wp-content/files/ku/110933/svg/tron.svg"><b> Tron</b> (TRX) - <a href="https://tron.network">tron.network</a>
-                            </li>
-                            <li>
-                                <img width="16em" src="https://assets.website-files.com/5c269a684fdbba1386c0d796/5daa540e0d705b20297dd194_xrp-social-media-profile%201.svg"><b> Ripple</b> (XRP) - <a href="https://ripple.com">ripple.com</a> (listing in a few days)
-                            </li>
-                            <li>
-                                <img width="16em" src="https://cdn.worldvectorlogo.com/logos/digibyte.svg"><b> Digibyte</b> (DGB) - <a href="https://digibyte.org/">digibyte.org</a> (listing in a few days)
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="columns is-flex is-centered is-vcentered">
-                        <div class="column" id="grad">
-                            <a class="btn is-rounded button is-large" href="exchange.html">
-                                <i class="fa fa-fw fa-arrow-right"></i>
-                                Start trading
+    <main class="hero is-primary">
+        <div class="hero-body container">
+            <div class="columns">
+                <div class="column">
+                    <div class="columns">
+                        <div class="column">
+                            <p class="title center">
+                                <img class="image" width="256em" src="images/banner.png">
+                            </p>
+                            <p class="subtitle center shadow">
+                                Easy to use coin exchange service
+                            </p>
+                        </div>
+                        <div class="column center">
+                            <a class="btn button is-large" href="exchange.html">
+                                <span>
+                                    START TRADING
+                                </span>
+                                <i class="icon icon-text fa fa-fw">
+                                    arrow-circle-right
+                                </i>
                             </a>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="subtitle shadow">
+                        Currently we support the following coins:
+                    </p>
+                    <div class="columns is-multiline shadow">
+                        <div class="column">
+                            <img class="icon icon-text" src="images/duco.png">
+                            <b> Duino-Coin</b> <span class="has-text-warning">
+                                (DUCO)
+                            </span><br>
+                            <a href="https://duinocoin.com">duinocoin.com</a>
+                        </div>
+                        <div class="column">
+                            <img class="icon icon-text" src="images/xmg.png">
+                            <b> Coin Magi</b><span class="has-text-warning">
+                                (XMG)
+                            </span><br>
+                            <a href="https://xmg.network">xmg.network</a>
+                        </div>
+                        <div class="column">
+                            <img class="icon icon-text" src="images/lke.png">
+                            <b> Likecoin</b><span class="has-text-warning">
+                                (LKE)
+                            </span><br>
+                            <a href="https://likecoin.pro">likecoin.pro</a>
+                        </div>
+                        <div class="column">
+                            <img class="icon icon-text" src="images/bch.png">
+                            <b> Bitcoin Cash</b><span class="has-text-warning">
+                                (BCH)
+                            </span><br>
+                            <a href="https://bitcoincash.org">bitcoincash.org</a>
+                        </div>
+                    </div>
+                    <div class="columns shadow">
+                        <div class="column">
+                            <img class="icon icon-text" src="images/trx.png">
+                            <b> Tron</b><span class="has-text-warning">
+                                (TRX)
+                            </span><br>
+                            <a href="https://tron.network">tron.network</a>
+                        </div>
+                        <div class="column">
+                            <img class="icon icon-text" src="images/xrp.png">
+                            <b> Ripple</b>
+                            <span class="has-text-warning">
+                                (XRP)
+                            </span><br>
+                            <a href="https://ripple.com">ripple.com</a>
+                        </div>
+                        <div class="column">
+                            <img class="icon icon-text" src="images/dgb.png">
+                            <b> Digibyte</b>
+                            <span class="has-text-warning">
+                                (DGB)
+                            </span><br>
+                            <a href="https://digibyte.org/">digibyte.org</a>
+                        </div>
+                        <div class="column">
+                            <img class="icon icon-text" src="images/nano.png">
+                            <b> Nano</b>
+                            <span class="has-text-warning">
+                                (NANO)
+                            </span><br>
+                            <a href="https://nano.org/">nano.org</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
-    <br>
-    <div class="container">
-        <div class="mx-5">
-            <h2 align="center" class="title">How it works</h2>
-            <ol class="subtitle mx-5 mt-2">
-                <li>Select desired cryptocurrency exchange pair (e.g. DUCO to XMG)</li>
-                <li>Fill in the exchange form (provide your username, exchanged amount and so on)</li>
-                <li>Wait for your assets to be exchanged - you'll be notified by an e-mail from us</li>
-                <li>Have your funds exchanged!</li>
-            </ol>
-            <br>
-
-            <h2 align="center" class="title">User reviews</h2>
-            <p align="center" class="subtitle">Average service rating from EMF Feedback:<b> 7.5/10</b></p>
+    <section class="container">
+        <hr>
+        <p class="title">
+            How it works
+        </p>
+        <div class="content">
             <ul class="subtitle">
                 <li>
-                    <h5 class="title is-size-5">
-                        <i class="fa fa-user"></i>
-                        lorenzo
-                    </h5>
-                    <p class="subtitle">I’ve received my funds in minutes, it was my first transaction and I’m so satisfied with your service.</p>
+                    Select a desired exchange pair - e.g. <b>DUCO</b> <i class="fa fa-arrows-alt-h"></i> <b>XMG</b>
                 </li>
-                <br>
                 <li>
-                    <h5 class="title is-size-5">
-                        <i class="fa fa-user"></i>
-                        AlexSama
-                    </h5>
-                    <p class="subtitle">Very fast transaction and everything confirmed. Thank you for the whole project.</p>
+                    <b>Fill in the exchange form</b> - provide your username, email, exchanged amount and wallet address
                 </li>
-                <br>
                 <li>
-                    <h5 class="title is-size-5">
-                        <i class="fa fa-user"></i>
-                        Rogerina
-                    </h5>
-                    <p class="subtitle">Fast exchange processed in less than 24h, I'm keen on seeing exchanges to more cryptos.</p>
+                    Wait for your exchange request to be processed - you'll be notified by an <b>e-mail from us</b>
+                    <br>
+                    (exchanges are processed manually - they may take <b>up to 72 hours</b>)
+                </li>
+                <li>
+                    Receive exchanged assets <b>directly</b> in your desired crypto wallet - you can see<br>
+                    our last exchanges in the chain explorers:
+                    <a href="https://chainz.cryptoid.info/xmg/address.dws?93qJ8j93ibCye7pTWKTu88pr6a8xy7EUqC.htm">
+                        XMG
+                    </a>
+                    <a href="https://tronscan.org/#/address/TJsSD29FXfbq6BtGRmnfYGDUfrF9DPVGSq/transactions">
+                        TRX
+                    </a>
+                    <a href="https://www.blockchain.com/bch/address/bitcoincash:qzv4g8e2nkpwg6dkzdfuyf1zzrfts9qe350t2">
+                        BCH
+                    </a>
+                    <a href="https://explorer.duinocoin.com?search=coinexchange">
+                        DUCO
+                    </a>
                 </li>
             </ul>
-            <br>
-            <h2 align="center" class="title" id="TOS">Terms of service</h2>
-            <p class="subtitle">
-                DUCO-Exchange is an online service which allows users to exchange digital assets (Duino-Coin, Bitcoin Cash, Likecoin, Beyondcoin and Coin Magi) between themselves.<br>
-                Minimum exchangeable amount is a value of <b>200 DUCO (Duino-Coin)</b>.<br>
-                Exchange requests are processed manually and may take <b>up to 72 hours</b>.<br>
-                If applicable, fees from other cryptocurrencies are subtracted from the exchanged amount.<br><br>
-                Exchanges can be rejected if:</p>
-            <ul class="subtitle">
-                <li>- user is flooding the system with requests</li>
-                <li>- user gained crypto assets illegally</li>
-                <li>- user doesn't exchange more than 200 DUCO worth of funds</li>
-            </ul>
-            <p class="subtitle">
-                In rare cases exchange requests may not be completed because of:
-            </p>
-            <ul class="subtitle">
-                <li>- not sufficient amount of digital assets in DUCO-Exchange bank</li>
-                <li>- technical problems</li>
-                <li>- personal problems of the owners</li>
-                <li>- other random scenarios we can't predict</li>
+        </div>
+        <hr>
+        <p class="title">
+            User reviews
+        </p>
+        <ul class="subtitle">
+            <div class="column">
+                <p class="title is-size-5">
+                    <i class="fa fa-user"></i>
+                    <a href="https://www.scamadviser.com/account/profile/407370">
+                        Chandimal Priyankara
+                    </a>
+                </p>
+                <p class="subtitle">
+                    It is a very trustworthy website with an amazing idea. Admin teams may be young, but their idea and vision is mature than their actual age. Their exchange works really fast.
+                </p>
+            </div>
+            <div class="column">
+                <p class="title is-size-5">
+                    <i class="fa fa-user"></i>
+                    <a href="https://www.scamadviser.com/account/profile/407156">
+                        Taufik Sarif
+                    </a>
+                </p>
+                <p class="subtitle">
+                    They provided very good service.
+                </p>
+            </div>
+            <div class="column">
+                <p class="title is-size-5">
+                    <i class="fa fa-user"></i>
+                    <a href="https://www.scamadviser.com/account/profile/406644">
+                        406644
+                    </a>
+                </p>
+                <p class="subtitle">
+                    Stability, Trustworthy, Accurate & Safe Just these 4 words are enough to describe the portal. I'm lovin' it :)
+                </p>
+            </div>
+            <div class="column">
+                <p class="title is-size-5">
+                    <i class="fa fa-user"></i>
+                    <a href="https://www.scamadviser.com/account/profile/406708">
+                        Troy
+                    </a>
+                </p>
+                <p class="subtitle">
+                    Great exchange, fast rates. BCH rates are terrible, but they will be improved in the future.
+                </p>
+            </div>
+            <div class="column">
+                <p class="title is-size-5">
+                    <i class="fa fa-user"></i>
+                    <a href="https://www.scamadviser.com/account/profile/407424">
+                        micro04 thai
+                    </a>
+                </p>
+                <p class="subtitle">
+                    Good support quickly
+                </p>
+            </div>
+            <div class="column">
+                <p class="title is-size-5">
+                    <i class="fa fa-user"></i>
+                    AlexSama
+                </p>
+                <p class="subtitle">Very fast transaction and everything confirmed. Thank you for the whole project.</p>
+            </div>
+            <div class="column">
+                <p class="title is-size-5">
+                    <i class="fa fa-user"></i>
+                    Rogerina
+                </p>
+                <p class="subtitle">Fast exchange processed in less than 24h, I'm keen on seeing exchanges to more cryptos.</p>
+            </div>
+        </ul>
+        <div class="columns">
+            <div class="column">
+                <p class="subtitle">
+                    EMF Feedback: <b>7.5/10 stars</b><br>
+                    Scamadviser: <b>4.7/5 stars</b>
+                </p>
+            </div>
+            <div class="column">
+                <p class="subtitle has-text-right is-size-6">
+                    User reviews from
+                    <a href="https://www.scamadviser.com/check-website/exchange.duinocoin.com">
+                        scamadviser.com
+                    </a>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <p class="title" id="TOS">
+            Terms of service
+        </p>
+        <p class="subtitle">
+            DUCO Exchange is an online service which allows users to exchange digital assets between themselves.<br>
+            Minimum exchangeable amount is a value of <b>200 DUCO (Duino-Coin)</b>.<br>
+            Exchange requests are processed manually and may take <b>up to 72 hours</b>.<br>
+            If applicable, fees from other cryptocurrencies are subtracted from the exchanged amount.<br><br>
+            Exchanges can be rejected if: user is flooding the system with requests; user gained crypto assets illegally; user doesn't exchange more than 200 DUCO worth of funds.
+        </p>
+        <p class="subtitle">
+            In rare cases exchange requests may not be completed because of: not sufficient amount of digital assets in DUCO Exchange reserves; technical problems; personal problems of the owners; other random scenarios we can't predict.
             </ul>
             <p class="subtitle">
                 <b>Trading is a risky activity and is not endorsed by us.</b><br>
                 You are responsible for your funds and we are not responsible for your actions.<br>
-                If you'll face any problems, please write to us - see the Contact page.<br>
-                You can also request adding of new coins - see the Listing form page.<br>
-                We're open to adding <b>any</b> new cryptos who suit the criteria.
+                If you'll face any problems, please write to us - see the <a href="contact.html">Contact</a> page.<br>
             </p>
-        </div>
-    </div>
+        </p>
+    </section>
     <hr>
     <!-- FOOTER -->
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>DUCO Exchange</strong> (v4) by <a href="https://github.com/revoxhere">Robert "revox" Piotrowski </a>2019-2021
+                <strong>DUCO Exchange</strong> 2019-2021 by <a href="https://github.com/revoxhere">Robert "revox" Piotrowski </a>
+                from the <b>Duino</b> team
                 <br>Hosted with the help of <a href="https://pages.github.com">GitHub Pages</a>
-                <br>Duino-Coin, Coin Magi, Beyondcoin, Likecoin and Bitcoin Cash logos are a property of their respective owners.
+                <br>Duino-Coin, Coin Magi, Likecoin, Bitcoin Cash and other logos are a property of their respective owners.
                 <br>This page is open-source. You can improve it <a href="https://github.com/revoxhere/duco-exchange">here</a><br>
             </p>
         </div>
