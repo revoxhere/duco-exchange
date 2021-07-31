@@ -1,13 +1,13 @@
 {
 	"result": {
 		"bch": {
-			"sell": 0.0000019,
-			"buy": 0.00000275,
+			"sell": 0.00000225,
+			"buy": 0.0000035,
 			"liquidity": "MEDIUM"
 		},
 		"xmg": {
-			"sell": 0.3,
-			"buy": 0.3,
+			"sell": 0.4,
+			"buy": 0.4,
 			"liquidity": "GOOD"
 		},
 		"lke": {
@@ -18,6 +18,21 @@
 		"trx": {
 			"sell": 0.015,
 			"buy": 0.035,
+			"liquidity": "LOW"
+		},
+		"dgb": {
+			"sell": 0.025,
+			"buy": 0.035,
+			"liquidity": "LOW"
+		},
+		"xrp": {
+			"sell": 0.00125,
+			"buy": 0.00315,
+			"liquidity": "LOW"
+		},
+		"nano": {
+			"sell": 0.00025,
+			"buy": 0.000375,
 			"liquidity": "LOW"
 		}
 	},
