@@ -4,303 +4,273 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DUCO Exchange | Exchange form</title>
-    <link rel="icon" href="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" type="image/png" />
-    <link rel="shortcut icon" href="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" type="image/png" />
+    <title is-size-6>DUCO Exchange | TRX</title is-size-6>
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/png" />
     <!-- SEO Stuff -->
-    <meta name="description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin, Bitcoin Cash and Tron in a few clicks!">
-    <meta name="keywords" content="exchange, altcoin, beyondcoin, xmg, magi, bynd, bch, bitcoincash, likecoin, trx, tron, lke, duco, duino, duinocoin, arduino, crypto, mining, blockchain, cryptocurrency, bitcoin">
-    <link rel="canonical" href="https://revoxhere.github.io/duco-exchange/" />
+    <meta name="description" content="Exchange Duino-Coin between Coin Magi, Likecoin, Bitcoin Cash, Ripple, Tron or Digibyte in a few clicks">
+    <meta name="keywords" content="exchange, altcoin, beyondcoin, xmg, magi, bynd, bch, bitcoincash, likecoin, lke, duco, duino, duinocoin, arduino, crypto, mining, blockchain, cryptocurrency, bitcoin">
+    <link rel="canonical" href="https://exchange.duinocoin.com/" />
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#D90088">
     <!-- Open Graph Metadata -->
-    <meta property="og:site_name" content="DUCO Exchange - Intuitive altcoin exchange service" />
-    <meta property="og:site" content="https://revoxhere.github.io/duco-exchange/" />
-    <meta property="og:title" content="DUCO Exchange - Intuitive altcoin exchange service" />
-    <meta property="og:description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin, Bitcoin Cash and Tron in a few clicks!" />
-    <meta property="og:image" content="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true" />
-    <meta property="og:url" content="https://revoxhere.github.io/duco-exchange/" />
+    <meta property="og:site_name" content="DUCO Exchange - Easy to use coin exchange service" />
+    <meta property="og:site" content="https://exchange.duinocoin.com/" />
+    <meta property="og:title is-size-6" content="DUCO Exchange - Easy to use coin exchange service" />
+    <meta property="og:description" content="Exchange Duino-Coin between Coin Magi, Likecoin, Bitcoin Cash, Ripple, Tron or Digibyte in a few clicks" />
+    <meta property="og:image" content="images/logo.png" />
+    <meta property="og:url" content="https://exchange.duinocoin.com/" />
     <meta property="og:type" content="website" />
     <!-- Twitter Metadata -->
-    <meta name="twitter:title" content="DUCO Exchange - Intuitive altcoin exchange service">
-    <meta name="twitter:description" content="Exchange Duino-Coin between Beyondcoin, Coin Magi, Likecoin, Bitcoin Cash and Tron in a few clicks!">
-    <meta name="twitter:image" content="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3logo.png?raw=true">
-    <meta name="twitter:site" content="@CoinDuino">
-    <meta name="twitter:creator" content="@CoinDuino">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+    <meta name="twitter:title is-size-6" content="DUCO Exchange - Easy to use coin exchange service">
+    <meta name="twitter:description" content="Exchange Duino-Coin between Coin Magi, Likecoin, Bitcoin Cash, Ripple, Tron or Digibyte in a few clicks">
+    <meta name="twitter:image" content="images/logo.png">
+    <meta name="twitter:site" content="@DuinoCoin">
+    <meta name="twitter:creator" content="@DuinoCoin">
+    <!-- Imports -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma-prefers-dark" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css">
-    <style>
-        .is-primary { 
-            /* Override Bulmas primary color to DUCO Exchange colored gradient*/
-            background: linear-gradient(160deg, #EA2027, #B53471) !important;
-        }
-    </style>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="js/fontawesome.js"></script>
+    <script src="js/wallet-address-validator.min.js"></script>
+    <script src="js/exchange.js"></script>
 </head>
 
 <body>
     <div id="pageloader" class="pageloader is-active is-primary is-bottom-to-top">
-        <span class="title">DUCO Exchange</span>
+        <span class="title is-size-6">DUCO Exchange</span>
     </div>
-    <nav class="navbar mt-1 mx-5" role="navigation" aria-label="main navigation">
+    <nav class="container navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item ml-5 mt-2" href="https://revoxhere.github.io/duco-exchange/">
-                <img src="https://github.com/revoxhere/duco-exchange/blob/master/ducoexchangev3.png?raw=true">
+            <a class="navbar-item" href="index.html">
+                <img src="images/logo.png">
             </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar_mobile">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div id="navbar_mobile" class="navbar-menu">
             <div class="navbar-start">
-                <a href="https://revoxhere.github.io/duco-exchange/exchange.html" class="navbar-item">
-                    <span class="subtitle is-size-5">
+                <a href="exchange.html" class="navbar-item">
+                    <span class="subtitle is-size-6">
                         Exchange pairs
                     </span>
                 </a>
-                <a href="https://revoxhere.github.io/duco-exchange/listing.html" class="navbar-item">
-                    <span class="subtitle is-size-5">
+                <a href="listing.html" class="navbar-item">
+                    <span class="subtitle is-size-6">
                         Listing form
                     </span>
                 </a>
             </div>
             <div class="navbar-end mr-5">
-                <a href="https://revoxhere.github.io/duco-exchange/contact.html" class="navbar-item">
-                    <span class="subtitle is-size-5">
+                <a href="contact.html" class="navbar-item">
+                    <span class="subtitle is-size-6">
                         Contact
                     </span>
                 </a>
             </div>
         </div>
     </nav>
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column">
-                    <h1 class="title">
-                        <span class="icon">
-                            <img src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true">
-                        </span>
-                        Duino-Coin
-                        <i class="fa fa-exchange-alt"></i>
-                        <span class="icon">
-                            <img src="https://iconape.com/wp-content/files/ku/110933/svg/tron.svg">
-                        </span>
-                        Tron exchange form
-                    </h1>
+    <br>
+    <section class="container">
+        <p class="title">
+            <img class="icon" src="images/duco.png">
+            Duino-Coin
+            <i class="fa fa-exchange-alt"></i>
+            <img class="icon" src="images/trx.png">
+            Tron exchange form
+        </p>
+        <div class="columns">
+            <div class="column">
+                <div class="box notification is-info is-light">
+                    <p class="title is-size-5">
+                        Fill out this form to start the exchange process.
+                    </p>
+                    <p class="subtitle is-size-5">
+                        After sending the exchange request you should receive an e-mail informing about the state of the transaction within the next 72 hours.<br>
+                        <span class="subtitle is-size-6">Exchange request may be rejected if it's against <a href="https://revoxhere.github.io/duco-exchange/index.html#TOS">DUCO Exchange ToS</a> or <a href="https://github.com/revoxhere/duino-coin#terms-of-service">Duino-Coin ToS</a>.</span>
+                    </p>
+                    <p class="title mt-5 is-size-6">
+                        Current exchange rates
+                    </p>
+                    <p class="subtitle is-size-6">
+                        When selling: 1 DUCO ≈ <span id="trxs"></span> TRX<br>
+                        When buying: 1 DUCO ≈ <span id="trxb"></span> TRX<br>
+                        Transaction fee: 1 TRX
+                    </p>
                 </div>
             </div>
-            <div class="columns">
-                <div class="column">
-                    <div class="box notification is-info is-light">
-                        <p class="title is-size-5">
-                            Fill out this form to start the exchange process.
-                        </p>
-                        <p class="subtitle is-size-5">
-                            After sending the exchange request you should receive an e-mail informing about the state of the transaction within the next 72 hours.<br>
-                            <span class="subtitle is-size-6">Exchange request may be rejected if it's against <a href="https://revoxhere.github.io/duco-exchange/index.html#TOS">DUCO Exchange ToS</a> or <a href="https://github.com/revoxhere/duino-coin#terms-of-service">Duino-Coin ToS</a>.</span>
-                        </p>
-                        <p class="title mt-5 is-size-6">
-                            Current exchange rates
-                        </p>
-                        <p class="subtitle is-size-6">
-                            When selling: 1 DUCO ≈ <span id="trxs"></span> TRX<br>
-                            When buying: 1 DUCO ≈ <span id="trxb"></span> TRX<br>
-                            Transaction fee: 1 TRX
-                        </p>
-                    </div>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <div class="box notification is-warning is-light">
+                    <button class="delete"></button>
+                    <i class="fa fa-exclamation-triangle"></i>
+                    <strong>This exchange pair has low liquidity.</strong> Consider selecting another exchange pair.<br>
+                    Exchange rate on this pair could be better - if you want to change that - buy some DUCO.
                 </div>
             </div>
-            <div class="columns">
-                <div class="column">
-                    <div class="box notification is-warning is-light">
-                        <button class="delete"></button>
-                        <i class="fa fa-exclamation-triangle"></i>
-                        <strong>This exchange pair has low liquidity.</strong>
-                        Exchange rate on this pair could be better - if you want to change that - buy some DUCO.
-                    </div>
-                </div>
-            </div>
-            <div class="columns">
-                <div class="column">
-                    <div class="box">
-                        <tr>
-                            <td id="td_element_label_0">
-                                <p class="title is-size-5 mb-2">
-                                    <i class="fa fa-fw fa-user" style="color:#B53471"></i>
-                                    Duino-Coin username
-                                    <small style="color:#ff6b6b">*</small>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td_element_field_0">
-                                <input class="input mb-4" placeholder="username" id="username" name="element_0" value="" class="validate[required]" type="text" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td_element_label_0">
-                                <p class="title is-size-5 mb-2">
-                                    <i class="fa fa-fw fa-lock" style="color:#d35400"></i>
-                                    Duino-Coin password
-                                    <small style="color:#ff6b6b">*</small>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td_element_field_0">
-                                <input class="input mb-4" placeholder="******" id="password" name="element_0" value="" class="validate[required]" type="password" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td_element_label_1">
-                                <p class="title is-size-5">
-                                    <i class="fa fa-fw fa-at" style="color:#1289A7"></i>
-                                    E-mail address
-                                    <small style="color:#ff6b6b">*</small>
-                                </p>
-                                <p class="subtitle is-size-5 mb-2">
-                                    associated with your Duino-Coin account
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td_element_field_1">
-                                <input class="input mb-4" placeholder="email@domain.com" id="email" name="element_1" class="validate[required,custom[email]]" value="" type="email" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td_element_label_2">
-                                <p class="title is-size-5 mb-2">
-                                    <i class="fa fa-fw fa-balance-scale" style="color:#009432"></i>
-                                    Are you selling or buying?
-                                    <small style="color:#ff6b6b">*</small>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td_element_field_2">
-                                <div>
-                                    <label class="radio mb-2">
-                                        <input type="radio" id="element_2_0" name="element_2" value="I'm selling DUCO for Tron" class="validate[required]" type="radio" />
-                                        <span class="subtitle">
-                                            &nbsp;I'm selling Duino-Coins for Tron
-                                        </span>
-                                    </label>
-                                </div>
-                                <div>
-                                    <label class="radio mb-4">
-                                        <input type="radio" id="element_2_1" name="element_2" value="I'm buying DUCO for Tron" class="validate[required]" type="radio" />
-                                        <span class="subtitle">
-                                            &nbsp;I'm buying Duino-Coins for Tron
-                                        </span>
-                                    </label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td_element_label_3">
-                                <p class="title is-size-5 mb-2">
-                                    <i class="fa fa-fw fa-coins" style="color:#EE5A24"></i>
-                                    How much DUCO are you selling/buying?
-                                    <small style="color:#ff6b6b">*</small>
-                                    <p class="has-text-info mb-3" id="amount_notify">
-                                    </p>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td_element_field_3">
-                                <div class="columns">
-                                    <div class="column">
-                                        <input class="input mt-1" type="number" id="amount" name="element_3" value="200" />
-                                    </div>
-                                    <div class="column">
-                                        <p class="has-text-left">
-                                            <span class="subtitle is-size-6">
-                                                If you're selling, you will receive
-                                                <strong>
-                                                    <span style="color:#6ab04c" id="exchanged_amountLabel">
-                                                        1 TRX (≈$0.139)
-                                                    </span>
-                                                </strong>
-                                            </span><br>
-                                            <span class="subtitle is-size-6">
-                                                If you're buying, you will pay
-                                                <strong>
-                                                    <span style="color:#6ab04c" id="soldValueLabel">
-                                                        4 TRX (≈$0.209)
-                                                    </span>
-                                                </strong>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td_element_label_4">
-                                <p class="title is-size-5 mb-1">
-                                    <i class="fa fa-fw fa-address-card" style="color:#A3CB38"></i>
-                                    Tron wallet address
-                                    <small style="color:#ff6b6b">*</small>
-                                    <p id="invalid_address" class="has-text-danger" style="display:none">
-                                        <i class="fa fa-fw fa-exclamation-triangle"></i>
-                                        Provide a valid wallet address!
-                                    </p>
-                                    <p id="valid_address" class="has-text-success" style="display:none">
-                                        <i class="fa fa-fw fa-check"></i>
-                                        Valid wallet address provided!
-                                    </p>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="td_element_field_4">
-                                <input class="input mt-3 mb-3" id="address" placeholder="trx wallet" name="element_4" value="" class="validate[required]" type="text" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <label class="subtitle checkbox mb-3">
-                                <input type="checkbox" id="tos">
-                                I agree to the
-                                <a href="https://exchange.duinocoin.com/index.html#TOS">DUCO Exchange</a>
-                                and
-                                <a href="https://github.com/revoxhere/duino-coin#terms-of-service">Duino-Coin</a>
-                                terms of service
+        </div>
+        <div class="columns">
+            <div class="column">
+                <div class="box">
+                    <tr>
+                        <td id="td_element_label_0">
+                            <p class="title is-size-5 mb-2">
+                                <i class="fa fa-fw fa-user" style="color:#B53471"></i>
+                                Duino-Coin username
                                 <small style="color:#ff6b6b">*</small>
-                            </label>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input name="element_counts" value="5" type="hidden" />
-                                <input name="embed" value="forms" type="hidden" />
-                                <button class="button is-success is-fullwidth" disabled="true" id="submit">
-                                    <i class="fa fa-fw fa-check"></i>
-                                    &nbsp;Submit exchange request
-                                </button>
-                                <div class="buttons mt-5">
-                                    <a href="https://bulma.io" class="button is-secondary">
-                                        <span>Made with</span>&nbsp;&nbsp;
-                                        <img class="image" width="16em" src="https://seeklogo.com/images/B/bulma-logo-45B5145BF4-seeklogo.com.png" alt="Bulma">&nbsp;
-                                        <span><b>BULMA</b></span>
-                                    </a>
-                                    <a href="https://duinocoin.com" class="button is-secondar">
-                                        <img class="image" width="16em" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true" alt="Bulma">&nbsp;
-                                        <span>Duino-Coin</span>
-                                    </a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_field_0">
+                            <input class="input mb-4" placeholder="username" id="username" name="element_0" value="" class="validate[required]" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_label_0">
+                            <p class="title is-size-5 mb-2">
+                                <i class="fa fa-fw fa-lock" style="color:#d35400"></i>
+                                Duino-Coin password
+                                <small style="color:#ff6b6b">*</small>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_field_0">
+                            <input class="input mb-4" placeholder="******" id="password" name="element_0" value="" class="validate[required]" type="password" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_label_1">
+                            <p class="title is-size-5">
+                                <i class="fa fa-fw fa-at" style="color:#1289A7"></i>
+                                E-mail address
+                                <small style="color:#ff6b6b">*</small>
+                            </p>
+                            <p class="subtitle is-size-5 mb-2">
+                                associated with your Duino-Coin account
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_field_1">
+                            <input class="input mb-4" placeholder="email@domain.com" id="email" name="element_1" class="validate[required,custom[email]]" value="" type="email" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_label_2">
+                            <p class="title is-size-5 mb-2">
+                                <i class="fa fa-fw fa-balance-scale" style="color:#009432"></i>
+                                Are you selling or buying?
+                                <small style="color:#ff6b6b">*</small>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_field_2">
+                            <div>
+                                <label class="radio mb-2">
+                                    <input type="radio" id="element_2_0" name="element_2" value="I'm selling DUCO for Tron" class="validate[required]" type="radio" />
+                                    <span class="subtitle">
+                                        &nbsp;I'm selling Duino-Coins for Tron
+                                    </span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="radio mb-4">
+                                    <input type="radio" id="element_2_1" name="element_2" value="I'm buying DUCO for Tron" class="validate[required]" type="radio" />
+                                    <span class="subtitle">
+                                        &nbsp;I'm buying Duino-Coins for Tron
+                                    </span>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_label_3">
+                            <p class="title is-size-5 mb-2">
+                                <i class="fa fa-fw fa-coins" style="color:#EE5A24"></i>
+                                How much DUCO are you selling/buying?
+                                <small style="color:#ff6b6b">*</small>
+                                <p class="has-text-info mb-3" id="amount_notify">
+                                </p>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_field_3">
+                            <div class="columns">
+                                <div class="column">
+                                    <input class="input mt-1" type="number" id="amount" name="element_3" value="200" />
                                 </div>
-                            </td>
-                        </tr>
-                    </div>
+                                <div class="column">
+                                    <p class="has-text-left">
+                                        <span class="subtitle is-size-6">
+                                            If you're selling, you will receive
+                                            <strong>
+                                                <span style="color:#6ab04c" id="exchanged_amountLabel">
+                                                    0.000190 TRX (≈$0.115)
+                                                </span>
+                                            </strong>
+                                        </span><br>
+                                        <span class="subtitle is-size-6">
+                                            If you're buying, you will pay
+                                            <strong>
+                                                <span style="color:#6ab04c" id="soldValueLabel">
+                                                    0.000360 TRX (≈$0.201)
+                                                </span>
+                                            </strong>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_label_4">
+                            <p class="title is-size-5 mb-1">
+                                <i class="fa fa-fw fa-address-card" style="color:#A3CB38"></i>
+                                Tron wallet address
+                                <small style="color:#ff6b6b">*</small>
+                                <p id="invalid_address" class="has-text-danger" style="display:none">
+                                    <i class="fa fa-fw fa-exclamation-triangle"></i>
+                                    Provide a valid wallet address!
+                                </p>
+                                <p id="valid_address" class="has-text-success" style="display:none">
+                                    <i class="fa fa-fw fa-check"></i>
+                                    Valid wallet address provided!
+                                </p>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_field_4">
+                            <input class="input mt-3 mb-3" id="address" placeholder="..." name="element_4" value="" class="validate[required]" type="text" />
+                        </td>
+                    </tr>
+                    <p class="subtitle">
+                        By submitting exchange request you agree to the
+                        <a href="https://exchange.duinocoin.com/index.html#TOS">DUCO Exchange</a>
+                        and
+                        <a href="https://github.com/revoxhere/duino-coin#terms-of-service">Duino-Coin</a>
+                        terms of service
+                    </p>
+                    <tr>
+                        <td>
+                            <button class="button btn is-fullwidth" disabled="true" id="submit">
+                                <span>
+                                    Submit exchange request
+                                </span>
+                                <i class="fa icon icon-text fa-fw fa-arrow-circle-right"></i>
+                            </button>
+                        </td>
+                    </tr>
                 </div>
             </div>
         </div>
@@ -310,33 +280,19 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>DUCO Exchange</strong> (v4) by <a href="https://github.com/revoxhere">Robert "revox" Piotrowski </a>2019-2021
+                <strong>DUCO Exchange</strong> 2019-2021 by <a href="https://github.com/revoxhere">Robert "revox" Piotrowski </a>
+                from the <b>Duino</b> team
                 <br>Hosted with the help of <a href="https://pages.github.com">GitHub Pages</a>
-                <br>Duino-Coin, Coin Magi, Beyondcoin, Likecoin and Bitcoin Cash logos are a property of their respective owners.
+                <br>Duino-Coin, Coin Magi, Likecoin, Bitcoin Cash and other logos are a property of their respective owners.
                 <br>This page is open-source. You can improve it <a href="https://github.com/revoxhere/duco-exchange">here</a><br>
             </p>
         </div>
     </footer>
 </body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-<script src="wallet-address-validator.min.js"></script>
 <script>
-let type = "sell";
-let currency = "TRX";
-let exchanged_amount = 0;
-let buy_value, sell_value;
-let coin_price = 0.07;
-let transactionFee = 1;
-
-let tos_checked = false;
-let correct_balance = false;
-let correct_address = false;
-let correct_amount = false;
-
 const amount_input = document.getElementById("amount");
 const radios = document.querySelectorAll('input[type=radio]');
 
-const amount_notify = document.getElementById("amount_notify");
 const sell_label = document.getElementById("exchanged_amountLabel");
 const buy_label = document.getElementById("soldValueLabel");
 
@@ -344,13 +300,15 @@ const valid_address = document.getElementById("valid_address");
 const invalid_address = document.getElementById("invalid_address");
 const address = document.getElementById("address");
 
-const tos = document.getElementById("tos");
 const submit_button = document.getElementById("submit")
 
+coin_price = 0;
 $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=tron&vs_currencies=usd', function(data) {
     coin_price = data["tron"]["usd"]
 });
 
+sell_value = 0;
+buy_value = 0;
 $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
     data = data.result;
     $("#trxs").html(data.trx.sell);
@@ -360,24 +318,21 @@ $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-
+    /* Check whether we're buying or selling */
+    type = "sell";
     $('input[type=radio]').click(function() {
-        console.log(this.value);
         if (this.value == "I'm selling DUCO for Tron") {
             type = "sell";
-            correct_balance = true;
         } else {
-            correct_balance = true;
             type = "buy";
         }
     });
 
-    address.addEventListener('input', updateValue);
+    /* Check wallet address */
+    correct_address = false;
 
-    function updateValue(e) {
-        // Coin wallet address validation
+    function check_wallet(e) {
         correct_address = WAValidator.validate(e.target.value, 'TRX');
-
         if (correct_address) {
             valid_address.style.display = "block";
             invalid_address.style.display = "none";
@@ -386,11 +341,13 @@ document.addEventListener('DOMContentLoaded', () => {
             invalid_address.style.display = "block";
         }
     }
+    address.addEventListener('input', check_wallet);
 
-    amount_input.addEventListener('input', updateRate);
+    /* Update exchange rate displayed to user */
+    transactionFee = 1
+    currency = "TRX"
 
-    function updateRate(e) {
-        // Show exchanged amount
+    function update_exchange_rate() {
         exchanged_amount = amount_input.value;
         exchanged_coin_value = exchanged_amount * sell_value;
         exchanged_coin_value_usd = exchanged_coin_value * coin_price;
@@ -398,111 +355,37 @@ document.addEventListener('DOMContentLoaded', () => {
         exchanged_amount_buy = exchanged_amount * buy_value;
         exchanged_coin_value_usd_buy = exchanged_amount_buy * coin_price;
 
-        // Display notifications when amount is incorrect
-        if (exchanged_amount < 200) {
-            amount_notify.innerHTML = "Minimum exchangeable amount is 200 DUCO";
-            correct_amount = false;
-        } else if (exchanged_amount > 10000) {
-            amount_notify.innerHTML = "Maximum exchangeable amount is 10000 DUCO";
-            correct_amount = false;
-        } else {
-            correct_amount = true;
-            amount_notify.innerHTML = "";
-
-            // Selling
-            sell_label.innerHTML = (exchanged_coin_value - transactionFee).toFixed(6) +
-                " " + currency + " (≈$" + exchanged_coin_value_usd.toFixed(3) + ")";
-
-            // Buying
-            buy_label.innerHTML = (exchanged_amount_buy + transactionFee).toFixed(6) +
-                " " + currency + " (≈$" + exchanged_coin_value_usd_buy.toFixed(3) + ")";
-        }
+        // Selling
+        sell_label.innerHTML = (exchanged_coin_value - transactionFee).toFixed(6) +
+            " " + currency + " (≈$" + exchanged_coin_value_usd.toFixed(3) + ")";
+        // Buying
+        buy_label.innerHTML = (exchanged_amount_buy + transactionFee).toFixed(6) +
+            " " + currency + " (≈$" + exchanged_coin_value_usd_buy.toFixed(3) + ")";
+        setTimeout(update_exchange_rate, 100);
     }
+    update_exchange_rate();
 
-    tos.addEventListener("change", function() {
-        if (this.checked) {
-            tos_checked = true;
-        } else {
-            tos_checked = false;
-        }
-    });
-
+    /* Enable submit button */
     function check_inputs() {
-        if (tos_checked) {
-            if (correct_balance && correct_amount) {
-                if (correct_address) {
-                    submit_button.disabled = false;
-                } else {
-                    submit_button.disabled = true;
-                }
-            } else {
-                submit_button.disabled = true;
-                amount_notify.innerHTML = "You don't have enough DUCO in your account";
-            }
+        if (correct_address) {
+            submit_button.disabled = false;
         } else {
             submit_button.disabled = true;
         }
-
         setTimeout(check_inputs, 100);
     }
     check_inputs();
 
+    /* Submit exchange request */
     submit_button.addEventListener("click", function() {
         let username = document.getElementById('username').value;
         let password = document.getElementById('password').value;
         let email = document.getElementById('email').value;
-        let amount = amount_input.value;
+        let amount = document.getElementById('amount').value;
         let address = document.getElementById('address').value;
-        let exchangedamount = 0;
+
         submit_button.classList.add("is-loading");
-        
-        function round_to(precision, value) {
-            power_of_ten = 10 ** precision;
-            return Math.round(value * power_of_ten) / power_of_ten;
-        }
-
-        if (type == "sell") {
-            exchangedamount = amount * sell_value;
-        } else {
-            exchangedamount = amount * buy_value;
-        }
-
-        (function() {
-            emailjs.init("user_7eTpa9sLmikyxaTct0Rif");
-        })();
-
-        let params = {
-            username: username,
-            pass: password,
-            amount: amount,
-            exchanged_amount: exchanged_amount,
-            address: address,
-            type: type,
-            currency: currency,
-            mail: email
-        };
-
-        emailjs.send('service_y7hagom', 'template_ukqzmui', params)
-            .then(function(response) {
-                submit_button.classList.remove("is-loading");
-                window.location.replace("success.html");
-            }, function(error) {
-                submit_button.classList.remove("is-loading");
-                alert("EJS is currently unavailable but the exchange request can be sent by e-mail, do you want to submit the request by emailing us?")
-                window.open(`mailto:duino.coin@gmail.com?subject=DUCO/TRX EXCHANGE&body=` +
-                    `Please check if the blanks below are correct ` +
-                    `and send an e-mail so we receive your exchange request:%0D%0A ` +
-                    `%0D%0A Your Duino-Coin Username: ` + username +
-                    `%0D%0A Your Duino-Coin Password: ` + password +
-                    `%0D%0A E-mail associated with your Duino-Coin account: ` + email +
-                    `%0D%0A Are you selling or buying DUCO? ` + type +
-                    `%0D%0A How much DUCO are you selling/buying? ` + amount +
-                    ` (` + round_to(6, exchanged_amount) + `)` +
-                    `%0D%0A Your TRX wallet address: ` + address +
-                    `%0D%0A ` +
-                    `%0D%0A 2019-2021 DUCO Exchange`
-                )
-            });
+        exchange(username, password, email, type, amount, address, currency);
     });
 });
 </script>

@@ -228,15 +228,15 @@
                         Sell: <b>1</b> DUCO ≈ <b id="xrp_sell">?</b> XRP<br>
                         Buy: <b>1</b> DUCO ≈ <b id="xrp_buy">?</b> XRP<br>
                         Liquidity: <b id="xrp_liq">?</b><br>
-                        Transaction fee: <b>?</b> XRP<br>
+                        Transaction fee: <b>0.15</b> XRP<br>
                     </p>
-                    <a disabled class="button is-fullwidth">
-                        <i class="icon icon-text far fa-fw">
-                            hourglass
-                        </i>
+                    <a href="xrp.html" class="button btn is-fullwidth">
                         <span>
-                            Exchange site is being created
+                            Continue with this pair
                         </span>
+                        <i class="icon icon-text fa fa-fw">
+                            arrow-circle-right
+                        </i>
                     </a>
                 </div>
             </div>
@@ -259,15 +259,15 @@
                         Sell: <b>1</b> DUCO ≈ <b id="dgb_sell">?</b> DGB<br>
                         Buy: <b>1</b> DUCO ≈ <b id="dgb_buy">?</b> DGB<br>
                         Liquidity: <b id="dgb_liq">?</b><br>
-                        Transaction fee: <b>?</b> DGB<br>
+                        Transaction fee: <b>0.003</b> DGB<br>
                     </p>
-                    <a disabled class="button is-fullwidth">
-                        <i class="icon icon-text far fa-fw">
-                            hourglass
-                        </i>
+                    <a href="dgb.html" class="button btn is-fullwidth">
                         <span>
-                            Exchange site is being created
+                            Continue with this pair
                         </span>
+                        <i class="icon icon-text fa fa-fw">
+                            arrow-circle-right
+                        </i>
                     </a>
                 </div>
             </div>
@@ -362,6 +362,14 @@ document.addEventListener('DOMContentLoaded', () => {
         $("#bch_sell").html(data.bch.sell)
         $("#bch_buy").html(data.bch.buy)
         $("#bch_liq").html(data.bch.liquidity)
+
+        $("#xrp_sell").html(data.xrp.sell)
+        $("#xrp_buy").html(data.xrp.buy)
+        $("#xrp_liq").html(data.xrp.liquidity)
+
+        $("#dgb_sell").html(data.dgb.sell)
+        $("#dgb_buy").html(data.dgb.buy)
+        $("#dgb_liq").html(data.dgb.liquidity)
     });
 });
 </script>

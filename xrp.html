@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title is-size-6>DUCO Exchange | LKE</title is-size-6>
+    <title is-size-6>DUCO Exchange | XRP</title is-size-6>
     <link rel="icon" href="images/logo.png" type="image/png" />
     <link rel="shortcut icon" href="images/logo.png" type="image/png" />
     <!-- SEO Stuff -->
@@ -81,8 +81,8 @@
             <img class="icon" src="images/duco.png">
             Duino-Coin
             <i class="fa fa-exchange-alt"></i>
-            <img class="icon" src="images/lke.png">
-            Likecoin exchange form
+            <img class="icon" src="images/xrp.png">
+            Ripple exchange form
         </p>
         <div class="columns">
             <div class="column">
@@ -98,10 +98,20 @@
                         Current exchange rates
                     </p>
                     <p class="subtitle is-size-6">
-                        When selling: 1 DUCO ≈ <span id="lkes"></span> LKE<br>
-                        When buying: 1 DUCO ≈ <span id="lkeb"></span> LKE<br>
-                        Transaction fee: 0 LKE
+                        When selling: 1 DUCO ≈ <span id="xrps"></span> XRP<br>
+                        When buying: 1 DUCO ≈ <span id="xrpb"></span> XRP<br>
+                        Transaction fee: 0.15 XRP
                     </p>
+                </div>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <div class="box notification is-warning is-light">
+                    <button class="delete"></button>
+                    <i class="fa fa-exclamation-triangle"></i>
+                    <strong>This exchange pair has low liquidity.</strong> Consider selecting another exchange pair.<br>
+                    Exchange rate on this pair could be better - if you want to change that - buy some DUCO.
                 </div>
             </div>
         </div>
@@ -166,17 +176,17 @@
                         <td id="td_element_field_2">
                             <div>
                                 <label class="radio mb-2">
-                                    <input type="radio" id="element_2_0" name="element_2" value="I'm selling DUCO for Likecoin" class="validate[required]" type="radio" />
+                                    <input type="radio" id="element_2_0" name="element_2" value="I'm selling DUCO for Ripple" class="validate[required]" type="radio" />
                                     <span class="subtitle">
-                                        &nbsp;I'm selling Duino-Coins for Likecoin
+                                        &nbsp;I'm selling Duino-Coins for Ripple
                                     </span>
                                 </label>
                             </div>
                             <div>
                                 <label class="radio mb-4">
-                                    <input type="radio" id="element_2_1" name="element_2" value="I'm buying DUCO for Likecoin" class="validate[required]" type="radio" />
+                                    <input type="radio" id="element_2_1" name="element_2" value="I'm buying DUCO for Ripple" class="validate[required]" type="radio" />
                                     <span class="subtitle">
-                                        &nbsp;I'm buying Duino-Coins for Likecoin
+                                        &nbsp;I'm buying Duino-Coins for Ripple
                                     </span>
                                 </label>
                             </div>
@@ -205,7 +215,7 @@
                                             If you're selling, you will receive
                                             <strong>
                                                 <span style="color:#6ab04c" id="exchanged_amountLabel">
-                                                    0.000190 LKE (≈$0.115)
+                                                    0.000190 XRP (≈$0.115)
                                                 </span>
                                             </strong>
                                         </span><br>
@@ -213,7 +223,7 @@
                                             If you're buying, you will pay
                                             <strong>
                                                 <span style="color:#6ab04c" id="soldValueLabel">
-                                                    0.000360 LKE (≈$0.201)
+                                                    0.000360 XRP (≈$0.201)
                                                 </span>
                                             </strong>
                                         </span>
@@ -226,7 +236,7 @@
                         <td id="td_element_label_4">
                             <p class="title is-size-5 mb-1">
                                 <i class="fa fa-fw fa-address-card" style="color:#A3CB38"></i>
-                                Likecoin wallet address
+                                Ripple wallet address
                                 <small style="color:#ff6b6b">*</small>
                                 <p id="invalid_address" class="has-text-danger" style="display:none">
                                     <i class="fa fa-fw fa-exclamation-triangle"></i>
@@ -242,6 +252,20 @@
                     <tr>
                         <td id="td_element_field_4">
                             <input class="input mt-3 mb-3" id="address" placeholder="..." name="element_4" value="" class="validate[required]" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_label_4">
+                            <p class="title is-size-5 mb-1">
+                                <i class="fa fa-fw fa-address-card" style="color:#730B38"></i>
+                                Ripple destination tag
+                                <small style="color:#ff6b6b">*</small>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="td_element_field_4">
+                            <input class="input mt-3 mb-3" id="tag" placeholder="000" name="element_4" value="" class="validate[required]" type="text" />
                         </td>
                     </tr>
                     <p class="subtitle">
@@ -289,29 +313,30 @@ const buy_label = document.getElementById("soldValueLabel");
 const valid_address = document.getElementById("valid_address");
 const invalid_address = document.getElementById("invalid_address");
 const address = document.getElementById("address");
+const tag = document.getElementById("tag");
 
 const submit_button = document.getElementById("submit")
 
 coin_price = 0;
-$.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=tron&vs_currencies=usd', function(data) {
-    coin_price = data["tron"]["usd"]
+$.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=ripple&vs_currencies=usd', function(data) {
+    coin_price = data["ripple"]["usd"]
 });
 
 sell_value = 0;
 buy_value = 0;
 $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
     data = data.result;
-    $("#lkes").html(data.lke.sell);
-    $("#lkeb").html(data.lke.buy);
-    buy_value = data.lke.buy;
-    sell_value = data.lke.sell;
+    $("#xrps").html(data.xrp.sell);
+    $("#xrpb").html(data.xrp.buy);
+    buy_value = data.xrp.buy;
+    sell_value = data.xrp.sell;
 });
 
 document.addEventListener('DOMContentLoaded', () => {
     /* Check whether we're buying or selling */
     type = "sell";
     $('input[type=radio]').click(function() {
-        if (this.value == "I'm selling DUCO for Likecoin") {
+        if (this.value == "I'm selling DUCO for Ripple") {
             type = "sell";
         } else {
             type = "buy";
@@ -322,11 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
     correct_address = false;
 
     function check_wallet(e) {
-        if (e.target.value.length == 43 && e.target.value.startsWith('Like')) {
-            correct_address = true;
-        }
-        else correct_address = false;
-
+        correct_address = WAValidator.validate(e.target.value, 'XRP');
         if (correct_address) {
             valid_address.style.display = "block";
             invalid_address.style.display = "none";
@@ -338,8 +359,8 @@ document.addEventListener('DOMContentLoaded', () => {
     address.addEventListener('input', check_wallet);
 
     /* Update exchange rate displayed to user */
-    transactionFee = 0
-    currency = "LKE"
+    transactionFee = 0.15
+    currency = "XRP"
 
     function update_exchange_rate() {
         exchanged_amount = amount_input.value;
@@ -350,16 +371,18 @@ document.addEventListener('DOMContentLoaded', () => {
         exchanged_coin_value_usd_buy = exchanged_amount_buy * coin_price;
 
         // Selling
-        sell_label.innerHTML = (exchanged_coin_value - transactionFee).toFixed(6) + " " + currency;
+        sell_label.innerHTML = (exchanged_coin_value - transactionFee).toFixed(6) +
+            " " + currency + " (≈$" + exchanged_coin_value_usd.toFixed(3) + ")";
         // Buying
-        buy_label.innerHTML = (exchanged_amount_buy + transactionFee).toFixed(6) + " " + currency;
+        buy_label.innerHTML = (exchanged_amount_buy + transactionFee).toFixed(6) +
+            " " + currency + " (≈$" + exchanged_coin_value_usd_buy.toFixed(3) + ")";
         setTimeout(update_exchange_rate, 100);
     }
     update_exchange_rate();
 
     /* Enable submit button */
     function check_inputs() {
-        if (correct_address) {
+        if (correct_address && parseInt(tag.value)) {
             submit_button.disabled = false;
         } else {
             submit_button.disabled = true;
@@ -375,9 +398,10 @@ document.addEventListener('DOMContentLoaded', () => {
         let email = document.getElementById('email').value;
         let amount = document.getElementById('amount').value;
         let address = document.getElementById('address').value;
+        let tag = document.getElementById('tag').value;
 
         submit_button.classList.add("is-loading");
-        exchange(username, password, email, type, amount, address, currency);
+        exchange(username, password, email, type, amount, address+" Tag: " + tag, currency);
     });
 });
 </script>
