@@ -1,13 +1,13 @@
 {
 	"result": {
 		"bch": {
-			"sell": 0.00000225,
+			"sell": 0.000002,
 			"buy": 0.0000035,
 			"liquidity": "MEDIUM"
 		},
 		"xmg": {
 			"sell": 0.4,
-			"buy": 0.4,
+			"buy": 0.6,
 			"liquidity": "GOOD"
 		},
 		"lke": {
@@ -21,7 +21,7 @@
 			"liquidity": "LOW"
 		},
 		"dgb": {
-			"sell": 0.025,
+			"sell": 0.021,
 			"buy": 0.035,
 			"liquidity": "LOW"
 		},
