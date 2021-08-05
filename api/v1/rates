@@ -6,8 +6,8 @@
 			"liquidity": "MEDIUM"
 		},
 		"xmg": {
-			"sell": 0.4,
-			"buy": 0.6,
+			"sell": 0.5,
+			"buy": 1,
 			"liquidity": "GOOD"
 		},
 		"lke": {
@@ -17,17 +17,17 @@
 		},
 		"trx": {
 			"sell": 0.015,
-			"buy": 0.035,
+			"buy": 0.0375,
 			"liquidity": "LOW"
 		},
 		"dgb": {
-			"sell": 0.021,
-			"buy": 0.035,
+			"sell": 0.0225,
+			"buy": 0.0375,
 			"liquidity": "LOW"
 		},
 		"xrp": {
 			"sell": 0.00125,
-			"buy": 0.00315,
+			"buy": 0.00325,
 			"liquidity": "LOW"
 		},
 		"nano": {
