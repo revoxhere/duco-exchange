@@ -84,8 +84,8 @@
             <img class="icon" src="images/lke.png">
             Likecoin exchange form
         </p>
-        <div class="columns">
-            <div class="column">
+        <div class="columns is-multiline">
+            <div class="column is-full">
                 <div class="box notification is-info is-light">
                     <p class="title is-size-5">
                         Fill out this form to start the exchange process.
@@ -103,6 +103,10 @@
                         Transaction fee: 0 LKE
                     </p>
                 </div>
+            </div>
+            <div class="column is-full">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle mb-2" style="display:block" data-ad-client="ca-pub-4670059148424169" data-ad-slot="4342121726" data-ad-format="horizontal" data-full-width-responsive="false"></ins>
             </div>
         </div>
         <div class="columns">
@@ -324,8 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function check_wallet(e) {
         if (e.target.value.length == 43 && e.target.value.startsWith('Like')) {
             correct_address = true;
-        }
-        else correct_address = false;
+        } else correct_address = false;
 
         if (correct_address) {
             valid_address.style.display = "block";
@@ -412,6 +415,11 @@ document.addEventListener('DOMContentLoaded', () => { // HAMBURGER MENU
         });
     }
 });
+</script>
+<script>
+window.setTimeout(() => {
+    (adsbygoogle = window.adsbygoogle || []).push({});
+}, 1000);
 </script>
 </body>
 
