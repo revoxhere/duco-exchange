@@ -15,5 +15,4 @@ function exchange(username, password, email, type, amount, address, coin) {
                 alert(data.message);
             }
         }).fail(function(jqXHR, textStatus, errorThrown) { alert('getJSON request failed! ' + textStatus); })
-    });
 }
