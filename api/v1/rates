@@ -21,18 +21,23 @@
 			"liquidity": "LOW"
 		},
 		"dgb": {
-			"sell": 0.0275,
-			"buy": 0.0415,
+			"sell": 0.03,
+			"buy": 0.0475,
 			"liquidity": "MEDIUM"
 		},
 		"xrp": {
 			"sell": 0.00175,
-			"buy": 0.0035,
+			"buy": 0.00325,
 			"liquidity": "LOW"
 		},
 		"nano": {
 			"sell": 0.00025,
 			"buy": 0.000375,
+			"liquidity": "LOW"
+		},
+		"fjc": {
+			"sell": 1,
+			"buy": 1.25,
 			"liquidity": "LOW"
 		}
 	},
