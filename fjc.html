@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title is-size-6>DUCO Exchange | NANO</title is-size-6>
+    <title is-size-6>DUCO Exchange | FJC</title is-size-6>
     <link rel="icon" href="images/logo.png" type="image/png" />
     <link rel="shortcut icon" href="images/logo.png" type="image/png" />
     <!-- SEO Stuff -->
@@ -81,8 +81,8 @@
             <img class="icon" src="images/duco.png">
             Duino-Coin
             <i class="fa fa-exchange-alt"></i>
-            <img class="icon" src="images/nano.png">
-            Nano exchange form
+            <img class="icon" src="images/fjc.png">
+            FujiCoin exchange form
         </p>
         <div class="columns">
             <div class="column">
@@ -98,9 +98,9 @@
                         Current exchange rates
                     </p>
                     <p class="subtitle is-size-6">
-                        When selling: 1 DUCO ≈ <span id="nanos"></span> NANO<br>
-                        When buying: 1 DUCO ≈ <span id="nanob"></span> NANO<br>
-                        Transaction fee: 0 NANO
+                        When selling: 1 DUCO ≈ <span id="fjcs"></span> FJC<br>
+                        When buying: 1 DUCO ≈ <span id="fjcb"></span> FJC<br>
+                        Transaction fee: 0.045 FJC
                     </p>
                 </div>
             </div>
@@ -183,17 +183,17 @@
                         <td id="td_element_field_2">
                             <div>
                                 <label class="radio mb-2">
-                                    <input type="radio" id="element_2_0" name="element_2" value="I'm selling DUCO for Nano" class="validate[required]" type="radio" />
+                                    <input type="radio" id="element_2_0" name="element_2" value="I'm selling DUCO for FujiCoin" class="validate[required]" type="radio" />
                                     <span class="subtitle">
-                                        &nbsp;I'm selling Duino-Coins for Nano
+                                        &nbsp;I'm selling Duino-Coins for FujiCoin
                                     </span>
                                 </label>
                             </div>
                             <div>
                                 <label class="radio mb-4">
-                                    <input type="radio" id="element_2_1" name="element_2" value="I'm buying DUCO for Nano" class="validate[required]" type="radio" />
+                                    <input type="radio" id="element_2_1" name="element_2" value="I'm buying DUCO for FujiCoin" class="validate[required]" type="radio" />
                                     <span class="subtitle">
-                                        &nbsp;I'm buying Duino-Coins for Nano
+                                        &nbsp;I'm buying Duino-Coins for FujiCoin
                                     </span>
                                 </label>
                             </div>
@@ -222,7 +222,7 @@
                                             If you're selling, you will receive
                                             <strong>
                                                 <span style="color:#6ab04c" id="exchanged_amountLabel">
-                                                    0.000190 NANO (≈$0.115)
+                                                    0.000190 FJC (≈$0.115)
                                                 </span>
                                             </strong>
                                         </span><br>
@@ -230,7 +230,7 @@
                                             If you're buying, you will pay
                                             <strong>
                                                 <span style="color:#6ab04c" id="soldValueLabel">
-                                                    0.000360 NANO (≈$0.201)
+                                                    0.000360 FJC (≈$0.201)
                                                 </span>
                                             </strong>
                                         </span>
@@ -243,7 +243,7 @@
                         <td id="td_element_label_4">
                             <p class="title is-size-5 mb-1">
                                 <i class="fa fa-fw fa-address-card" style="color:#A3CB38"></i>
-                                Nano wallet address
+                                FujiCoin wallet address
                                 <small style="color:#ff6b6b">*</small>
                                 <p id="invalid_address" class="has-text-danger" style="display:none">
                                     <i class="fa fa-fw fa-exclamation-triangle"></i>
@@ -310,25 +310,25 @@ const address = document.getElementById("address");
 const submit_button = document.getElementById("submit")
 
 coin_price = 0;
-$.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=nano&vs_currencies=usd', function(data) {
-    coin_price = data["nano"]["usd"]
+$.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=fujicoin&vs_currencies=usd', function(data) {
+    coin_price = data["fujicoin"]["usd"]
 });
 
 sell_value = 0;
 buy_value = 0;
 $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
     data = data.result;
-    $("#nanos").html(data.nano.sell);
-    $("#nanob").html(data.nano.buy);
-    buy_value = data.nano.buy;
-    sell_value = data.nano.sell;
+    $("#fjcs").html(data.fjc.sell);
+    $("#fjcb").html(data.fjc.buy);
+    buy_value = data.fjc.buy;
+    sell_value = data.fjc.sell;
 });
 
 document.addEventListener('DOMContentLoaded', () => {
     /* Check whether we're buying or selling */
     type = "sell";
     $('input[type=radio]').click(function() {
-        if (this.value == "I'm selling DUCO for Nano") {
+        if (this.value == "I'm selling DUCO for FujiCoin") {
             type = "sell";
         } else {
             type = "buy";
@@ -339,7 +339,11 @@ document.addEventListener('DOMContentLoaded', () => {
     correct_address = false;
 
     function check_wallet(e) {
-        correct_address = WAValidator.validate(e.target.value, 'NANO');
+        if (e.target.value.length == 34 && e.target.value.startsWith('F')) {
+            correct_address = true;
+        }
+        else correct_address = false;
+
         if (correct_address) {
             valid_address.style.display = "block";
             invalid_address.style.display = "none";
@@ -351,8 +355,8 @@ document.addEventListener('DOMContentLoaded', () => {
     address.addEventListener('input', check_wallet);
 
     /* Update exchange rate displayed to user */
-    transactionFee = 0
-    currency = "NANO"
+    transactionFee = 0.045
+    currency = "FJC"
 
     function update_exchange_rate() {
         exchanged_amount = amount_input.value;
