@@ -2,12 +2,12 @@
 	"result": {
 		"bch": {
 			"sell": 0.0000025,
-			"buy": 0.000004,
+			"buy": 0.00000375,
 			"liquidity": "MEDIUM"
 		},
 		"xmg": {
 			"sell": 0.5,
-			"buy": 1,
+			"buy": 0.75,
 			"liquidity": "GOOD"
 		},
 		"lke": {
@@ -36,9 +36,9 @@
 			"liquidity": "LOW"
 		},
 		"fjc": {
-			"sell": 1,
-			"buy": 1.25,
-			"liquidity": "LOW"
+			"sell": 2.5,
+			"buy": 3.5,
+			"liquidity": "MEDIUM"
 		}
 	},
 	"success": true
