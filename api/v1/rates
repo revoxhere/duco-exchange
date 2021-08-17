@@ -36,8 +36,8 @@
 			"liquidity": "LOW"
 		},
 		"fjc": {
-			"sell": 2.5,
-			"buy": 3.5,
+			"sell": 6,
+			"buy": 10,
 			"liquidity": "MEDIUM"
 		}
 	},
