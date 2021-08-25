@@ -1,10 +1,10 @@
 {
     "result": {
         "bch": {
-            "buy": 4.2e-06,
+            "buy": 4.16e-06,
             "dynamic": true,
             "liquidity": "LOW",
-            "sell": 2.8e-06
+            "sell": 2.77e-06
         },
         "dgb": {
             "buy": 0.012,
@@ -31,10 +31,10 @@
             "sell": 0.0001
         },
         "trx": {
-            "buy": 0.00962,
+            "buy": 0.00952,
             "dynamic": true,
             "liquidity": "LOW",
-            "sell": 0.00641
+            "sell": 0.00635
         },
         "xmg": {
             "buy": 0.42,
