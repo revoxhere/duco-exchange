@@ -1,16 +1,16 @@
 {
     "result": {
         "bch": {
-            "buy": 3.681e-05,
+            "buy": 0.00010524,
             "dynamic": true,
             "liquidity": "LOW",
-            "sell": 2.454e-05
+            "sell": 7.016e-05
         },
         "dgb": {
-            "buy": 0.1056,
+            "buy": 0.3018,
             "dynamic": true,
             "liquidity": "LOW",
-            "sell": 0.0704
+            "sell": 0.2012
         },
         "fjc": {
             "buy": 2,
@@ -31,16 +31,16 @@
             "sell": 0.0001
         },
         "trx": {
-            "buy": 0.08435,
+            "buy": 0.24114,
             "dynamic": true,
             "liquidity": "LOW",
-            "sell": 0.05623
+            "sell": 0.16076
         },
         "xmg": {
-            "buy": 3.74,
+            "buy": 10.68,
             "dynamic": true,
             "liquidity": "GOOD",
-            "sell": 2.49
+            "sell": 7.12
         },
         "xrp": {
             "buy": 0.002,
