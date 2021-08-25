@@ -1,1 +1,53 @@
-{"result": {"bch": {"sell": 2.7993e-06, "buy": 4.1989e-06, "liquidity": "LOW", "dynamic": true}, "xmg": {"sell": 0.28404, "buy": 0.42606, "liquidity": "GOOD", "dynamic": true}, "lke": {"sell": 1, "buy": 1.1, "liquidity": "GOOD", "dynamic": false}, "trx": {"sell": 0.00641, "buy": 0.00962, "liquidity": "LOW", "dynamic": true}, "dgb": {"sell": 0.00803, "buy": 0.01205, "liquidity": "LOW", "dynamic": true}, "xrp": {"sell": 0.001, "buy": 0.002, "liquidity": "LOW", "dynamic": false}, "nano": {"sell": 0.0001, "buy": 0.0002, "liquidity": "LOW", "dynamic": false}, "fjc": {"sell": 1, "buy": 2, "liquidity": "MEDIUM", "dynamic": false}}, "success": true}
+{
+    "result": {
+        "bch": {
+            "buy": 4.1989e-06,
+            "dynamic": true,
+            "liquidity": "LOW",
+            "sell": 2.7993e-06
+        },
+        "dgb": {
+            "buy": 0.01205,
+            "dynamic": true,
+            "liquidity": "LOW",
+            "sell": 0.00803
+        },
+        "fjc": {
+            "buy": 2,
+            "dynamic": false,
+            "liquidity": "MEDIUM",
+            "sell": 1
+        },
+        "lke": {
+            "buy": 1.1,
+            "dynamic": false,
+            "liquidity": "GOOD",
+            "sell": 1
+        },
+        "nano": {
+            "buy": 0.0002,
+            "dynamic": false,
+            "liquidity": "LOW",
+            "sell": 0.0001
+        },
+        "trx": {
+            "buy": 0.00962,
+            "dynamic": true,
+            "liquidity": "LOW",
+            "sell": 0.00641
+        },
+        "xmg": {
+            "buy": 0.42606,
+            "dynamic": true,
+            "liquidity": "GOOD",
+            "sell": 0.28404
+        },
+        "xrp": {
+            "buy": 0.002,
+            "dynamic": false,
+            "liquidity": "LOW",
+            "sell": 0.001
+        }
+    },
+    "success": true
+}
