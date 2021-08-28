@@ -86,7 +86,7 @@
         </p>
         <div class="columns is-multiline">
             <div class="column is-full">
-                <div class="box notification is-info is-light">
+                <div class="box notification is-info">
                     <p class="title is-size-5">
                         Fill out this form to start the exchange process.
                     </p>
@@ -95,7 +95,7 @@
                         <span class="subtitle is-size-6">Exchange request may be rejected if it's against <a href="https://revoxhere.github.io/duco-exchange/index.html#TOS">DUCO Exchange ToS</a> or <a href="https://github.com/revoxhere/duino-coin#terms-of-service">Duino-Coin ToS</a>.</span>
                     </p>
                     <p class="title mt-5 is-size-6">
-                        Current exchange rates
+                        Current exchange rates:
                     </p>
                     <p class="subtitle is-size-6">
                         When selling: 1 DUCO ≈ <span id="bchs"></span> BCH<br>
@@ -110,12 +110,21 @@
             </div>
         </div>
         <div class="columns">
-            <div class="column is-full">
-                <div class="box notification is-warning is-light">
+            <div class="column is-half">
+                <div class="box notification is-warning">
                     <button class="delete"></button>
                     <i class="fa fa-exclamation-triangle"></i>
-                    <strong>This exchange pair has medium liquidity.</strong> Consider selecting another exchange pair.<br>
-                    Exchange rate on this pair isn't bad but could be better - if you want to change that - buy some DUCO.
+                    <strong>This exchange pair has low liquidity.</strong> Consider selecting another exchange pair.<br>
+                    Exchange rate on this pair could be better - if you want to change that - buy some DUCO.
+                </div>
+            </div>
+            <div class="column is-half">
+                <div class="box notification is-success">
+                    <button class="delete"></button>
+                    <i class="fa fa-check"></i>
+                    This exchange pair supports <strong>QuickExchange</strong> <span class="tag is-warning">BETA</span>.
+                    This means that when selling you will receive your funds quickly in your BCH wallet without the need of
+                    our manual confirmation.
                 </div>
             </div>
         </div>
