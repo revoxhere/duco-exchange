@@ -12,7 +12,7 @@
   <img src="https://github.com/revoxhere/duino-coin/blob/master/Resources/ducobanner.png?raw=true" width="430px"/>
 </a>
 
-## Source of the online wallet and miner
+## DUCO Exchange source
 
 This repository contains the code for the **fully static** DUCO Exchange located at [https://exchange.duinocoin.com](https://exchange.duinocoin.com).
 
