@@ -12,7 +12,7 @@
             "sell": 0.02
         },
         "fjc": {
-            "buy": 10,
+            "buy": 300,
             "liquidity": "MEDIUM",
             "sell": 5
         },
