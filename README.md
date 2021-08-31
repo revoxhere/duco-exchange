@@ -49,7 +49,7 @@ The DUCO Exchange is distributed under the MIT License. See the `LICENSE` file f
     }
     ```
 - Exchange request
-  - URL: `/exchange_request/?username=<username>&password=<password>&email=<email>&type=<ex_type>&amount=<amount>&coin=<coin>&address=<address>`
+  - URL: `https://server.duinocoin.com/exchange_request/?username=<username>&password=<password>&email=<email>&type=<ex_type>&amount=<amount>&coin=<coin>&address=<address>`
   - Example GET success response:
     ```json
     {
