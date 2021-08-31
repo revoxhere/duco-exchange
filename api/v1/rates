@@ -12,9 +12,9 @@
             "sell": 0.01
         },
         "fjc": {
-            "buy": 10,
-            "liquidity": "MEDIUM",
-            "sell": 5
+            "buy": 50,
+            "liquidity": "GOOD",
+            "sell": 10
         },
         "lke": {
             "buy": 2,
