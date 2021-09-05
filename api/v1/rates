@@ -43,7 +43,7 @@
             "sell": 0.00175
         },
         "rvn": {
-            "buy": 0.001,
+            "buy": 0.01,
             "liquidity": "LOW",
             "sell": 0.0005
         }
