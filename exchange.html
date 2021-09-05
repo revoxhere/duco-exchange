@@ -359,15 +359,15 @@
                         Sell: <b>1</b> DUCO ≈ <b id="rvn_sell">?</b> RVN<br>
                         Buy: <b>1</b> DUCO ≈ <b id="rvn_buy">?</b> RVN<br>
                         Liquidity: <b id="rvn_liq">?</b><br>
-                        Transaction fee: <b>?</b> RVN<br>
+                        Transaction fee: <b>0.005</b> RVN<br>
                     </p>
-                    <a disabled class="button is-fullwidth">
-                        <i class="icon icon-text far fa-fw">
-                            hourglass
-                        </i>
+                    <a href="rvn.html" class="button btn is-fullwidth">
                         <span>
-                            Coming soon
+                            Continue with this pair
                         </span>
+                        <i class="icon icon-text fa fa-fw">
+                            arrow-circle-right
+                        </i>
                     </a>
                 </div>
             </div>
@@ -378,7 +378,7 @@
                     <img class="icon is-large" src="images/question_mark.png">
                     <br>
                     <p class="title is-size-5">
-                        More pairs
+                        Suggest new pairs
                     </p>
                     <p class="subtitle is-size-5">
                         Please note that Litecoin, Ethereum, Bitcoin, Dogecoin
@@ -447,6 +447,10 @@ document.addEventListener('DOMContentLoaded', () => {
         $("#fjc_sell").html(data.fjc.sell)
         $("#fjc_buy").html(data.fjc.buy)
         $("#fjc_liq").html(data.fjc.liquidity)
+
+        $("#rvn_sell").html(data.rvn.sell)
+        $("#rvn_buy").html(data.rvn.buy)
+        $("#rvn_liq").html(data.rvn.liquidity)
 
     });
 });
