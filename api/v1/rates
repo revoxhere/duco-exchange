@@ -40,12 +40,12 @@
         "xrp": {
             "buy": 0.0035,
             "liquidity": "LOW",
-            "sell": 0.00175
+            "sell": 0.00155
         },
         "rvn": {
-            "buy": 0.01,
+            "buy": 0.05,
             "liquidity": "LOW",
-            "sell": 0.0005
+            "sell": 0.0025
         }
     },
     "success": true
