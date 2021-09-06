@@ -12,7 +12,7 @@
             "sell": 0.0175
         },
         "fjc": {
-            "buy": 30,
+            "buy": 40,
             "liquidity": "GOOD",
             "sell": 15
         },
@@ -43,7 +43,7 @@
             "sell": 0.001
         },
         "rvn": {
-            "buy": 0.05,
+            "buy": 0.075,
             "liquidity": "LOW",
             "sell": 0.0025
         }
