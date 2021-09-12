@@ -375,6 +375,37 @@
                 <div class="box">
                     <img class="icon is-large" src="images/duco.png">
                     <i class="fa icon is-large fa-exchange-alt"></i>
+                    <img class="icon is-large" src="images/nim.png">
+                    <br>
+                    <p class="title is-size-5">
+                        <a href="https://duinocoin.com">
+                            Duino-Coin
+                        </a>
+                        and
+                        <a href="https://nimiq.com">
+                            Nimiq
+                        </a>
+                    </p>
+                    <p class="subtitle is-size-5">
+                        Sell: <b>1</b> DUCO ≈ <b id="nim_sell">?</b> NIM<br>
+                        Buy: <b>1</b> DUCO ≈ <b id="nim_buy">?</b> NIM<br>
+                        Liquidity: <b id="nim_liq">?</b><br>
+                        Transaction fee: <b>0.01</b> NIM<br>
+                    </p>
+                    <a href="#" disabled class="button btn is-fullwidth">
+                        <span>
+                            Continue with this pair
+                        </span>
+                        <i class="icon icon-text fa fa-fw">
+                            arrow-circle-right
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="box">
+                    <img class="icon is-large" src="images/duco.png">
+                    <i class="fa icon is-large fa-exchange-alt"></i>
                     <img class="icon is-large" src="images/question_mark.png">
                     <br>
                     <p class="title is-size-5">
@@ -451,6 +482,10 @@ document.addEventListener('DOMContentLoaded', () => {
         $("#rvn_sell").html(data.rvn.sell)
         $("#rvn_buy").html(data.rvn.buy)
         $("#rvn_liq").html(data.rvn.liquidity)
+
+        $("#nim_sell").html(data.nim.sell)
+        $("#nim_buy").html(data.nim.buy)
+        $("#nim_liq").html(data.nim.liquidity)
 
     });
 });
