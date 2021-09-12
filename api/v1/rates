@@ -46,6 +46,11 @@
             "buy": 0.01,
             "liquidity": "LOW",
             "sell": 0.007
+        },
+        "nim": {
+            "buy": 0.3,
+            "liquidity": "LOW",
+            "sell": 0.065
         }
     },
     "success": true
