@@ -12,7 +12,7 @@
             "sell": 0.0135
         },
         "fjc": {
-            "buy": 10,
+            "buy": 30,
             "liquidity": "GOOD",
             "sell": 1.8
         },
