@@ -1,14 +1,14 @@
 {
     "result": {
         "bch": {
-            "buy": 0.0000015,
+            "buy": 0.00000175,
             "quickexchange": true,
-            "liquidity": "LOW",
-            "sell": 0.000001
+            "liquidity": "MEDIUM",
+            "sell": 0.0000015
         },
         "dgb": {
             "buy": 0.015,
-            "liquidity": "LOW",
+            "liquidity": "MEDIUM",
             "sell": 0.0135
         },
         "fjc": {
@@ -23,7 +23,7 @@
         },
         "nano": {
             "buy": 0.0002,
-            "liquidity": "LOW",
+            "liquidity": "MEDIUM",
             "sell": 0.000145
         },
         "trx": {
