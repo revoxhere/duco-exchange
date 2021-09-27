@@ -17,9 +17,9 @@
             "sell": 1.1759725293
         },
         "lke": {
-            "buy": 2,
+            "buy": 3,
             "liquidity": "HIGH",
-            "sell": 1
+            "sell": 3
         },
         "nano": {
             "buy": 0.0002802691,
