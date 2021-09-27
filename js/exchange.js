@@ -3,9 +3,9 @@ function exchange(username, password, email, type, amount, address, coin) {
         '?username=' + encodeURIComponent(username) +
         '&password=' + encodeURIComponent(password) +
         '&email=' + encodeURIComponent(email) +
-        '&type=' + type +
+        '&type=' + encodeURIComponent(type) +
         '&amount=' + encodeURIComponent(amount) +
-        '&coin=' + coin +
+        '&coin=' + encodeURIComponent(coin) +
         '&address=' + encodeURIComponent(address),
         function(data) {
             submit_button.classList.remove("is-loading");
@@ -14,5 +14,7 @@ function exchange(username, password, email, type, amount, address, coin) {
             } else {
                 alert(data.message);
             }
-        }).fail(function(jqXHR, textStatus, errorThrown) { alert('getJSON request failed! ' + textStatus); })
+        }).fail(function(jqXHR, textStatus, errorThrown) { 
+            alert(`Error submitting exchange request: ${jqXHR}, ${textStatus}, ${errorThrown} - please contact us`);
+        })
 }
