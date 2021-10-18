@@ -99,7 +99,6 @@
                     </p>
                     <p class="subtitle is-size-6">
                         When selling: 1 DUCO ≈ <span id="fjcs"></span> FJC<br>
-                        When buying: 1 DUCO ≈ <span id="fjcb"></span> FJC<br>
                         Transaction fee: 0.045 FJC
                     </p>
                 </div>
@@ -107,23 +106,6 @@
             <div class="column is-full">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <ins class="adsbygoogle mb-2" style="display:block" data-ad-client="ca-pub-4670059148424169" data-ad-slot="1324855347" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
-            </div>
-        </div>
-        <div class="columns is-multiline">
-            <div class="column">
-                <div class="box notification is-warning is-light">
-                    <button class="delete"></button>
-                    <i class="fa fa-exclamation-triangle"></i>
-                    <strong>This exchange pair has low liquidity.</strong> Consider selecting another exchange pair.<br>
-                    Exchange rate on this pair could be better - if you want to change that - buy some DUCO.
-                </div>
-            </div>
-            <div class="column">
-                <div class="box notification is-success is-light">
-                    <button class="delete"></button>
-                    <i class="fa fa-exclamation-triangle"></i>
-                    <strong>This exchange pair is new.</strong> The exchange rates may change significantly in the future as the liquidity changes
-                </div>
             </div>
         </div>
         <div class="columns">
@@ -195,9 +177,9 @@
                             </div>
                             <div>
                                 <label class="radio mb-4">
-                                    <input type="radio" id="element_2_1" name="element_2" value="I'm buying DUCO for FujiCoin" class="validate[required]" type="radio" />
+                                    <input type="radio" disabled id="element_2_1" name="element_2" value="I'm buying DUCO for FujiCoin" class="validate[required]" type="radio" />
                                     <span class="subtitle">
-                                        &nbsp;I'm buying Duino-Coins for FujiCoin
+                                        &nbsp;I'm buying Duino-Coins for FujiCoin <strong class="has-text-danger">Buy disabled - coin is getting delisted</strong>
                                     </span>
                                 </label>
                             </div>
@@ -207,7 +189,7 @@
                         <td id="td_element_label_3">
                             <p class="title is-size-5 mb-2">
                                 <i class="fa fa-fw fa-coins" style="color:#EE5A24"></i>
-                                How much DUCO are you selling/buying?
+                                How much DUCO are you selling?
                                 <small style="color:#ff6b6b">*</small>
                                 <p class="has-text-info mb-3" id="amount_notify">
                                 </p>
@@ -227,14 +209,6 @@
                                             <strong>
                                                 <span style="color:#6ab04c" id="exchanged_amountLabel">
                                                     0.000190 FJC (≈$0.115)
-                                                </span>
-                                            </strong>
-                                        </span><br>
-                                        <span class="subtitle is-size-6">
-                                            If you're buying, you will pay
-                                            <strong>
-                                                <span style="color:#6ab04c" id="soldValueLabel">
-                                                    0.000360 FJC (≈$0.201)
                                                 </span>
                                             </strong>
                                         </span>
@@ -305,7 +279,6 @@ const amount_input = document.getElementById("amount");
 const radios = document.querySelectorAll('input[type=radio]');
 
 const sell_label = document.getElementById("exchanged_amountLabel");
-const buy_label = document.getElementById("soldValueLabel");
 
 const valid_address = document.getElementById("valid_address");
 const invalid_address = document.getElementById("invalid_address");
@@ -372,9 +345,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Selling
         sell_label.innerHTML = (exchanged_coin_value - transactionFee).toFixed(6) +
             " " + currency + " (≈$" + exchanged_coin_value_usd.toFixed(3) + ")";
-        // Buying
-        buy_label.innerHTML = (exchanged_amount_buy + transactionFee).toFixed(6) +
-            " " + currency + " (≈$" + exchanged_coin_value_usd_buy.toFixed(3) + ")";
         setTimeout(update_exchange_rate, 100);
     }
     update_exchange_rate();
