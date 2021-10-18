@@ -329,7 +329,7 @@
                     </p>
                     <p class="subtitle is-size-5">
                         Sell: <b>1</b> DUCO ≈ <b id="fjc_sell">?</b> FJC<br>
-                        Buy: <b>1</b> DUCO ≈ <b id="fjc_buy">?</b> FJC<br>
+                        Buy: <b>disabled (delisting)</b>
                         Liquidity: <b id="fjc_liq">?</b><br>
                         Transaction fee: <b>0.045</b> FJC<br>
                     </p>
@@ -479,7 +479,6 @@ document.addEventListener('DOMContentLoaded', () => {
         $("#nano_liq").html(data.nano.liquidity)
 
         $("#fjc_sell").html(data.fjc.sell)
-        $("#fjc_buy").html(data.fjc.buy)
         $("#fjc_liq").html(data.fjc.liquidity)
 
         $("#rvn_sell").html(data.rvn.sell)
