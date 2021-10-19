@@ -308,8 +308,8 @@ const address = document.getElementById("address");
 const submit_button = document.getElementById("submit")
 
 coin_price = 0;
-$.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=magi&vs_currencies=usd', function(data) {
-    coin_price = data["magi"]["usd"]
+$.getJSON('https://magi.duinocoin.com/statistics', function(data) {
+    coin_price = data["result"]["price"]["max"]
 });
 
 sell_value = 0;
