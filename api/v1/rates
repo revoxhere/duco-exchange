@@ -1,15 +1,15 @@
 {
     "result": {
         "bch": {
-            "buy": 9.6e-07,
+            "buy": 9.7e-07,
             "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 4.8e-07
         },
         "dgb": {
-            "buy": 0.01978709,
+            "buy": 0.01979101,
             "liquidity": "MEDIUM",
-            "sell": 0.00989355
+            "sell": 0.0098955
         },
         "fjc": {
             "buy": 26.18636078,
@@ -22,25 +22,25 @@
             "sell": 3
         },
         "nano": {
-            "buy": 0.00017271,
+            "buy": 0.00017301,
             "liquidity": "MEDIUM",
-            "sell": 8.636e-05
+            "sell": 8.651e-05
         },
         "nim": {
-            "buy": 0.08167285,
+            "buy": 0.08138295,
             "liquidity": "LOW",
-            "sell": 0.04083642
+            "sell": 0.04069148
         },
         "rvn": {
-            "buy": 0.00573869,
+            "buy": 0.00577482,
             "liquidity": "LOW",
-            "sell": 0.00286935
+            "sell": 0.00288741
         },
         "trx": {
-            "buy": 0.00575982,
+            "buy": 0.00577907,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.00287991
+            "sell": 0.00288953
         },
         "xmg": {
             "buy": 0.5,
@@ -48,9 +48,9 @@
             "sell": 0.2
         },
         "xrp": {
-            "buy": 0.00053571,
+            "buy": 0.00054054,
             "liquidity": "LOW",
-            "sell": 0.00013393
+            "sell": 0.00013514
         }
     },
     "success": true
