@@ -27,9 +27,9 @@
             "sell": 5.803e-05
         },
         "nim": {
-            "buy": 0.74538421,
-            "liquidity": "LOW",
-            "sell": 0.03726921
+            "buy": 0,
+            "liquidity": "NONE",
+            "sell": 0
         },
         "rvn": {
             "buy": 0,
