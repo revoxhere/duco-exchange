@@ -27,9 +27,9 @@
             "sell": 5.803e-05
         },
         "nim": {
-            "buy": 0.7488365,
+            "buy": 0.74538421,
             "liquidity": "LOW",
-            "sell": 0.03744182
+            "sell": 0.03726921
         },
         "rvn": {
             "buy": 0,
@@ -37,10 +37,10 @@
             "sell": 0
         },
         "trx": {
-            "buy": 0.06399386,
+            "buy": 0.06407997,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.00319969
+            "sell": 0.003204
         },
         "xmg": {
             "buy": 0.5,
