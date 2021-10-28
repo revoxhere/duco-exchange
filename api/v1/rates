@@ -1,7 +1,7 @@
 {
     "result": {
         "bch": {
-            "buy": 6.31e-06,
+            "buy": 6.29e-06,
             "liquidity": "LOW",
             "quickexchange": true,
             "sell": 3.7e-07
@@ -37,10 +37,10 @@
             "sell": 0
         },
         "trx": {
-            "buy": 0.06299146,
+            "buy": 0.06252931,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.00314957
+            "sell": 0.00312647
         },
         "xmg": {
             "buy": 0.5,
