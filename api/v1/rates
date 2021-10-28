@@ -1,10 +1,10 @@
 {
     "result": {
         "bch": {
-            "buy": 6.39e-06,
+            "buy": 6.23e-06,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 3.7e-07
+            "sell": 3.6e-07
         },
         "dgb": {
             "buy": 0,
@@ -22,9 +22,9 @@
             "sell": 3
         },
         "nano": {
-            "buy": 0.00118812,
+            "buy": 0.00114723,
             "liquidity": "LOW",
-            "sell": 5.941e-05
+            "sell": 5.736e-05
         },
         "nim": {
             "buy": 0,
@@ -37,10 +37,10 @@
             "sell": 0
         },
         "trx": {
-            "buy": 0.06407929,
+            "buy": 0.06233378,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.00320396
+            "sell": 0.00311669
         },
         "xmg": {
             "buy": 0.5,
