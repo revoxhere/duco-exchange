@@ -22,9 +22,9 @@
             "sell": 3
         },
         "nano": {
-            "buy": 0.00114943,
+            "buy": 0.00114286,
             "liquidity": "LOW",
-            "sell": 5.747e-05
+            "sell": 5.714e-05
         },
         "nim": {
             "buy": 0,
@@ -37,10 +37,10 @@
             "sell": 0
         },
         "trx": {
-            "buy": 0.06206362,
+            "buy": 0.06217745,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.00310318
+            "sell": 0.00310887
         },
         "xmg": {
             "buy": 0.5,
