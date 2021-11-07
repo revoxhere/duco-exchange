@@ -24,7 +24,7 @@
         "nano": {
             "buy": 0.001,
             "liquidity": "LOW",
-            "sell": 5e-05
+            "sell": 7.5e-05
         },
         "nim": {
             "buy": 0,
@@ -43,9 +43,9 @@
             "sell": 0.003
         },
         "xmg": {
-            "buy": 0.5,
+            "buy": 0.8,
             "liquidity": "MEDIUM",
-            "sell": 0.2
+            "sell": 0.4
         },
         "xrp": {
             "buy": 0,
