@@ -4,7 +4,7 @@
             "buy": 4e-06,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 3.5e-07
+            "sell": 2.5e-06
         },
         "dgb": {
             "buy": 0,
@@ -22,9 +22,9 @@
             "sell": 3
         },
         "nano": {
-            "buy": 0.00075,
+            "buy": 0.00035,
             "liquidity": "LOW",
-            "sell": 0.00025
+            "sell": 0.00015
         },
         "nim": {
             "buy": 0,
@@ -43,9 +43,9 @@
             "sell": 0
         },
         "xmg": {
-            "buy": 0.75,
+            "buy": 0.65,
             "liquidity": "MEDIUM",
-            "sell": 0.5
+            "sell": 0.4
         },
         "xrp": {
             "buy": 0,
