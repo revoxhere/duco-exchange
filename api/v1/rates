@@ -2,9 +2,9 @@
     "result": {
         "bch": {
             "buy": 4e-06,
-            "liquidity": "LOW",
+            "liquidity": "NONE",
             "quickexchange": true,
-            "sell": 2.5e-06
+            "sell": 0
         },
         "dgb": {
             "buy": 0,
