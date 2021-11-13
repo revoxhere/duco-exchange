@@ -1,7 +1,7 @@
 {
     "result": {
         "bch": {
-            "buy": 3e-06,
+            "buy": 1e-06,
             "liquidity": "NONE",
             "quickexchange": true,
             "sell": 0
