@@ -190,6 +190,38 @@
                 <div class="box">
                     <img class="icon is-large" src="images/duco.png">
                     <i class="fa icon is-large fa-exchange-alt"></i>
+                    <img class="icon is-large" src="images/bkc.png">
+                    <br>
+                    <p class="title is-size-5">
+                        <a href="https://duinocoin.com">
+                            Duino-Coin
+                        </a>
+                        and
+                        <a href="http://144.202.13.184">
+                            Bunkercoin
+                        </a>
+                    </p>
+                    <p class="subtitle is-size-5">
+                        Sell: <b>1</b> DUCO ≈ <b id="bkc_sell">?</b> BKC<br>
+                        Buy: <b>1</b> DUCO ≈ <b id="bkc_buy">?</b> BKC<br>
+                        Liquidity: <b id="bkc_liq">?</b><br>
+                        Transaction fee: <b>0</b> BKC<br>
+                        <strong class="tag has-background-success-dark has-text-white">QuickExchange</strong> supported
+                    </p>
+                    <a href="bkc.html" class="button btn is-fullwidth">
+                        <span>
+                            Continue with this pair
+                        </span>
+                        <i class="icon icon-text fa fa-fw">
+                            arrow-circle-right
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="box">
+                    <img class="icon is-large" src="images/duco.png">
+                    <i class="fa icon is-large fa-exchange-alt"></i>
                     <img class="icon is-large" src="images/trx.png">
                     <br>
                     <p class="title is-size-5">
@@ -273,7 +305,7 @@
                     </p>
                     <a disabled class="button btn is-fullwidth">
                         <span>
-                            Exchange discontinued
+                            Temporarily unavailable
                         </span>
                         <i class="icon icon-text fa fa-fw">
                             arrow-circle-right
@@ -304,7 +336,7 @@
                     </p>
                     <a disabled class="button btn is-fullwidth">
                         <span>
-                            Exchange discontinued
+                            Temporarily unavailable
                         </span>
                         <i class="icon icon-text fa fa-fw">
                             arrow-circle-right
@@ -335,7 +367,7 @@
                     </p>
                     <a disabled class="button btn is-fullwidth">
                         <span>
-                            Exchange discontinued
+                            Temporarily unavailable
                         </span>
                         <i class="icon icon-text fa fa-fw">
                             arrow-circle-right
@@ -366,7 +398,7 @@
                     </p>
                     <a disabled class="button btn is-fullwidth">
                         <span>
-                            Exchange discontinued
+                            Temporarily unavailable
                         </span>
                         <i class="icon icon-text fa fa-fw">
                             arrow-circle-right
@@ -384,12 +416,9 @@
                         Suggest new pairs
                     </p>
                     <p class="subtitle is-size-5">
-                        <del>
-                            Please note that Litecoin, Ethereum, Bitcoin, Dogecoin
-                            or other coins with high fees
-                            won't be added.
-                        </del>
-                        No more pairs will be listed - I lose too much money because of duco exchange
+                        Please note that Litecoin, Ethereum, Bitcoin, Dogecoin
+                        or other coins with high fees
+                        won't be added.
                     </p>
                     <a disabled class="button is-fullwidth">
                         <i class="icon icon-text fa fa-fw">
@@ -441,6 +470,10 @@ document.addEventListener('DOMContentLoaded', () => {
         $("#xrp_sell").html(data.xrp.sell)
         $("#xrp_buy").html(data.xrp.buy)
         $("#xrp_liq").html(data.xrp.liquidity)
+
+        $("#bkc_sell").html(data.bkc.sell)
+        $("#bkc_buy").html(data.bkc.buy)
+        $("#bkc_liq").html(data.bkc.liquidity)
 
         $("#dgb_sell").html(data.dgb.sell)
         $("#dgb_buy").html(data.dgb.buy)
