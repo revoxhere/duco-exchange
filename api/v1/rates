@@ -6,6 +6,12 @@
             "quickexchange": true,
             "sell": 5e-07
         },
+        "bkc": {
+            "buy": 2000000,
+            "liquidity": "LOW",
+            "quickexchange": true,
+            "sell": 5e-7
+        },
         "dgb": {
             "buy": 0,
             "liquidity": "NONE",
