@@ -28,9 +28,9 @@
             "sell": 3
         },
         "nano": {
-            "buy": 0.000075,
+            "buy": 0.000055,
             "liquidity": "LOW",
-            "sell": 0.000025
+            "sell": 0.00001
         },
         "nim": {
             "buy": 0,
