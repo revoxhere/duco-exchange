@@ -4,7 +4,7 @@
             "buy": 8e-07,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 5e-07
+            "sell": 0
         },
         "bkc": {
             "buy": 250,
