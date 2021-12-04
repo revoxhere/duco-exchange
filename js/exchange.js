@@ -15,6 +15,7 @@ function exchange(username, password, email, type, amount, address, coin) {
                 alert(data.message);
             }
         }).fail(function(jqXHR, textStatus, errorThrown) { 
-            alert(`Error submitting exchange request: ${jqXHR.responseText}, ${textStatus}, ${errorThrown} - please contact us`);
+            if (!jqXHR) alert(`Too many exchange requests`);
+            else alert(`Error submitting exchange request: ${jqXHR.responseText}, ${textStatus}, ${errorThrown} - please contact us`);
         })
 }
