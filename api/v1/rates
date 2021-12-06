@@ -1,64 +1,69 @@
 {
     "result": {
         "bch": {
-            "buy": 8e-07,
+            "buy":  0.0000005,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0
+            "sell": 0.0000002
         },
         "bkc": {
-            "buy": 250,
+            "buy":  250,
             "liquidity": "HIGH",
             "quickexchange": true,
             "sell": 225
         },
         "dgb": {
-            "buy": 0,
+            "buy":  0,
             "liquidity": "NONE",
+            "quickexchange": false,
             "sell": 0
         },
         "fjc": {
-            "buy": 0,
+            "buy":  0,
             "liquidity": "NONE",
+            "quickexchange": false,
             "sell": 0
         },
         "lke": {
-            "buy": 6,
+            "buy":  6,
             "liquidity": "HIGH",
             "quickexchange": true,
             "sell": 3
         },
         "nano": {
-            "buy": 0.00002,
+            "buy":  0.0000125,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.00001
+            "sell": 0.000005
         },
         "nim": {
-            "buy": 0,
+            "buy":  0,
             "liquidity": "LOW",
+            "quickexchange": false,
             "sell": 0
         },
         "rvn": {
-            "buy": 0,
+            "buy":  0,
             "liquidity": "NONE",
+            "quickexchange": false,
             "sell": 0
         },
         "trx": {
-            "buy": 0.008,
+            "buy":  0.005,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.0035
+            "sell": 0.0025
         },
         "xmg": {
-            "buy": 0.4,
+            "buy":  0.4,
             "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.2
         },
         "xrp": {
-            "buy": 0,
+            "buy":  0,
             "liquidity": "NONE",
+            "quickexchange": false,
             "sell": 0
         }
     },
