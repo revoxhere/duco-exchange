@@ -7,10 +7,10 @@
             "sell": 0.00000018
         },
         "bkc": {
-            "buy":  250,
+            "buy":  0,
             "liquidity": "HIGH",
             "quickexchange": true,
-            "sell": 225
+            "sell": 250
         },
         "dgb": {
             "buy":  0,
