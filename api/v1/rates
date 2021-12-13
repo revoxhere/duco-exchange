@@ -1,10 +1,10 @@
 {
     "result": {
         "bch": {
-            "buy":  0.0000004,
+            "buy":  0.00000025,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.00000018
+            "sell": 0.000000125
         },
         "bkc": {
             "buy":  0,
