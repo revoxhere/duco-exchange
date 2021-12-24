@@ -1,10 +1,10 @@
 {
     "result": {
         "bch": {
-            "buy":  0.000000215,
+            "buy":  0.0000002,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.0000001
+            "sell": 0.0000000875
         },
         "bkc": {
             "buy":  800,
@@ -34,7 +34,7 @@
             "buy":  0.000011,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.000004
+            "sell": 0.00000375
         },
         "nim": {
             "buy":  0,
@@ -49,10 +49,10 @@
             "sell": 0
         },
         "trx": {
-            "buy":  0.00325,
+            "buy":  0.0032,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.00125
+            "sell": 0.001
         },
         "xmg": {
             "buy":  0.325,
