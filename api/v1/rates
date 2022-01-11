@@ -5,7 +5,7 @@
             "liquidity": "LOW",
             "quickexchange": true,
             "sell": 0.000000055
-        }
+        },
         "dgb": {
             "buy":  0,
             "liquidity": "NONE",
