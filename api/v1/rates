@@ -52,7 +52,7 @@
             "buy":  0.1,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.01
+            "sell": 0.005
         },
         "xrp": {
             "buy":  0,
