@@ -2,9 +2,9 @@
     "result": {
         "bch": {
             "buy":  0.000000175,
-            "liquidity": "LOW",
+            "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.000000025
+            "sell": 0.00000003
         },
         "dgb": {
             "buy":  0,
@@ -50,7 +50,7 @@
         },
         "xmg": {
             "buy":  1,
-            "liquidity": "LOW",
+            "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.5
         },
