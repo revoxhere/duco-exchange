@@ -50,9 +50,9 @@
         },
         "xmg": {
             "buy":  1,
-            "liquidity": "MEDIUM",
+            "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.5
+            "sell": 0.2
         },
         "xrp": {
             "buy":  0,
