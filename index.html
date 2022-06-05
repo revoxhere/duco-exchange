@@ -114,6 +114,8 @@
                                             <option value="RVN">Ravencoin</option>
                                             <option value="DGB">Digibyte</option>
                                             <option value="XRP">Ripple</option>
+                                            <option value="ETH">Ethereum</option>
+                                            <option value="LTC">Litecoin</option>
                                             <option value="LKE">Likecoin</option>
                                         </select>
                                     </div>
@@ -325,7 +327,7 @@ let prices, dollar_prices;
 $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
     prices = data.result;
 });
-$.getJSON(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash,nano,tron,ripple,ravencoin,digibyte&vs_currencies=usd`, function(data) {
+$.getJSON(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash,nano,tron,ripple,ravencoin,digibyte,ethereum,litecoin&vs_currencies=usd`, function(data) {
     dollar_prices = data;
 });
 
@@ -400,6 +402,8 @@ function dollar_price(coin) {
     else if (coin.toUpperCase() == "TRX") coin = "tron";
     else if (coin.toUpperCase() == "RVN") coin = "ravencoin";
     else if (coin.toUpperCase() == "DGB") coin = "digibyte";
+    else if (coin.toUpperCase() == "ETH") coin = "ethereum";
+    else if (coin.toUpperCase() == "LTC") coin = "litecoin";
 
     return dollar_prices[coin.toLowerCase()]["usd"];
 }
