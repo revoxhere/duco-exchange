@@ -130,7 +130,7 @@
                                     <img class="icon is-small" src="https://exchange.duinocoin.com/images/duco.png" id="from_icon">
                                     <span id="coin_from">DUCO</span>
                                     <span class="has-text-weight-normal">to</span>
-                                    <img class="icon is-small" src="https://exchange.duinocoin.com/images/bch.png" id="to_icon">
+                                    <img class="icon is-small" src="https://exchange.duinocoin.com/images/bch.png" id="to_icon_t">
                                     <span id="coin_to">BCH</span>
                                 </p>
                             </div>
@@ -354,6 +354,7 @@ function update_element(element, value) {
 function update_coins() {
     from_icon = document.getElementById("from_icon");
     to_icon = document.getElementById("to_icon");
+    to_icon_t = document.getElementById("to_icon_t");
     current_coin = document.getElementById("coin_select").value;
     update_element("current_coin", current_coin);
 
@@ -367,6 +368,7 @@ function update_coins() {
 
         from_icon.src = `https://exchange.duinocoin.com/images/${current_coin.toLowerCase()}.png`;
         to_icon.src = `https://exchange.duinocoin.com/images/duco.png`;
+        to_icon_t.src = `https://exchange.duinocoin.com/images/duco.png`;
     } else {
         update_element("coin_to", current_coin);
         update_element("coin_from", "DUCO");
@@ -376,6 +378,7 @@ function update_coins() {
 
         from_icon.src = `https://exchange.duinocoin.com/images/duco.png`;
         to_icon.src = `https://exchange.duinocoin.com/images/${current_coin.toLowerCase()}.png`;
+        to_icon_t.src = `https://exchange.duinocoin.com/images/${current_coin.toLowerCase()}.png`;
     }
 }
 
@@ -419,6 +422,7 @@ function change_coin() {
 
     from_icon.src = `https://exchange.duinocoin.com/images/${old_to.toLowerCase()}.png`;
     to_icon.src = `https://exchange.duinocoin.com/images/${old_from.toLowerCase()}.png`;
+    to_icon_t.src = `https://exchange.duinocoin.com/images/${old_from.toLowerCase()}.png`;
 
     update_element("coin_from", old_to);
     update_element("coin_to", old_from);
