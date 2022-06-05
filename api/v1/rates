@@ -14,11 +14,13 @@
         },
         "eth": {
             "buy": 0.000000002,
+            "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "ltc": {
             "buy": 0.000000022,
+            "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
