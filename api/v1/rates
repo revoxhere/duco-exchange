@@ -1,25 +1,25 @@
 {
     "result": {
         "bch": {
-            "buy":  0.00000015,
+            "buy":  0.000000175,
             "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.00000002
         },
         "dgb": {
-            "buy":  0.0025,
+            "buy":  0.003,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "eth": {
-            "buy": 0.000000002,
+            "buy": 0.000000025,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "ltc": {
-            "buy": 0.000000022,
+            "buy": 0.0000005,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
