@@ -121,6 +121,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <p id="likecoin_notice" style="display: none;" class="has-text-info-dark mb-3"><i class="fa fa-info-circle"></i>&nbsp;Likecoin we support is <a href="https://likecoin.pro" target="_blank">likecoin.pro</a> and not the other one. Double check which one you're using to avoid confusion.</p>
                         </p>
                     </div>
                     <div class="box pb-1" style="max-width:400px">
@@ -360,6 +361,9 @@ function update_coins() {
     to_icon_t = document.getElementById("to_icon_t");
     current_coin = document.getElementById("coin_select").value;
     update_element("current_coin", current_coin);
+
+    if (current_coin == "LKE") $("#likecoin_notice").fadeIn('fast');
+    else $("#likecoin_notice").fadeOut('fast');
 
     if (get_price(current_coin, "sell") <= 0) {
         update_element("coin_from",
