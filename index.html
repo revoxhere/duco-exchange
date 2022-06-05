@@ -368,7 +368,7 @@ function update_coins() {
 
         from_icon.src = `https://exchange.duinocoin.com/images/${current_coin.toLowerCase()}.png`;
         to_icon.src = `https://exchange.duinocoin.com/images/duco.png`;
-        to_icon_t.src = `https://exchange.duinocoin.com/images/duco.png`;
+        to_icon_t.src = `https://exchange.duinocoin.com/images/${current_coin.toLowerCase()}.png`;
     } else {
         update_element("coin_to", current_coin);
         update_element("coin_from", "DUCO");
