@@ -4,45 +4,66 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DUCO Exchange | Easy to use coin exchange service</title>
+    <title>DUCO Exchange | Swap coins with ease</title>
     <link rel="icon" href="images/logo.png" type="image/png" />
     <link rel="shortcut icon" href="images/logo.png" type="image/png" />
     <!-- SEO Stuff -->
-    <meta name="description" content="Exchange Duino-Coin between Coin Magi, Likecoin, Bitcoin Cash, Ripple, Tron or Digibyte in a few clicks">
+    <meta name="description" content="Swap Duino-Coin between Bitcoin Cash, Coin Magi, Likecoin, Ripple, Tron and others in a few clicks">
     <meta name="keywords" content="exchange, altcoin, beyondcoin, xmg, magi, bynd, bch, bitcoincash, likecoin, lke, duco, duino, duinocoin, arduino, crypto, mining, blockchain, cryptocurrency, bitcoin">
     <link rel="canonical" href="https://exchange.duinocoin.com/" />
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#D90088">
     <!-- Open Graph Metadata -->
-    <meta property="og:site_name" content="DUCO Exchange - Easy to use coin exchange service" />
+    <meta property="og:site_name" content="DUCO Exchange - Swap coins with ease!" />
     <meta property="og:site" content="https://exchange.duinocoin.com/" />
-    <meta property="og:title" content="DUCO Exchange - Easy to use coin exchange service" />
-    <meta property="og:description" content="Exchange Duino-Coin between Coin Magi, Likecoin, Bitcoin Cash, Ripple, Tron or Digibyte in a few clicks" />
+    <meta property="og:title" content="DUCO Exchange - Swap coins with ease!" />
+    <meta property="og:description" content="Swap Duino-Coin between Bitcoin Cash, Coin Magi, Likecoin, Ripple, Tron and others in a few clicks" />
     <meta property="og:image" content="images/logo.png" />
     <meta property="og:url" content="https://exchange.duinocoin.com/" />
     <meta property="og:type" content="website" />
     <!-- Twitter Metadata -->
-    <meta name="twitter:title" content="DUCO Exchange - Easy to use coin exchange service">
-    <meta name="twitter:description" content="Exchange Duino-Coin between Coin Magi, Likecoin, Bitcoin Cash, Ripple, Tron or Digibyte in a few clicks">
+    <meta name="twitter:title" content="Swap coins with ease!">
+    <meta name="twitter:description" content="Swap Duino-Coin between Bitcoin Cash, Coin Magi, Likecoin, Ripple, Tron and others in a few clicks">
     <meta name="twitter:image" content="images/logo.png">
     <meta name="twitter:site" content="@DuinoCoin">
     <meta name="twitter:creator" content="@DuinoCoin">
-    <!-- Imports -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/bulma-prefers-dark" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://server.duinocoin.com/assets/css/mystyles.css">
+    <script src="https://explorer.duinocoin.com/assets/jquery.min.js"></script>
+    <script src="https://explorer.duinocoin.com/assets/fontawesome.js"></script>
+    <script src="https://exchange.duinocoin.com/js/wallet-address-validator.min.js"></script>
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <style>
+        #background {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          filter: brightness(0.7);
+          overflow: hidden;
+          background-position: 50% 50%;
+          background-image: url("https://wallet.duinocoin.com/backgrounds/wallet/yenn-mountains-1.jpg");
+        }
+        select {
+          border: 2px solid #DDD !important;
+        }
+        button, select {
+          transition: 0.2s all;
+        }
+        button:hover, select:hover {
+          transform: scale(1.03);
+        }
+        .footer {
+          width: 100%;
+          position: relative;
+          bottom: 0;
+      }
+    </style>
 </head>
 
 <body>
-    <div id="pageloader" class="pageloader is-active is-primary is-bottom-to-top">
-        <span class="title">DUCO Exchange</span>
-    </div>
-    <nav class="container navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="index.html">
-                <img src="images/logo.png">
+                <img src="images/logo.png">&nbsp;DUCO Exchange
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar_mobile">
                 <span aria-hidden="true"></span>
@@ -51,297 +72,480 @@
             </a>
         </div>
         <div id="navbar_mobile" class="navbar-menu">
-            <div class="navbar-start">
-                <a href="exchange.html" class="navbar-item">
-                    <span class="subtitle">
-                        Exchange pairs
-                    </span>
-                </a>
+            <div class="navbar-end">
                 <a href="listing.html" class="navbar-item">
-                    <span class="subtitle">
-                        Listing form
-                    </span>
-                </a>
-            </div>
-            <div class="navbar-end mr-5">
-                <a href="contact.html" class="navbar-item">
-                    <span class="subtitle">
-                        Contact
-                    </span>
+                  <i class="fa fa-plus"></i>&nbsp;Coin listing
                 </a>
             </div>
         </div>
     </nav>
-    <main class="hero is-primary">
-        <div class="hero-body container">
+    <div id="background"></div>
+    <section class="section mb-5">
+        <div class="container my-5 py-5">
+            <div class="columns pt-5" style="min-height: 768px">
+                <div class="column"></div>
+                <div class="column is-narrow" id="step_one">
+                    <p class="title is-size-4 has-text-white">
+                        Step 1/3: choose a trading pair
+                    </p>
+                    <div class="box blur pb-1" style="max-width:400px">
+                        <p class="heading is-size-5">
+                            1. Select assets
+                        </p>
+                        <p class="title is-size-5">
+                            <div class="columns is-touch">
+                                <div class="column mt-2 is-narrow">
+                                    <p class="title is-size-5">Duino-Coin</span>
+                                </div>
+                                <div class="column mt-2 is-narrow">
+                                    <span class="has-text-weight-normal">and</span>
+                                </div>
+                                <div class="column">
+                                    <div class="select is-narrow" onchange="update_coins()">
+                                        <select id="coin_select">
+                                            <option value="BCH">Bitcoin Cash</option>
+                                            <option value="XMG">Coin Magi</option>
+                                            <option value="TRX">Tron</option>
+                                            <option value="XNO">Nano</option>
+                                            <option value="RVN">Ravencoin</option>
+                                            <option value="XRP">Ripple</option>
+                                            <option value="LKE">Likecoin</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="box pb-1" style="max-width:400px">
+                        <p class="heading is-size-5">
+                            2. Select swap type
+                        </p>
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <p class="title is-size-5 mt-2">
+                                    <img class="icon is-small" src="https://exchange.duinocoin.com/images/duco.png" id="from_icon">
+                                    <span id="coin_from">DUCO</span>
+                                    <span class="has-text-weight-normal">to</span>
+                                    <img class="icon is-small" src="https://exchange.duinocoin.com/images/bch.png" id="to_icon">
+                                    <span id="coin_to">BCH</span>
+                                </p>
+                            </div>
+                            <div class="column is-narrow">
+                                <button class="button" onclick="change_coin()"><i class="fa fa-sync"></i></button>
+                            </div>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="box" style="max-width:400px">
+                        <p class="heading is-size-5">
+                            Confirm your choice
+                        </p>
+                        <p class="subtitle has-text-weight-normal is-size-5">
+                            You are about to <span id="swap_type" class="has-text-weight-bold">sell</span> DUCO.<br>Current <span id="swap_type">sell</span> price is<br><span id="swap_price" class="has-text-weight-bold">2e-8 BCH</span> per <span class="has-text-weight-bold">1 DUCO</span>.
+                        </p>
+                        <button class="button is-fullwidth is-success" onclick="$('#step_one').fadeOut(250, function(){$('#step_two').fadeIn(250)});">Continue to details</button>
+                    </div>
+                </div>
+                <div class="column is-narrow" id="step_two" style="display:none">
+                    <p class="title is-size-4 has-text-white">
+                        Step 2/3: Input the desired amount
+                    </p>
+                    <div class="box" style="max-width:400px">
+                        <p class="heading is-size-5">
+                            3. How much DUCO are you <span id="swap_type">sell</span>ing?
+                        </p>
+                        <input class="input" value="200" min="1" max="200000" id="amount_input" type="number">
+                    </div>
+                    <div class="box" style="max-width:400px">
+                        <p class="heading is-size-5">
+                            Confirm your choice
+                        </p>
+                        <p class="subtitle has-text-weight-normal is-size-5">
+                            You want to <span id="swap_type" class="has-text-weight-bold">sell</span> <span id="swap_amount" class="has-text-weight-bold">0 DUCO</span> for <span id="swap_amount_alt" class="has-text-weight-bold">0 BCH</span>.<br>
+                            <span class="has-text-grey is-size-6">This pair has <span id="swap_liquidity" class="has-text-weight-bold">medium</span> liquidity.</span>
+                        </p>
+                        <div class="columns">
+                            <div class="column is-one-third">
+                                <button class="button is-fullwidth" onclick="$('#step_two').fadeOut(250, function(){$('#step_one').fadeIn(250)});">Return</button>
+                            </div>
+                            <div class="column">
+                                <button id="submit_amount" class="button is-fullwidth is-success" onclick="$('#step_two').fadeOut(250, function(){$('#step_three').fadeIn(250)});">Continue to swap</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-narrow" id="step_three" style="display:none">
+                    <p class="title is-size-4 has-text-white">
+                        Step 3/3: Connect your wallets
+                    </p>
+                    <div class="box" style="max-width:400px">
+                        <p class="heading is-size-5">
+                            4. Connect your <img class="icon is-small" src="https://exchange.duinocoin.com/images/duco.png">&nbsp;DUCO wallet
+                        </p>
+                        <div class="columns is-multiline is-gapless">
+                            <div class="column is-full mb-1">
+                                <input class="input" placeholder="Your Duino-Coin username" id="username" type="text">
+                            </div>
+                            <div class="column is-full mt-1">
+                                <input class="input" placeholder="Your Duino-Coin password" id="password" type="password">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box" style="max-width:400px">
+                        <p class="heading is-size-5">
+                            5. Enter your <img class="icon is-small" src="https://exchange.duinocoin.com/images/bch.png" id="to_icon">&nbsp;<span id="current_coin">BCH</span> wallet
+                        </p>
+                        <div class="columns is-multiline is-gapless">
+                            <div class="column is-full">
+                                <input class="input" placeholder="Wallet address" id="address" type="text">
+                            </div>
+                            <div class="column mt-2">
+                                <span id="invalid_address" class="has-text-danger">
+                                    <i class="fa fa-times-circle"></i>&nbsp;Provide a valid <span id="current_coin">BCH</span> wallet address!
+                                </span>
+                                <span id="valid_address" class="has-text-success">
+                                    <i class="fa fa-check-circle"></i>&nbsp;Wallet address looks correct
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box" style="max-width:400px">
+                        <p class="heading is-size-5">
+                            6. Enter your e-mail
+                        </p>
+                        <div class="columns is-multiline">
+                            <div class="column is-full">
+                                <input class="input" placeholder="Your e-mail address" id="email" type="email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box" style="max-width:400px">
+                        <p class="heading is-size-5">
+                            Ready to swap?
+                        </p>
+                        <p class="subtitle is-size-6 mb-3">If you're buying DUCO you'll receive further instructions via e-mail. If you're selling you'll get an e-mail once the swap is complete.</p>
+                        <div class="columns">
+                            <div class="column is-one-third">
+                                <button class="button is-fullwidth" onclick="$('#step_three').fadeOut(250, function(){$('#step_two').fadeIn(250)});">Return</button>
+                            </div>
+                            <div class="column">
+                                <button id="submit" disabled class="button is-fullwidth is-success" onclick="swap()">Swap</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column"></div>
+            </div>
+            <br><br>
+            <hr>
+            <br><br>
             <div class="columns">
                 <div class="column">
-                    <div class="columns">
-                        <div class="column">
-                            <p class="title center">
-                                <img class="image" width="256em" src="images/banner.png">
-                            </p>
-                            <p class="subtitle center shadow">
-                                Easy to use coin exchange service
-                            </p>
-                        </div>
-                        <div class="column center">
-                            <a class="btn button is-large" href="exchange.html">
-                                <span>
-                                    START TRADING
-                                </span>
-                                <i class="icon icon-text fa fa-fw">
-                                    arrow-circle-right
-                                </i>
-                            </a>
-                        </div>
-                    </div>
-                    <hr>
-                    <p class="subtitle shadow">
-                        Currently we support the following coins:
-                    </p>
-                    <div class="columns is-multiline shadow">
-                        <div class="column">
-                            <img class="icon icon-text" src="images/duco.png">
-                            <b> Duino-Coin</b> <span class="has-text-warning">
-                                (DUCO)
-                            </span><br>
-                        </div>
-                        <div class="column">
-                            <img class="icon icon-text" src="images/xmg.png">
-                            <b> Coin Magi</b><span class="has-text-warning">
-                                (XMG)
-                            </span><br>
-                        </div>
-                        <div class="column">
-                            <img class="icon icon-text" src="images/lke.png">
-                            <b> Likecoin</b><span class="has-text-warning">
-                                (LKE)
-                            </span><br>
-                        </div>
-                        <div class="column">
-                            <img class="icon icon-text" src="images/bch.png">
-                            <b> Bitcoin Cash</b><span class="has-text-warning">
-                                (BCH)
-                            </span><br>
-                        </div>
-                        <div class="column">
-                            <img class="icon icon-text" src="images/trx.png">
-                            <b> Tron</b><span class="has-text-warning">
-                                (TRX)
-                            </span><br>
-                        </div>
-                        <div class="column">
-                            <img class="icon icon-text" src="images/nano.png">
-                            <b> Nano</b><span class="has-text-warning">
-                                (NANO)
-                            </span><br>
+                    <div class="box">
+                        <p class="heading is-size-5">
+                            How to use the DUCO Exchange?
+                        </p>
+                        <div class="content">
+                            <ul class="subtitle mt-0">
+                                <li>
+                                    Select a desired exchange pair - e.g. <b>DUCO</b> to <b>XMG</b>
+                                </li>
+                                <li>
+                                    <b>Fill in the swap form</b> - enter how much are you swapping and connect your wallets
+                                </li>
+                                <li>
+                                    Wait for your exchange request to be processed - you'll be notified by an <b>e-mail from us</b>
+                                    <br>
+                                    (some exchanges are processed manually - they may take <b>up to 72 hours</b>)
+                                </li>
+                                <li>
+                                    Receive exchanged assets <b>directly</b> in your desired crypto wallet - you can see<br>
+                                    our last exchanges in the chain explorers:
+                                    <a href="https://chainz.cryptoid.info/xmg/address.dws?93qJ8j93ibCye7pTWKTu88pr6a8xy7EUqC.htm">
+                                        XMG
+                                    </a>
+                                    <a href="https://tronscan.org/#/address/TJsSD29FXfbq6BtGRmnfYGDUfrF9DPVGSq/transactions">
+                                        TRX
+                                    </a>
+                                    <a href="https://www.blockchain.com/bch/address/bitcoincash:qzv4g8e2nkpwg6dkzdfuyf1zzrfts9qe350t2">
+                                        BCH
+                                    </a>
+                                    <a href="https://explorer.duinocoin.com?search=coinexchange">
+                                        DUCO
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <!--
-                        <div class="column">
-                            <img class="icon icon-text" src="images/xrp.png">
-                            <b> Ripple</b>
-                            <span class="has-text-warning">
-                                (XRP)
-                            </span><br>
-                            <a href="https://ripple.com">ripple.com</a>
-                        </div>
-                        <div class="column">
-                            <img class="icon icon-text" src="images/dgb.png">
-                            <b> Digibyte</b>
-                            <span class="has-text-warning">
-                                (DGB)
-                            </span><br>
-                            <a href="https://digibyte.org/">digibyte.org</a>
-                        </div>
-                        <div class="column">
-                            <img class="icon icon-text" src="images/nano.png">
-                            <b> Nano</b>
-                            <span class="has-text-warning">
-                                (NANO)
-                            </span><br>
-                            <a href="https://nano.org/">nano.org</a>
-                        </div>
-                        <div class="column">
-                            <img class="icon icon-text" src="images/nim.png">
-                            <b> Nimiq</b><span class="has-text-warning">
-                                (NIM)
-                            </span><br>
-                            <a href="https://nimiq.com">nimiq.com</a>
-                        </div>
-                    </div>-->
+                </div>
+                <div class="column">
+                  <div class="box">
+                        <p class="heading is-size-5">
+                            How it works?
+                        </p>
+                        <span class="subtitle">
+                          Since 2019, <b>the official DUCO Exchange</b> allows Duino-Coin users to quickly exchange their Duino-Coins to other cryptocurrencies and assets. At first, only Coin Magi was supported, but new coins came in quickly. Currently you can choose one of many trading pairs to convert your DUCOs into  more usable coins.<br>
+                          Assets are stored inside our reserves and distributed accordingly to the liquidity. When you swap coins with DUCO Exchange the system automatically subtracts Duino-Coins from your account and sends you the second exchanged asset directly to your wallet.
+                        </span>
+                    </div>
                 </div>
             </div>
-    </main>
-    <section class="container">
-        <hr>
-        <p class="title">
-            How it works
-        </p>
-        <div class="content">
-            <ul class="subtitle">
-                <li>
-                    Select a desired exchange pair - e.g. <b>DUCO</b> <i class="fa fa-arrows-alt-h"></i> <b>XMG</b>
-                </li>
-                <li>
-                    <b>Fill in the exchange form</b> - provide your username, email, exchanged amount and wallet address
-                </li>
-                <li>
-                    Wait for your exchange request to be processed - you'll be notified by an <b>e-mail from us</b>
-                    <br>
-                    (exchanges are processed manually - they may take <b>up to 72 hours</b>)
-                </li>
-                <li>
-                    Receive exchanged assets <b>directly</b> in your desired crypto wallet - you can see<br>
-                    our last exchanges in the chain explorers:
-                    <a href="https://chainz.cryptoid.info/xmg/address.dws?93qJ8j93ibCye7pTWKTu88pr6a8xy7EUqC.htm">
-                        XMG
-                    </a>
-                    <a href="https://tronscan.org/#/address/TJsSD29FXfbq6BtGRmnfYGDUfrF9DPVGSq/transactions">
-                        TRX
-                    </a>
-                    <a href="https://www.blockchain.com/bch/address/bitcoincash:qzv4g8e2nkpwg6dkzdfuyf1zzrfts9qe350t2">
-                        BCH
-                    </a>
-                    <a href="https://explorer.duinocoin.com?search=coinexchange">
-                        DUCO
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <hr>
-        <p class="title">
-            User reviews
-        </p>
-        <ul class="subtitle">
-            <div class="column">
-                <p class="title is-size-5">
-                    <i class="fa fa-user"></i>
-                    <a href="https://www.scamadviser.com/account/profile/407370">
-                        Chandimal Priyankara
-                    </a>
-                </p>
-                <p class="subtitle">
-                    It is a very trustworthy website with an amazing idea. Admin teams may be young, but their idea and vision is mature than their actual age. Their exchange works really fast.
-                </p>
-            </div>
-            <div class="column">
-                <p class="title is-size-5">
-                    <i class="fa fa-user"></i>
-                    <a href="https://www.scamadviser.com/account/profile/407156">
-                        Taufik Sarif
-                    </a>
-                </p>
-                <p class="subtitle">
-                    They provided very good service.
-                </p>
-            </div>
-            <div class="column">
-                <p class="title is-size-5">
-                    <i class="fa fa-user"></i>
-                    <a href="https://www.scamadviser.com/account/profile/406644">
-                        406644
-                    </a>
-                </p>
-                <p class="subtitle">
-                    Stability, Trustworthy, Accurate & Safe Just these 4 words are enough to describe the portal. I'm lovin' it :)
-                </p>
-            </div>
-            <div class="column">
-                <p class="title is-size-5">
-                    <i class="fa fa-user"></i>
-                    <a href="https://www.scamadviser.com/account/profile/406708">
-                        Troy
-                    </a>
-                </p>
-                <p class="subtitle">
-                    Great exchange, fast rates. BCH rates are terrible, but they will be improved in the future.
-                </p>
-            </div>
-            <div class="column">
-                <p class="title is-size-5">
-                    <i class="fa fa-user"></i>
-                    <a href="https://www.scamadviser.com/account/profile/407424">
-                        micro04 thai
-                    </a>
-                </p>
-                <p class="subtitle">
-                    Good support quickly
-                </p>
-            </div>
-            <div class="column">
-                <p class="title is-size-5">
-                    <i class="fa fa-user"></i>
-                    AlexSama
-                </p>
-                <p class="subtitle">Very fast transaction and everything confirmed. Thank you for the whole project.</p>
-            </div>
-            <div class="column">
-                <p class="title is-size-5">
-                    <i class="fa fa-user"></i>
-                    Rogerina
-                </p>
-                <p class="subtitle">Fast exchange processed in less than 24h, I'm keen on seeing exchanges to more cryptos.</p>
-            </div>
-        </ul>
-        <div class="columns">
-            <div class="column">
-                <p class="subtitle">
-                    EMF Feedback: <b>7.5/10 stars</b><br>
-                    Scamadviser: <b>4.7/5 stars</b>
-                </p>
-            </div>
-            <div class="column">
-                <p class="subtitle has-text-right is-size-6">
-                    User reviews from
-                    <a href="https://www.scamadviser.com/check-website/exchange.duinocoin.com">
-                        scamadviser.com
-                    </a>
-                </p>
-            </div>
-        </div>
-        <hr>
-        <p class="title" id="TOS">
-            Terms of service
-        </p>
-        <p class="subtitle">
-            DUCO Exchange is an online service which allows users to exchange digital assets between themselves.<br>
-            Minimum exchangeable amount is a value of <b>200 DUCO (Duino-Coin)</b>.<br>
-            Exchange requests are processed manually and may take <b>up to 72 hours</b>.<br>
-            If applicable, fees from other cryptocurrencies are subtracted from the exchanged amount.<br><br>
-            Exchanges can be rejected if: user is flooding the system with requests; user gained crypto assets illegally; user doesn't exchange more than 200 DUCO worth of funds.
-        </p>
-        <p class="subtitle">
-            In rare cases exchange requests may not be completed because of: not sufficient amount of digital assets in DUCO Exchange reserves; technical problems; personal problems of the owners; other random scenarios we can't predict.
-            </ul>
-            <p class="subtitle">
-                <b>Trading is a risky activity and is not endorsed by us.</b><br>
-                You are responsible for your funds and we are not responsible for your actions.<br>
-                If you'll face any problems, please write to us - see the <a href="contact.html">Contact</a> page.<br>
-            </p>
-        </p>
     </section>
-    <hr>
-    <!-- FOOTER -->
     <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-                <strong>DUCO Exchange</strong> 2019-2022 by <a href="https://github.com/revoxhere">Robert "revox" Piotrowski </a>
-                from the <b>Duino</b> team
-                <br>Hosted with the help of <a href="https://pages.github.com">GitHub Pages</a>
-                <br>Duino-Coin, Coin Magi, Likecoin, Bitcoin Cash and other logos are a property of their respective owners.
-                <br>This page is open-source. You can improve it <a href="https://github.com/revoxhere/duco-exchange">here</a><br>
-            </p>
+        <div class="content has-text-centered is-size-6">
+            <b>DUCO Exchange 2019-2022</b>
+            by
+            <a href="https://revoxhere.github.io">
+                <b>Robert "revox" Piotrowski</b>
+            </a> from the
+            <b>Duino team</b>
+            2019-2022<br>
+            This page is open-source.
+            You can improve it
+            <a href="https://github.com/revoxhere/duco-exchange">
+                <b>here</b>
+            </a><br>
+            Made with
+            <a href="https://bulma.io">
+                <b>Bulma</b>
+            </a>
+            <div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="610739f8f6bbd1001def29cc" data-style-height="24px" data-style-width="100%" data-theme="light" data-min-review-count="10">
+              <a href="https://www.trustpilot.com/review/duinocoin.com" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
         </div>
     </footer>
 </body>
 <script>
-let pageloader = document.getElementById("pageloader"); // PAGE LOAGER
-pageloader.setAttribute('class', "pageloader is-active is-primary is-bottom-to-top"); // Before page is loaded
-window.addEventListener('load', function() {
-    pageloader.setAttribute('class', "pageloader is-primary is-bottom-to-top"); // After page is loaded
+let prices, dollar_prices;
+$.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
+    prices = data.result;
 });
+$.getJSON(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash,nano,tron,ripple,ravencoin&vs_currencies=usd`, function(data) {
+    dollar_prices = data;
+});
+
+function round_to(precision, value) {
+    power_of_ten = 10 ** precision;
+    return Math.round(value * power_of_ten) / power_of_ten;
+}
+
+
+function update_element(element, value) {
+    // Nicely fade in the new value if it changed
+    element = "[id=" + element + "]";
+    old_value = $(element).text()
+
+    if ($("<div>" + value + "</div>").text() != old_value) {
+        $(element).fadeOut('fast', function() {
+            $(element).html(value);
+            $(element).fadeIn('fast');
+        });
+        return true;
+    }
+    return false;
+}
+
+/* ----------- Step 1 ----------- */
+
+function update_coins() {
+    from_icon = document.getElementById("from_icon");
+    to_icon = document.getElementById("to_icon");
+    current_coin = document.getElementById("coin_select").value;
+    update_element("current_coin", current_coin);
+
+    if (get_price(current_coin, "sell") <= 0) {
+        update_element("coin_from",
+            current_coin + "<span class='has-text-info'> (Buy only)</span>");
+        update_element("swap_type", "buy");
+        update_element("coin_to", "DUCO");
+        update_element("swap_price", get_price(current_coin, "buy") + " " + current_coin)
+        update_element("swap_liquidity", prices[current_coin.toLowerCase()]["liquidity"].toLowerCase());
+
+        from_icon.src = `https://exchange.duinocoin.com/images/${current_coin.toLowerCase()}.png`;
+        to_icon.src = `https://exchange.duinocoin.com/images/duco.png`;
+    } else {
+        update_element("coin_to", current_coin);
+        update_element("coin_from", "DUCO");
+        update_element("swap_type", "sell");
+        update_element("swap_price", get_price(current_coin, "sell") + " " + current_coin);
+        update_element("swap_liquidity", prices[current_coin.toLowerCase()]["liquidity"].toLowerCase());
+
+        from_icon.src = `https://exchange.duinocoin.com/images/duco.png`;
+        to_icon.src = `https://exchange.duinocoin.com/images/${current_coin.toLowerCase()}.png`;
+    }
+}
+
+function get_price(coin, type) {
+    try {
+        return prices[coin.toLowerCase()][type.toLowerCase()];
+    } catch (err) {
+        return 0.0
+    }
+}
+
+function dollar_price(coin) {
+    if (coin.toUpperCase() == "LKE") return 0.0;
+    if (coin.toUpperCase() == "XMG") return 0.001166;
+    else if (coin.toUpperCase() == "XNO") coin = "nano";
+    else if (coin.toUpperCase() == "BCH") coin = "bitcoin-cash";
+    else if (coin.toUpperCase() == "XRP") coin = "ripple";
+    else if (coin.toUpperCase() == "TRX") coin = "tron";
+    else if (coin.toUpperCase() == "RVN") coin = "ravencoin";
+
+    return dollar_prices[coin.toLowerCase()]["usd"];
+}
+
+function change_coin() {
+    current_coin = document.getElementById("coin_select").value;
+    from_span = document.getElementById("coin_from");
+    to_span = document.getElementById("coin_to");
+    from_icon = document.getElementById("from_icon");
+    to_icon = document.getElementById("to_icon");
+    type_span = document.getElementById("swap_type");
+
+    old_from = from_span.innerHTML;
+    old_to = to_span.innerHTML;
+    if (type_span.innerHTML == "sell") new_type = "buy";
+    else new_type = "sell";
+
+    if (get_price(current_coin, new_type) <= 0) {
+        alert("This pair is buy only because of no liquidity");
+        return
+    }
+
+    from_icon.src = `https://exchange.duinocoin.com/images/${old_to.toLowerCase()}.png`;
+    to_icon.src = `https://exchange.duinocoin.com/images/${old_from.toLowerCase()}.png`;
+
+    update_element("coin_from", old_to);
+    update_element("coin_to", old_from);
+
+    update_element("swap_type", new_type);
+    update_element("swap_price", get_price(current_coin, new_type) + " " + current_coin)
+    update_element("swap_liquidity", prices[current_coin.toLowerCase()]["liquidity"].toLowerCase());
+}
+
+/* ----------- Step 2 ----------- */
+
+function process_input() {
+    current_coin = document.getElementById("coin_select").value;
+    current_type = document.getElementById("swap_type").innerHTML;
+    amount = document.getElementById("amount_input").value;
+    swap_amount = document.getElementById("swap_amount");
+    amount_button = document.getElementById("submit_amount");
+    swap_amount_alt = document.getElementById("swap_amount_alt");
+
+    if (amount > 0) {
+        update_element("swap_amount", amount + " DUCO");
+        update_element("swap_amount_alt", round_to(8, amount * get_price(current_coin, current_type)) + " " + current_coin +
+            " ($" + round_to(4, amount * get_price(current_coin, current_type) * dollar_price(current_coin)) + ")");
+        amount_button.disabled = false;
+    } else {
+        update_element("swap_amount", "0 DUCO");
+        update_element("swap_amount_alt", "0 " + current_coin + " ($0)");
+        amount_button.disabled = true;
+    }
+}
+
+setInterval(function() {
+    process_input();
+}, 150)
+
+/* ----------- Step 3 ----------- */
+
+function swap() {
+    submit_button = document.getElementById("submit");
+    submit_button.classList.add("is-loading");
+
+    username = document.getElementById("username").value;
+    password = document.getElementById("password").value;
+    email = document.getElementById("email").value;
+
+    amount = document.getElementById("amount_input").value;
+    coin = document.getElementById("coin_select").value;
+    type = document.getElementById("swap_type").innerHTML;
+
+    address = document.getElementById("address").value;
+    exchange(username, password, email, type, amount, address, coin);
+}
+
+function exchange(username, password, email, type, amount, address, coin) {
+    submit_button = document.getElementById("submit");
+    $.getJSON('https://server.duinocoin.com/exchange_request/' +
+        '?username=' + encodeURIComponent(username) +
+        '&password=' + encodeURIComponent(password) +
+        '&email=' + encodeURIComponent(email) +
+        '&type=' + encodeURIComponent(type) +
+        '&amount=' + encodeURIComponent(amount) +
+        '&coin=' + encodeURIComponent(coin) +
+        '&address=' + encodeURIComponent(address),
+        function(data) {
+            submit_button.classList.remove("is-loading");
+            if (data.success == true) {
+                window.location = 'success.html';
+            } else {
+                alert(data.message);
+            }
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+        if (!jqXHR) alert(`Too many exchange requests`);
+        else alert(`Error submitting exchange request: ${jqXHR.responseText}, ${textStatus}, ${errorThrown} - please contact us`);
+    })
+}
+
+/* --------- Checks -------- */
+
+function check_inputs() {
+    submit_button = document.getElementById("submit");
+
+    username = document.getElementById("username").value;
+    password = document.getElementById("password").value;
+    email = document.getElementById("email").value;
+
+    amount = document.getElementById("amount_input").value;
+    coin = document.getElementById("coin_select").value;
+    type = document.getElementById("swap_type").innerHTML;
+
+    address = document.getElementById("address").value;
+
+    ignored_coins = ["LKE", "XMG", "RVN"];
+    if (coin == "XNO") coin = "NANO";
+
+    if (!ignored_coins.includes(coin.toUpperCase())) {
+        correct_address = WAValidator.validate(address, coin.toUpperCase());
+    } else {
+        if (coin.toUpperCase() == "LKE") {
+            if (address.length == 43 && address.startsWith('Like')) {
+                correct_address = true;
+            } else correct_address = false;
+        } else if (coin.toUpperCase() == "XMG") {
+            if (address.length == 34 && address.startsWith('9')) {
+                correct_address = true;
+            } else correct_address = false;
+        } else if (coin.toUpperCase() == "RVN") {
+            if (address.length == 34 && address.startsWith('R')) {
+                correct_address = true;
+            } else correct_address = false;
+        }
+    }
+    if (correct_address) {
+        $("#invalid_address").fadeOut('fast', function() {
+            $("#valid_address").fadeIn('fast');
+        });
+    } else {
+        $("#valid_address").fadeOut('fast', function() {
+            $("#invalid_address").fadeIn('fast');
+        });
+    }
+
+    if (username && password && email && amount && coin && type && address && correct_address) {
+        submit_button.disabled = false;
+    } else {
+        submit_button.disabled = true;
+    }
+}
+
+setInterval(function() {
+    check_inputs();
+}, 150)
 
 document.addEventListener('DOMContentLoaded', () => { // HAMBURGER MENU
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
