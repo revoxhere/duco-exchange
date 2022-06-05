@@ -12,6 +12,16 @@
             "quickexchange": false,
             "sell": 0
         },
+        "eth": {
+            "buy": 0.000000002,
+            "quickexchange": false,
+            "sell": 0
+        },
+        "ltc": {
+            "buy": 0.000000022,
+            "quickexchange": false,
+            "sell": 0
+        },
         "fjc": {
             "buy":  0,
             "liquidity": "NO",
