@@ -112,6 +112,7 @@
                                             <option value="TRX">Tron</option>
                                             <option value="XNO">Nano</option>
                                             <option value="RVN">Ravencoin</option>
+                                            <option value="DGB">Digibyte</option>
                                             <option value="XRP">Ripple</option>
                                             <option value="LKE">Likecoin</option>
                                         </select>
@@ -130,7 +131,7 @@
                                     <img class="icon is-small" src="https://exchange.duinocoin.com/images/duco.png" id="from_icon">
                                     <span id="coin_from">DUCO</span>
                                     <span class="has-text-weight-normal">to</span>
-                                    <img class="icon is-small" src="https://exchange.duinocoin.com/images/bch.png" id="to_icon_t">
+                                    <img class="icon is-small" src="https://exchange.duinocoin.com/images/bch.png" id="to_icon">
                                     <span id="coin_to">BCH</span>
                                 </p>
                             </div>
@@ -197,7 +198,7 @@
                     </div>
                     <div class="box" style="max-width:400px">
                         <p class="heading is-size-5">
-                            5. Enter your <img class="icon is-small" src="https://exchange.duinocoin.com/images/bch.png" id="to_icon">&nbsp;<span id="current_coin">BCH</span> wallet
+                            5. Enter your <img class="icon is-small" src="https://exchange.duinocoin.com/images/bch.png" id="to_icon_t">&nbsp;<span id="current_coin">BCH</span> wallet
                         </p>
                         <div class="columns is-multiline is-gapless">
                             <div class="column is-full">
@@ -324,7 +325,7 @@ let prices, dollar_prices;
 $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
     prices = data.result;
 });
-$.getJSON(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash,nano,tron,ripple,ravencoin&vs_currencies=usd`, function(data) {
+$.getJSON(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash,nano,tron,ripple,ravencoin,digibyte&vs_currencies=usd`, function(data) {
     dollar_prices = data;
 });
 
@@ -398,6 +399,7 @@ function dollar_price(coin) {
     else if (coin.toUpperCase() == "XRP") coin = "ripple";
     else if (coin.toUpperCase() == "TRX") coin = "tron";
     else if (coin.toUpperCase() == "RVN") coin = "ravencoin";
+    else if (coin.toUpperCase() == "DGB") coin = "digibyte";
 
     return dollar_prices[coin.toLowerCase()]["usd"];
 }
@@ -409,6 +411,7 @@ function change_coin() {
     from_icon = document.getElementById("from_icon");
     to_icon = document.getElementById("to_icon");
     type_span = document.getElementById("swap_type");
+    to_icon_t = document.getElementById("to_icon_t");
 
     old_from = from_span.innerHTML;
     old_to = to_span.innerHTML;
