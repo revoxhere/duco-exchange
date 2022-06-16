@@ -4,7 +4,7 @@
             "buy":  0.000000175,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.0000001
+            "sell": 0.000000125
         },
         "dgb": {
             "buy":  0.003,
@@ -37,13 +37,13 @@
             "sell": 3
         },
         "nano": {
-            "buy":  0.000045,
+            "buy":  0.00005,
             "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.000015
         },
         "xno": {
-            "buy":  0.000045,
+            "buy":  0.00005,
             "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.000015
