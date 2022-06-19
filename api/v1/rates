@@ -50,7 +50,7 @@
         },
         "nim": {
             "buy":  0,
-            "liquidity": "LOW",
+            "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
