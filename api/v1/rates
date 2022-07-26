@@ -79,7 +79,19 @@
             "sell": 0
         },
         "shib": {
-            "buy":  4,
+            "buy":  5,
+            "liquidity": "NO",
+            "quickexchange": false,
+            "sell": 0
+        },
+        "xmr": {
+            "buy":  0.00000175,
+            "liquidity": "NO",
+            "quickexchange": false,
+            "sell": 0
+        },
+        "doge": {
+            "buy":  10,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
