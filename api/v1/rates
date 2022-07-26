@@ -79,7 +79,7 @@
             "sell": 0
         },
         "shib": {
-            "buy":  1,
+            "buy":  4,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
