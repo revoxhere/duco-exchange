@@ -117,6 +117,7 @@
                                             <option value="ETH">Ethereum</option>
                                             <option value="LTC">Litecoin</option>
                                             <option value="LKE">Likecoin</option>
+                                            <option value="SHIB">Shiba inu</option>
                                         </select>
                                     </div>
                                 </div>
@@ -332,7 +333,7 @@ let prices, dollar_prices;
 $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
     prices = data.result;
 });
-$.getJSON(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash,nano,tron,ripple,ravencoin,digibyte,ethereum,litecoin&vs_currencies=usd`, function(data) {
+$.getJSON(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash,nano,tron,ripple,ravencoin,digibyte,ethereum,litecoin,shiba-inu&vs_currencies=usd`, function(data) {
     dollar_prices = data;
 });
 
@@ -410,6 +411,7 @@ function dollar_price(coin) {
     if (coin.toUpperCase() == "XMG") return 0.001166;
     else if (coin.toUpperCase() == "XNO") coin = "nano";
     else if (coin.toUpperCase() == "BCH") coin = "bitcoin-cash";
+    else if (coin.toUpperCase() == "SHIB") coin = "shiba-inu";
     else if (coin.toUpperCase() == "XRP") coin = "ripple";
     else if (coin.toUpperCase() == "TRX") coin = "tron";
     else if (coin.toUpperCase() == "RVN") coin = "ravencoin";
@@ -541,7 +543,7 @@ function check_inputs() {
 
     bonus = document.getElementById("bonus");
 
-    ignored_coins = ["LKE", "XMG", "RVN"];
+    ignored_coins = ["LKE", "XMG", "RVN", "SHIB"];
     if (coin == "XNO") coin = "NANO";
 
     bonus.innerHTML = round_to(3, ((amount*1.05) - amount))
@@ -555,6 +557,10 @@ function check_inputs() {
             } else correct_address = false;
         } else if (coin.toUpperCase() == "XMG") {
             if (address.length == 34 && address.startsWith('9')) {
+                correct_address = true;
+            } else correct_address = false;
+        } else if (coin.toUpperCase() == "SHIB") {
+            if (address.length == 42 && address.startsWith('0x')) {
                 correct_address = true;
             } else correct_address = false;
         } else if (coin.toUpperCase() == "RVN") {
