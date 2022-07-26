@@ -83,7 +83,7 @@
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
-        },
+        }
     },
     "success": true
 }
