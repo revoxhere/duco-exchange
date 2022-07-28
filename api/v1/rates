@@ -1,10 +1,10 @@
 {
     "result": {
         "bch": {
-            "buy":  0.00000035,
+            "buy":  0.000000325,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.000000225
+            "sell": 0.00000025
         },
         "dgb": {
             "buy":  0.004,
@@ -13,13 +13,13 @@
             "sell": 0
         },
         "eth": {
-            "buy": 0.00000003,
+            "buy": 0.000000025,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "ltc": {
-            "buy": 0.0000008,
+            "buy": 0.00000075,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
@@ -79,19 +79,19 @@
             "sell": 0
         },
         "shib": {
-            "buy":  5,
+            "buy":  3,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "xmr": {
-            "buy":  0.00000175,
+            "buy":  0.000001,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "doge": {
-            "buy":  0.1,
+            "buy":  0.05,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
