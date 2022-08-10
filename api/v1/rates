@@ -91,7 +91,7 @@
             "sell": 0
         },
         "doge": {
-            "buy":  0.05,
+            "buy":  0.005,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
