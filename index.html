@@ -107,6 +107,7 @@
                                 <div class="column">
                                     <div class="select is-narrow" onchange="update_coins()">
                                         <select id="coin_select">
+                                            <option value="BTC">Bitcoin/option>
                                             <option value="BCH">Bitcoin Cash</option>
                                             <option value="XMG">Coin Magi</option>
                                             <option value="TRX">Tron</option>
@@ -335,7 +336,7 @@ let prices, dollar_prices;
 $.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
     prices = data.result;
 });
-$.getJSON(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash,nano,tron,ripple,ravencoin,digibyte,ethereum,litecoin,shiba-inu,monero,dogecoin&vs_currencies=usd`, function(data) {
+$.getJSON(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash,nano,tron,ripple,ravencoin,digibyte,bitcoin,ethereum,litecoin,shiba-inu,monero,dogecoin&vs_currencies=usd`, function(data) {
     dollar_prices = data;
 });
 
@@ -420,6 +421,7 @@ function dollar_price(coin) {
     else if (coin.toUpperCase() == "DGB") coin = "digibyte";
     else if (coin.toUpperCase() == "ETH") coin = "ethereum";
     else if (coin.toUpperCase() == "XMR") coin = "monero";
+    else if (coin.toUpperCase() == "BTC") coin = "bitcoin";
     else if (coin.toUpperCase() == "DOGE") coin = "dogecoin";
     else if (coin.toUpperCase() == "LTC") coin = "litecoin";
 
