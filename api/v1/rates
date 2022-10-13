@@ -10,7 +10,7 @@
             "buy":  0.0000005,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.0000003
+            "sell": 0.00000015
         },
         "dgb": {
             "buy":  0.0045,
@@ -46,13 +46,13 @@
             "buy":  0.000045,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.00002
+            "sell": 0.00001
         },
         "xno": {
             "buy":  0.000045,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.00002
+            "sell": 0.00001
         },
         "nim": {
             "buy":  0,
@@ -70,13 +70,13 @@
             "buy":  0.001,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.000275
+            "sell": 0.0001
         },
         "xmg": {
             "buy":  0.8,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.08
+            "sell": 0.04
         },
         "xrp": {
             "buy":  0.00015,
