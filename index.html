@@ -169,8 +169,8 @@
                         </p>
                         <input class="input" value="200" min="1" max="1000000" id="amount_input" type="number">
                         <p class="subtitle mt-3 is-size-6" id="bonustag" style="display:none">
-                            <b class="has-text-success">Cyber week bonus:</b>
-                            you will receive 15% more <b>(+<span id="bonus">0</span> DUCO)</b>
+                            <b class="has-text-success">Buy bonus:</b>
+                            you will receive 5% more <b>(+<span id="bonus">0</span> DUCO)</b>
                         </p>
                     </div>
                     <div class="box" style="max-width:400px">
@@ -553,7 +553,7 @@ function check_inputs() {
     ignored_coins = ["LKE", "XMG", "RVN", "SHIB"];
     if (coin == "XNO") coin = "NANO";
 
-    bonus.innerHTML = round_to(3, ((amount*1.15) - amount))
+    bonus.innerHTML = round_to(3, ((amount*1.05) - amount))
 
     if (!ignored_coins.includes(coin.toUpperCase())) {
         correct_address = WAValidator.validate(address, coin.toUpperCase());
