@@ -10,7 +10,7 @@
             "buy":  0.000000055,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.00000003
+            "sell": 0.000000035
         },
         "dgb": {
             "buy":  0.002,
@@ -68,13 +68,13 @@
         },
         "trx": {
             "buy":  0.0007,
-            "liquidity": "LOW",
+            "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.00004
         },
         "xmg": {
             "buy":  1.0,
-            "liquidity": "LOW",
+            "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.1
         },
