@@ -1,13 +1,13 @@
 {
     "result": {
         "btc": {
-            "buy": 0.000000001,
+            "buy": 0.00000000125,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "bch": {
-            "buy":  0.000000055,
+            "buy":  0.000000065,
             "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.000000035
@@ -19,13 +19,13 @@
             "sell": 0
         },
         "eth": {
-            "buy": 0.00000001,
+            "buy": 0.0000000125,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "ltc": {
-            "buy": 0.0000005,
+            "buy": 0.0000006,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
@@ -43,13 +43,13 @@
             "sell": 3
         },
         "nano": {
-            "buy":  0.00004,
+            "buy":  0.000045,
             "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.0000025
         },
         "xno": {
-            "buy":  0.00004,
+            "buy":  0.000045,
             "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.0000025
@@ -97,7 +97,7 @@
             "sell": 0
         },
         "doge": {
-            "buy":  0.001,
+            "buy":  0.0015,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
