@@ -1,31 +1,31 @@
 {
     "result": {
         "btc": {
-            "buy": 0.00000000125,
+            "buy": 0.0000000015,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "bch": {
-            "buy":  0.000000065,
+            "buy":  0.0000000675,
             "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.000000035
         },
         "dgb": {
-            "buy":  0.002,
+            "buy":  0.0025,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "eth": {
-            "buy": 0.0000000125,
+            "buy": 0.000000015,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "ltc": {
-            "buy": 0.0000006,
+            "buy": 0.00000065,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
@@ -43,13 +43,13 @@
             "sell": 3
         },
         "nano": {
-            "buy":  0.000045,
+            "buy":  0.00005,
             "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.0000025
         },
         "xno": {
-            "buy":  0.000045,
+            "buy":  0.00005,
             "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.0000025
@@ -79,25 +79,25 @@
             "sell": 0.1
         },
         "xrp": {
-            "buy":  0.00005,
+            "buy":  0.000055,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "shib": {
-            "buy":  10,
+            "buy":  12,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "xmr": {
-            "buy":  0.0000005,
+            "buy":  0.00000055,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "doge": {
-            "buy":  0.0015,
+            "buy":  0.00125,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
