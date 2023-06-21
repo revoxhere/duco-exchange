@@ -1,31 +1,31 @@
 {
     "result": {
         "btc": {
-            "buy": 0.0000000015,
+            "buy": 0.000000001,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "bch": {
-            "buy":  0.0000000675,
+            "buy":  0.00000006,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.000000035
+            "sell": 0.00000002
         },
         "dgb": {
-            "buy":  0.0025,
+            "buy":  0.002,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "eth": {
-            "buy": 0.000000015,
+            "buy": 0.00000001,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "ltc": {
-            "buy": 0.00000065,
+            "buy": 0.0000005,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
@@ -43,16 +43,16 @@
             "sell": 3
         },
         "nano": {
-            "buy":  0.00005,
+            "buy":  0.00004,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.0000025
+            "sell": 0.0000015
         },
         "xno": {
-            "buy":  0.00005,
+            "buy":  0.00004,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.0000025
+            "sell": 0.0000015
         },
         "nim": {
             "buy":  0,
@@ -61,16 +61,16 @@
             "sell": 0
         },
         "rvn": {
-            "buy":  0.00075,
+            "buy":  0.0005,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "trx": {
-            "buy":  0.0007,
+            "buy":  0.0005,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.00004
+            "sell": 0.00002
         },
         "xmg": {
             "buy":  1.0,
@@ -79,25 +79,25 @@
             "sell": 0.1
         },
         "xrp": {
-            "buy":  0.000055,
+            "buy":  0.00003,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "shib": {
-            "buy":  12,
+            "buy":  10,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "xmr": {
-            "buy":  0.00000055,
+            "buy":  0.0000005,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "doge": {
-            "buy":  0.00125,
+            "buy":  0.001,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
