@@ -7,10 +7,10 @@
             "sell": 0
         },
         "bch": {
-            "buy":  0.0000003,
+            "buy":  0.0000002,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.000000175
+            "sell": 0.0000001
         },
         "dgb": {
             "buy":  0.006,
