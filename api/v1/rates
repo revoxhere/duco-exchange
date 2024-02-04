@@ -10,7 +10,7 @@
             "buy":  0.0000002,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.00000005
+            "sell": 0.0000000
         },
         "dgb": {
             "buy":  0.004,
