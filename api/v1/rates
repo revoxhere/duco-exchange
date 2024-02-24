@@ -46,7 +46,7 @@
             "buy":  0.00004,
             "liquidity": "HIGH",
             "quickexchange": true,
-            "sell": 0.000015
+            "sell": 0.00000
         },
         "nim": {
             "buy":  0,
