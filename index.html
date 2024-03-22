@@ -334,7 +334,7 @@
 </body>
 <script>
 let prices, dollar_prices;
-$.getJSON('https://exchange.duinocoin.com/api/v1/rates', function(data) {
+$.getJSON('https://exchange.duinocoin.com/api/v1/rates?v=' + new Date(), function(data) {
     prices = data.result;
 });
 $.getJSON(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash,nano,tron,ripple,ravencoin,digibyte,bitcoin,ethereum,litecoin,shiba-inu,monero,dogecoin&vs_currencies=usd`, function(data) {
