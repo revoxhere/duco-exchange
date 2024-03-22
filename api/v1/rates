@@ -1,31 +1,31 @@
 {
     "result": {
         "btc": {
-            "buy": 0.0000000005,
+            "buy": 0.000000001,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "bch": {
-            "buy":  0.0000002,
+            "buy":  0.0000004,
             "liquidity": "MEDIUM",
             "quickexchange": true,
-            "sell": 0.0000000
+            "sell": 0.0000002
         },
         "dgb": {
-            "buy":  0.004,
+            "buy":  0.008,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "eth": {
-            "buy": 0.000000015,
+            "buy": 0.00000003,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "ltc": {
-            "buy": 0.0000004,
+            "buy": 0.0000006,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
@@ -43,10 +43,10 @@
             "sell": 3
         },
         "xno": {
-            "buy":  0.00004,
+            "buy":  0.00006,
             "liquidity": "HIGH",
             "quickexchange": true,
-            "sell": 0.00000
+            "sell": 0.00003
         },
         "nim": {
             "buy":  0,
@@ -55,22 +55,22 @@
             "sell": 0
         },
         "rvn": {
-            "buy":  0.002,
+            "buy":  0.003,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "trx": {
-            "buy":  0.0002,
+            "buy":  0.0004,
             "liquidity": "HIGH",
             "quickexchange": true,
-            "sell": 0.000075
+            "sell": 0.0002
         },
         "xmg": {
-            "buy":  0.5,
+            "buy":  0.6,
             "liquidity": "LOW",
             "quickexchange": true,
-            "sell": 0.01
+            "sell": 0.03
         },
         "xrp": {
             "buy":  0.00005,
@@ -85,7 +85,7 @@
             "sell": 0
         },
         "xmr": {
-            "buy":  0.00000025,
+            "buy":  0.0000004,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
