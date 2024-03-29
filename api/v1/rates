@@ -1,25 +1,25 @@
 {
     "result": {
         "btc": {
-            "buy": 0.0000000152,
+            "buy": 0.00000001,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "bch": {
-            "buy":  0.00000215,
+            "buy":  0.000001,
             "liquidity": "MEDIUM",
             "quickexchange": true,
             "sell": 0.0000005
         },
         "dgb": {
-            "buy":  0.07,
+            "buy":  0.05,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
         },
         "eth": {
-            "buy":  0.0000003,
+            "buy":  0.0000002,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0
@@ -43,7 +43,7 @@
             "sell": 3
         },
         "xno": {
-            "buy":  0.0006,
+            "buy":  0.0005,
             "liquidity": "HIGH",
             "quickexchange": true,
             "sell": 0.00035
@@ -61,13 +61,13 @@
             "sell": 0
         },
         "trx": {
-            "buy":  0.0085,
+            "buy":  0.008,
             "liquidity": "HIGH",
             "quickexchange": true,
             "sell":  0.005
         },
         "xmg": {
-            "buy":  0.6,
+            "buy":  0.5,
             "liquidity": "LOW",
             "quickexchange": true,
             "sell": 0.03
