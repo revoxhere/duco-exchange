@@ -8,9 +8,9 @@
         },
         "bch": {
             "buy":  0.00000075,
-            "liquidity": "LOW",
-            "quickexchange": true,
-            "sell": 0.0000001
+            "liquidity": "NO",
+            "quickexchange": false,
+            "sell": 0.0
         },
         "dgb": {
             "buy":  0.05,
@@ -44,9 +44,9 @@
         },
         "xno": {
             "buy":  0.00035,
-            "liquidity": "MEDIUM",
-            "quickexchange": true,
-            "sell": 0.0002
+            "liquidity": "NO",
+            "quickexchange": false,
+            "sell": 0.0
         },
         "nim": {
             "buy":  0,
