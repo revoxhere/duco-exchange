@@ -108,16 +108,16 @@
                                 <div class="column">
                                     <div class="select is-narrow" onchange="update_coins()">
                                         <select id="coin_select">
-                                            <option value="BCH">Bitcoin Cash</option>
+                                            <!--<option value="BCH">Bitcoin Cash</option>-->
                                             <option value="BTC">Bitcoin</option>
                                             <option value="XMG">Coin Magi</option>
                                             <option value="TRX">Tron</option>
-                                            <option value="XNO">Nano</option>
+                                            <!--<option value="XNO">Nano</option>-->
                                             <option value="RVN">Ravencoin</option>
                                             <option value="DGB">Digibyte</option>
                                             <option value="XRP">Ripple</option>
                                             <option value="ETH">Ethereum</option>
-                                            <option value="LTC">Litecoin</option>
+                                            <option selected value="LTC">Litecoin</option>
                                             <option value="LKE">Likecoin</option>
                                             <option value="SHIB">Shiba inu</option>
                                             <option value="XMR">Monero</option>
@@ -139,8 +139,8 @@
                                     <img class="icon is-small" src="https://exchange.duinocoin.com/images/duco.png" id="from_icon">
                                     <span id="coin_from">DUCO</span>
                                     <span class="has-text-weight-normal">to</span>
-                                    <img class="icon is-small" src="https://exchange.duinocoin.com/images/bch.png" id="to_icon">
-                                    <span id="coin_to">BCH</span>
+                                    <img class="icon is-small" src="https://exchange.duinocoin.com/images/lke.png" id="to_icon">
+                                    <span id="coin_to">LKE</span>
                                 </p>
                             </div>
                             <div class="column is-narrow">
@@ -154,7 +154,7 @@
                             Confirm your choice
                         </p>
                         <p class="subtitle has-text-weight-normal is-size-5">
-                            You are about to <span id="swap_type" class="has-text-weight-bold">sell</span> DUCO.<br>Current <span id="swap_type">sell</span> price is<br><span id="swap_price" class="has-text-weight-bold">2e-8 BCH</span> per <span class="has-text-weight-bold">1 DUCO</span>.
+                            You are about to <span id="swap_type" class="has-text-weight-bold">sell</span> DUCO.<br>Current <span id="swap_type">sell</span> price is<br><span id="swap_price" class="has-text-weight-bold">3 LKE</span> per <span class="has-text-weight-bold">1 DUCO</span>.
                         </p>
                         <button class="button is-fullwidth is-success" onclick="$('#step_one').fadeOut(250, function(){$('#step_two').fadeIn(250)});">Continue to details</button>
                     </div>
@@ -178,7 +178,7 @@
                             Confirm your choice
                         </p>
                         <p class="subtitle has-text-weight-normal is-size-5">
-                            You want to <span id="swap_type" class="has-text-weight-bold">sell</span> <span id="swap_amount" class="has-text-weight-bold">0 DUCO</span> for <span id="swap_amount_alt" class="has-text-weight-bold">0 BCH</span>.<br>
+                            You want to <span id="swap_type" class="has-text-weight-bold">sell</span> <span id="swap_amount" class="has-text-weight-bold">0 DUCO</span> for <span id="swap_amount_alt" class="has-text-weight-bold">0 LKE</span>.<br>
                             <span class="has-text-grey is-size-6">This pair has <span id="swap_liquidity" class="has-text-weight-bold">medium</span> liquidity.</span>
                         </p>
                         <div class="columns">
@@ -210,7 +210,7 @@
                     </div>
                     <div class="box" style="max-width:400px">
                         <p class="heading is-size-5">
-                            5. Enter your <img class="icon is-small" src="https://exchange.duinocoin.com/images/bch.png" id="to_icon_t">&nbsp;<span id="current_coin">BCH</span> wallet
+                            5. Enter your <img class="icon is-small" src="https://exchange.duinocoin.com/images/lke.png" id="to_icon_t">&nbsp;<span id="current_coin">LKE</span> wallet
                         </p>
                         <div class="columns is-multiline is-gapless">
                             <div class="column is-full">
@@ -218,7 +218,7 @@
                             </div>
                             <div class="column mt-2">
                                 <span id="invalid_address" class="has-text-danger">
-                                    <i class="fa fa-times-circle"></i>&nbsp;Provide a valid <span id="current_coin">BCH</span> wallet address!
+                                    <i class="fa fa-times-circle"></i>&nbsp;Provide a valid <span id="current_coin">LKE</span> wallet address!
                                 </span>
                                 <span id="valid_address" class="has-text-success">
                                     <i class="fa fa-check-circle"></i>&nbsp;Wallet address looks correct
