@@ -108,11 +108,11 @@
                                 <div class="column">
                                     <div class="select is-narrow" onchange="update_coins()">
                                         <select id="coin_select">
-                                            <!--<option value="BCH">Bitcoin Cash</option>-->
+                                            <option value="BCH">Bitcoin Cash</option>
                                             <option value="BTC">Bitcoin</option>
                                             <option value="XMG">Coin Magi</option>
                                             <option value="TRX">Tron</option>
-                                            <!--<option value="XNO">Nano</option>-->
+                                            <option value="XNO">Nano</option>
                                             <option value="RVN">Ravencoin</option>
                                             <option value="DGB">Digibyte</option>
                                             <option value="XRP">Ripple</option>
@@ -409,7 +409,7 @@ function get_price(coin, type) {
 
 function dollar_price(coin) {
     if (coin.toUpperCase() == "LKE") return 0.0;
-    if (coin.toUpperCase() == "XMG") return 0.001166;
+    if (coin.toUpperCase() == "XMG") return 0.0;
     else if (coin.toUpperCase() == "XNO") coin = "nano";
     else if (coin.toUpperCase() == "BCH") coin = "bitcoin-cash";
     else if (coin.toUpperCase() == "SHIB") coin = "shiba-inu";
