@@ -7,7 +7,7 @@
             "sell": 0
         },
         "bch": {
-            "buy":  0.0000005,
+            "buy":  0.0000003,
             "liquidity": "NO",
             "quickexchange": false,
             "sell": 0.0
