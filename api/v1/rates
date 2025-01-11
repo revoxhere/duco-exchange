@@ -61,10 +61,10 @@
             "sell": 0
         },
         "trx": {
-            "buy":  0.002,
-            "liquidity": "NO",
+            "buy":  0.001,
+            "liquidity": "LOW",
             "quickexchange": true,
-            "sell":  0.001
+            "sell":  0.0005
         },
         "xmg": {
             "buy":  1.0,
