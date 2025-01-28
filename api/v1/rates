@@ -8,9 +8,9 @@
         },
         "bch": {
             "buy": 0.0000005,
-            "liquidity": "LOW",
-            "quickexchange": true,
-            "sell": 0.00000001
+            "liquidity": "NO",
+            "quickexchange": false,
+            "sell": 0.0000000
         },
         "dgb": {
             "buy":  0.07,
